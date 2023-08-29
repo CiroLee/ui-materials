@@ -69,7 +69,7 @@ export default function DropdownMenuPage() {
           </div>
         </ShowBox>
         <ShowBox className="mt-4 max-w-[80%]">
-          <h4 className="mb-2">width separator</h4>
+          <h4 className="mb-2">width children menu</h4>
           <DropDown className="w-[120px]" menus={menuWithChildren}>
             <button className="outline-none h-[36px] px-3 rounded-md cursor-default bg-brand-500 text-white">
               menu
