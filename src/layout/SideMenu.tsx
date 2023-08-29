@@ -1,8 +1,8 @@
 import { Link, NavLink } from 'react-router-dom';
 import { router } from '@/routes';
+import { type MyRouteObject } from '@/routes';
 export default function SideMenu() {
-  const navRoutes = router.routes.find((r) => r.id === 'layout')?.children || [];
-  console.log(navRoutes);
+  const navRoutes = (router.routes.find((r) => r.id === 'layout')?.children || []) as MyRouteObject[];
   return (
     <div className="flex flex-col w-[200px] shrink-0 h-[100vh] border-r px-3">
       {navRoutes.map((r) =>

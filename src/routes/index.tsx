@@ -1,7 +1,13 @@
 import { RouteObject, createHashRouter } from 'react-router-dom';
 import Home from '@/pages/home';
 import Layout from '@/layout';
-import DropdownMenuPage from '@/pages/dropdowm-menu';
+export type MyRouteObject = RouteObject & {
+  meta: {
+    title?: string;
+    role?: string;
+  };
+};
+import DropdownMenuPage from '@/pages/dropdown-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -13,7 +19,7 @@ export const router = createHashRouter([
         id: 'home',
         element: <Home />,
         meta: {
-          title: 'Radix Demo',
+          title: 'Radix materials',
           role: 'title',
         },
       },
@@ -22,10 +28,10 @@ export const router = createHashRouter([
         id: 'dropdown-menu',
         element: <DropdownMenuPage />,
         meta: {
-          title: 'DropdownMenu',
+          title: 'Dropdown',
           role: 'component',
         },
       },
-    ] as unknown as RouteObject[],
+    ] as MyRouteObject[],
   },
 ]);
