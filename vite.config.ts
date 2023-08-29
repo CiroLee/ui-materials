@@ -5,6 +5,7 @@ import tailwindcss from 'tailwindcss';
 import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/radix-materials/',
   plugins: [react()],
   resolve: {
     alias: {
