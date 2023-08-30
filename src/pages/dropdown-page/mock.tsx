@@ -70,18 +70,12 @@ export const menuWidthPreAndSuffix: MenuItem[] = [
     label: 'Layer',
     prefix: <LayersIcon className="mr-1" />,
     suffix: <div className="text-gray-400">⌘ + L</div>,
-    onItemClick: (item) => {
-      console.log(item);
-    },
   },
   {
     id: 'opacity',
     label: 'Opacity',
     prefix: <OpacityIcon className="mr-1" />,
     suffix: <div className="text-gray-400">⌘ + O</div>,
-    onItemClick: (item) => {
-      console.log(item);
-    },
   },
   {
     id: 'more',
