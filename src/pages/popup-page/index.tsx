@@ -1,0 +1,50 @@
+import { useState } from 'react';
+import ShowBox from '@/components/ShowBox';
+import Popup from '@/packages/components/Popup';
+import Button from '@/components/Button';
+export default function PopupPage() {
+  const [showCenter, setShowCenter] = useState(false);
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+  const [showTop, setShowTop] = useState(false);
+  const [showBottom, setShowBottom] = useState(false);
+  return (
+    <>
+      <h2>Popup</h2>
+      <ShowBox className="mt-4">
+        <div className="[&_button:not(:first-child)]:ml-2">
+          <Button onClick={() => setShowCenter(true)}>center</Button>
+          <Button onClick={() => setShowLeft(true)}>left</Button>
+          <Button onClick={() => setShowRight(true)}>right</Button>
+          <Button onClick={() => setShowTop(true)}>top</Button>
+          <Button onClick={() => setShowBottom(true)}>bottom</Button>
+        </div>
+        <Popup placement="center" show={showCenter} maskClosable onClose={() => setShowCenter(false)}>
+          <div className="w-[300px] h-[200px] bg-white p-6 rounded-md">
+            <p>this is center box content</p>
+          </div>
+        </Popup>
+        <Popup placement="left" show={showLeft} maskClosable onClose={() => setShowLeft(false)}>
+          <div className="w-[300px] h-[100vh] bg-white p-4">
+            <p>this is left box content</p>
+          </div>
+        </Popup>
+        <Popup placement="right" show={showRight} maskClosable onClose={() => setShowRight(false)}>
+          <div className="w-[300px] h-[100vh] bg-white p-4">
+            <p>this is right box content</p>
+          </div>
+        </Popup>
+        <Popup placement="top" show={showTop} maskClosable onClose={() => setShowTop(false)}>
+          <div className="w-[100vw] h-[200px] bg-white p-4">
+            <p>this is top box content</p>
+          </div>
+        </Popup>
+        <Popup placement="bottom" show={showBottom} maskClosable onClose={() => setShowBottom(false)}>
+          <div className="w-[100vw] h-[200px] bg-white p-4">
+            <p>this is bottom box content</p>
+          </div>
+        </Popup>
+      </ShowBox>
+    </>
+  );
+}

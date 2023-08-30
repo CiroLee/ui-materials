@@ -12,6 +12,9 @@ module.exports = {
           100: '#EBDAFE',
         },
       },
+      zIndex: {
+        popup: 100,
+      },
     },
   },
   plugins: [],

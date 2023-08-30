@@ -8,6 +8,7 @@ export type MyRouteObject = RouteObject & {
   };
 };
 import DropdownMenuPage from '@/pages/dropdown-page';
+import PopupPage from '@/pages/popup-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -30,6 +31,14 @@ export const router = createHashRouter([
         meta: {
           title: 'Dropdown',
           role: 'component',
+        },
+      },
+      {
+        path: '/popup',
+        id: 'popup',
+        element: <PopupPage />,
+        meta: {
+          title: 'Popup',
         },
       },
     ] as MyRouteObject[],
