@@ -4,7 +4,7 @@ export default function Layout() {
   return (
     <div className="flex">
       <SideMenu />
-      <main className="flex-1 py-4 px-6 h-[100vh] overflow-auto">
+      <main className="flex-1 py-4 px-6 pl-12 h-[100vh] overflow-auto">
         <Outlet />
       </main>
     </div>
