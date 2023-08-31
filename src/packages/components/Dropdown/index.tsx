@@ -4,7 +4,7 @@ import { ChevronRightIcon } from '@radix-ui/react-icons';
 import * as DropDownMenu from '@radix-ui/react-dropdown-menu';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 
-export type MenuItemOnClickEvent = (menu: MenuItem) => void;
+export type MenuItemOnSelectEvent = (event: Event, menu: MenuItem) => void;
 export interface MenuItem {
   id?: string;
   label?: string;
@@ -22,13 +22,15 @@ export interface DropDownProps {
   className?: string;
   style?: React.CSSProperties;
   onOpenChange?: (open: boolean) => void;
-  onItemClick?: MenuItemOnClickEvent;
+  onSelect?: MenuItemOnSelectEvent;
 }
 
-const MenuItem: FC<MenuItem & { onClick?: MenuItemOnClickEvent }> = (props) => {
+const MenuItem: FC<MenuItem & { onSelect?: MenuItemOnSelectEvent }> = (props) => {
   return (
     <DropDownMenu.Item
-      onClick={() => props.onClick?.(props)}
+      onSelect={(event) => {
+        props.onSelect?.(event, props);
+      }}
       disabled={props.disabled}
       className="outline-none h-[32px] flex items-center justify-between text-[#333] text-sm cursor-default data-[disabled]:text-gray-400 data-[disabled]:cursor-not-allowed data-[highlighted]:bg-gray-100 p-[4px] rounded-[4px]">
       <div className="flex items-center">
@@ -40,7 +42,7 @@ const MenuItem: FC<MenuItem & { onClick?: MenuItemOnClickEvent }> = (props) => {
   );
 };
 
-function renderSubMenu(menu: MenuItem, onItemClick?: MenuItemOnClickEvent) {
+function renderSubMenu(menu: MenuItem, onSelect?: MenuItemOnSelectEvent) {
   return (
     <DropDownMenu.Sub key={menu.id}>
       <DropDownMenu.SubTrigger className="outline-none h-[32px] flex justify-between items-center text-[#333] text-sm cursor-default data-[highlighted]:bg-gray-100 p-[4px] rounded-[4px]">
@@ -52,21 +54,21 @@ function renderSubMenu(menu: MenuItem, onItemClick?: MenuItemOnClickEvent) {
       </DropDownMenu.SubTrigger>
       <DropDownMenu.Portal>
         <DropDownMenu.SubContent className="bg-white rounded-[6px] border border-gray-200 p-[4px]">
-          {renderMenuList(menu.children!, onItemClick)}
+          {renderMenuList(menu.children!, onSelect)}
         </DropDownMenu.SubContent>
       </DropDownMenu.Portal>
     </DropDownMenu.Sub>
   );
 }
-function renderMenuList(menu: MenuItem[], onItemClick?: MenuItemOnClickEvent) {
+function renderMenuList(menu: MenuItem[], onSelect?: MenuItemOnSelectEvent) {
   return menu.map((item) => {
     if (item.type === 'separator') {
       return <DropDownMenu.Separator key={item.id} className="h-[1px] my-[4px] bg-gray-200" />;
     }
     if (item.children) {
-      return renderSubMenu(item, onItemClick);
+      return renderSubMenu(item, onSelect);
     }
-    return <MenuItem key={item.id} {...item} onClick={() => onItemClick?.(item)} />;
+    return <MenuItem key={item.id} {...item} onSelect={(event: Event) => onSelect?.(event, item)} />;
   });
 }
 
@@ -106,7 +108,7 @@ const DropDown: FC<DropDownProps> = (props) => {
                   exit="closed"
                   variants={dropdownVariants}>
                   <DropDownMenu.Group className="bg-white rounded-[6px] border border-gray-200 p-[4px]">
-                    {renderMenuList(props.menus, props.onItemClick)}
+                    {renderMenuList(props.menus, props.onSelect)}
                   </DropDownMenu.Group>
                 </motion.div>
               </DropDownMenu.Content>

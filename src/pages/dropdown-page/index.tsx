@@ -1,10 +1,11 @@
 import DropDown, { MenuItem } from '@/packages/components/Dropdown';
 import ShowBox from '@/components/ShowBox';
 import { commonMenus, menuWidthSeparator, menuWithChildren, menuWidthPreAndSuffix } from './mock';
+import Button from '@/components/Button';
 
 export default function DropdownMenuPage() {
-  const handleOnItemClick = (item: MenuItem) => {
-    console.log('you click:', item);
+  const handleOnItemSelect = (event: Event, item: MenuItem) => {
+    console.log('you click:', event, item);
   };
   return (
     <>
@@ -12,10 +13,8 @@ export default function DropdownMenuPage() {
         <h2>Dropdown</h2>
         <ShowBox className="mt-4 max-w-[80%]">
           <h4 className="mb-2">basic</h4>
-          <DropDown className="w-[120px]" menus={commonMenus} onItemClick={handleOnItemClick}>
-            <button className="outline-none h-[36px] px-3 rounded-md cursor-default bg-brand-500 text-white">
-              menu
-            </button>
+          <DropDown className="w-[120px]" menus={commonMenus} onSelect={handleOnItemSelect}>
+            <Button>menu</Button>
           </DropDown>
         </ShowBox>
         <ShowBox className="mt-4 max-w-[80%]">
@@ -64,7 +63,7 @@ export default function DropdownMenuPage() {
           </div>
         </ShowBox>
         <ShowBox className="mt-4 max-w-[80%]">
-          <h4 className="mb-2">width separator</h4>
+          <h4 className="mb-2">separator</h4>
           <DropDown className="w-[120px]" menus={menuWidthSeparator}>
             <button className="outline-none h-[36px] px-3 rounded-md cursor-default bg-brand-500 text-white">
               menu
@@ -73,8 +72,8 @@ export default function DropdownMenuPage() {
         </ShowBox>
 
         <ShowBox className="mt-4 max-w-[80%]">
-          <h4 className="mb-2">width children menu</h4>
-          <DropDown className="w-[120px]" menus={menuWithChildren} onItemClick={handleOnItemClick}>
+          <h4 className="mb-2">children menu</h4>
+          <DropDown className="w-[120px]" menus={menuWithChildren} onSelect={handleOnItemSelect}>
             <button className="outline-none h-[36px] px-3 rounded-md cursor-default bg-brand-500 text-white">
               menu
             </button>
@@ -82,7 +81,7 @@ export default function DropdownMenuPage() {
         </ShowBox>
         <ShowBox className="mt-4 max-w-[80%]">
           <h4 className="mb-2">custom prefix and suffix</h4>
-          <DropDown className="w-[200px]" menus={menuWidthPreAndSuffix}>
+          <DropDown className="w-[200px]" menus={menuWidthPreAndSuffix} onSelect={handleOnItemSelect}>
             <button className="outline-none h-[36px] px-3 rounded-md cursor-default bg-brand-500 text-white">
               menu
             </button>

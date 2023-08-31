@@ -13,6 +13,10 @@ export const commonMenus: MenuItem[] = [
     id: '003',
     label: 'item-003',
   },
+  {
+    id: '004',
+    label: 'item-004',
+  },
 ];
 export const menuWidthSeparator: MenuItem[] = [
   {
