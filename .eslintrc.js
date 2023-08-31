@@ -20,6 +20,7 @@ module.exports = {
     },
   },
   rules: {
+    'max-len': ['error', { code: 200 }],
     'react/react-in-jsx-scope': 0,
     '@typescript-eslint/no-explicit-any': 0,
   },

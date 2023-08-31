@@ -32,7 +32,8 @@ const MenuItem: FC<MenuItem & { onSelect?: MenuItemOnSelectEvent }> = (props) =>
         props.onSelect?.(event, props);
       }}
       disabled={props.disabled}
-      className="outline-none h-[32px] flex items-center justify-between text-[#333] text-sm cursor-default data-[disabled]:text-gray-400 data-[disabled]:cursor-not-allowed data-[highlighted]:bg-gray-100 p-[4px] rounded-[4px]">
+      className="outline-none h-[32px] flex items-center justify-between text-[#333] text-sm cursor-default 
+      data-[disabled]:text-gray-400 data-[disabled]:cursor-not-allowed data-[highlighted]:bg-gray-100 p-[4px] rounded-[4px]">
       <div className="flex items-center">
         {props.prefix}
         <span>{props.label}</span>
