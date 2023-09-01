@@ -54,9 +54,10 @@ const Switch = forwardRef<React.ElementRef<typeof RadixSwitch.Root>, SwitchProps
       onCheckedChange={checkedChangeHandler}
       disabled={props.disabled}
       className={cn(
-        'h-[var(--height)] w-[var(--width)] cursor-default rounded-[var(--height)] box-border bg-gray-200 p-[var(--padding)] data-[state=checked]:bg-brand-500 transition-colors ease-linear',
+        'h-[var(--height)] w-[var(--width)] cursor-default rounded-[var(--height)] box-border bg-gray-200 p-[var(--padding)] transition-colors ease-linear',
         {
-          'data-[disabled]:bg-brand-400 cursor-not-allowed': props.disabled && checked,
+          'data-[state=checked]:bg-brand-500': !props.disabled && checked,
+          'data-[disabled]:bg-brand-300 cursor-not-allowed': props.disabled && checked,
           'data-[disabled]:bg-gray-400/50 cursor-not-allowed': props.disabled && !checked,
         },
         props.className,
