@@ -9,7 +9,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props: ButtonProps, r
   <button
     ref={ref}
     {...props}
-    className="outline-none transition-transform h-[36px] px-3 rounded-md cursor-default bg-brand-500 text-white hover:bg-brand-400 active:bg-brand-300 active:scale-[98%]"
+    className="outline-none transition-transform h-[32px] px-3 rounded-md cursor-default bg-brand-500 text-white hover:bg-brand-400 active:bg-brand-300 active:scale-[98%]"
   />
 ));
 

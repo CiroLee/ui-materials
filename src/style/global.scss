@@ -3,10 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  --webkit-hightlight-color: transparent;
-}
-
 @layer base {
   h2 {
     @apply text-2xl font-bold;

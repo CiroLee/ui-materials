@@ -3,6 +3,8 @@ import ShowBox from '@/components/ShowBox';
 import Popup from '@/packages/components/Popup';
 import Button from '@/components/Button';
 import Switch from '@/packages/components/Switch';
+import CodeView from '@/components/CodeView';
+import { html as useHtml } from './docs/use.md';
 export default function PopupPage() {
   const [showCenter, setShowCenter] = useState(false);
   const [showLeft, setShowLeft] = useState(false);
@@ -51,6 +53,7 @@ export default function PopupPage() {
             <p>this is bottom box content</p>
           </div>
         </Popup>
+        <CodeView content={useHtml} />
       </ShowBox>
     </>
   );
