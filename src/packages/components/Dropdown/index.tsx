@@ -1,4 +1,4 @@
-import { type FC, useState } from 'react';
+import { type FC, forwardRef, useState } from 'react';
 import cn from 'classnames';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 import * as DropDownMenu from '@radix-ui/react-dropdown-menu';
@@ -64,7 +64,7 @@ function renderSubMenu(menu: MenuItem, onSelect?: MenuItemOnSelectEvent) {
 function renderMenuList(menu: MenuItem[], onSelect?: MenuItemOnSelectEvent) {
   return menu.map((item) => {
     if (item.type === 'separator') {
-      return <DropDownMenu.Separator key={item.id} className="h-[1px] my-[4px] bg-gray-200" />;
+      return <DropDownMenu.Separator key={item.id || String(Date.now())} className="h-[1px] my-[4px] bg-gray-200" />;
     }
     if (item.children) {
       return renderSubMenu(item, onSelect);
@@ -73,7 +73,7 @@ function renderMenuList(menu: MenuItem[], onSelect?: MenuItemOnSelectEvent) {
   });
 }
 
-const DropDown: FC<DropDownProps> = (props) => {
+const DropDown = forwardRef<React.ElementRef<typeof DropDownMenu.Root>, DropDownProps>((props: DropDownProps, ref) => {
   const [open, setOpen] = useState(false);
   const dropdownVariants: Variants = {
     open: {
@@ -97,6 +97,7 @@ const DropDown: FC<DropDownProps> = (props) => {
           {open ? (
             <DropDownMenu.Portal forceMount>
               <DropDownMenu.Content
+                ref={ref}
                 loop={true}
                 side={props.side || 'bottom'}
                 align={props.align || 'start'}
@@ -119,6 +120,8 @@ const DropDown: FC<DropDownProps> = (props) => {
       </DropDownMenu.Root>
     </>
   );
-};
+});
+
+DropDown.displayName = 'DropDown';
 
 export default DropDown;

@@ -16,7 +16,6 @@ const CodeView: FC<CodeViewProps> = (props) => {
   useEffect(() => {
     if (ref.current) {
       const { height } = ref.current.getBoundingClientRect();
-      console.log(height);
       if (height > MAX_HEIGHT) {
         setExpand(true);
       }

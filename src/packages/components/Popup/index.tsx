@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import { forwardRef } from 'react';
 import cn from 'classnames';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 export type Placement = 'top' | 'bottom' | 'left' | 'right' | 'center';
@@ -148,7 +148,7 @@ function placementContainer(placement: Placement, children: React.ReactNode) {
   return placementsMap[placement];
 }
 
-const Popup: FC<PopupProps> = (props) => {
+const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
   const maskVariants: Variants = {
     visible: {
       opacity: 1,
@@ -168,7 +168,7 @@ const Popup: FC<PopupProps> = (props) => {
   return (
     <AnimatePresence>
       {props.show ? (
-        <div className={cn('fixed overflow-hidden inset-0 z-popup', props.className)} style={props.style}>
+        <div ref={ref} className={cn('fixed overflow-hidden inset-0 z-popup', props.className)} style={props.style}>
           <motion.div
             initial="hidden"
             animate={props.show ? 'visible' : 'hidden'}
@@ -194,6 +194,8 @@ const Popup: FC<PopupProps> = (props) => {
       ) : null}
     </AnimatePresence>
   );
-};
+});
+
+Popup.displayName = 'Popup';
 
 export default Popup;
