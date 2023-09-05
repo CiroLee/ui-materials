@@ -1,5 +1,6 @@
 import { MenuItem } from '@/packages/components/Dropdown';
-import { LayersIcon, OpacityIcon, GlobeIcon, TransparencyGridIcon } from '@radix-ui/react-icons';
+import { Layers, Droplet, Globe, Pipette } from 'lucide-react';
+
 export const commonMenus: MenuItem[] = [
   {
     id: '001',
@@ -72,24 +73,24 @@ export const menuWidthPreAndSuffix: MenuItem[] = [
   {
     id: 'layer',
     label: 'Layer',
-    prefix: <LayersIcon className="mr-1" />,
+    prefix: <Layers size={16} className="mr-1" />,
     suffix: <div className="text-gray-400">⌘ + L</div>,
   },
   {
     id: 'opacity',
     label: 'Opacity',
-    prefix: <OpacityIcon className="mr-1" />,
+    prefix: <Droplet size={16} className="mr-1" />,
     suffix: <div className="text-gray-400">⌘ + O</div>,
   },
   {
     id: 'more',
     label: 'More tools',
-    prefix: <GlobeIcon className="mr-1" />,
+    prefix: <Globe size={16} className="mr-1" />,
     children: [
       {
         id: 'tool-trans',
-        label: 'Trans',
-        prefix: <TransparencyGridIcon className="mr-1" />,
+        label: 'Pipette',
+        prefix: <Pipette size={15} className="mr-1" />,
         suffix: <div className="text-gray-400 ml-10">⌘ + ⌥ + T</div>,
       },
     ],

@@ -10,6 +10,7 @@ export type MyRouteObject = RouteObject & {
 import DropdownMenuPage from '@/pages/dropdown-page';
 import PopupPage from '@/pages/popup-page';
 import SwitchPage from '@/pages/switch-page';
+import ButtonPage from '@/pages/button-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -23,6 +24,15 @@ export const router = createHashRouter([
         meta: {
           title: 'Radix materials',
           role: 'title',
+        },
+      },
+      {
+        path: '/button',
+        id: 'button',
+        element: <ButtonPage />,
+        meta: {
+          title: 'Button',
+          role: 'component',
         },
       },
       {

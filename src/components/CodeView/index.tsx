@@ -1,7 +1,7 @@
 import { type FC, useState, useEffect, useRef } from 'react';
 import cn from 'classnames';
 import 'highlight.js/styles/atom-one-dark.css';
-import Button from '../Button';
+import Button from '@/packages/components/Button';
 
 interface CodeViewProps {
   content: string;
@@ -33,7 +33,9 @@ const CodeView: FC<CodeViewProps> = (props) => {
         dangerouslySetInnerHTML={{ __html: props.content }}></div>
       {expanded ? (
         <div className="absolute bottom-0 flex justify-center items-center w-full h-[60px] bg-gradient-to-b from-transparent to-gray-800">
-          <Button onClick={() => setExpandToggle(!expandedToggle)}>{expandedToggle ? 'collapse' : 'expand'}</Button>
+          <Button size="small" onClick={() => setExpandToggle(!expandedToggle)}>
+            {expandedToggle ? 'collapse' : 'expand'}
+          </Button>
         </div>
       ) : null}
     </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ShowBox from '@/components/ShowBox';
 import Switch from '@/packages/components/Switch';
-import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
+import { Check, X } from 'lucide-react';
 import CodeView from '@/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as sizeHtml } from './docs/size.md';
@@ -40,12 +40,12 @@ export default function SwitchPage() {
         <Switch
           checkedThumb={
             <div className="w-full h-full flex justify-center items-center">
-              <CheckIcon />
+              <Check size={12} />
             </div>
           }
           unCheckedThumb={
             <div className="w-full h-full flex justify-center items-center">
-              <Cross2Icon width="12px" height="12px" />
+              <X size={12} />
             </div>
           }
         />

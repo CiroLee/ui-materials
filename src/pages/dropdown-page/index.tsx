@@ -7,7 +7,7 @@ import { html as separatorHtml } from './docs/separator.md';
 import { html as childrenMenuHtml } from './docs/children-menu.md';
 import { html as preAndSuffixHtml } from './docs/custom.md';
 import { commonMenus, menuWidthSeparator, menuWithChildren, menuWidthPreAndSuffix } from './mock';
-import Button from '@/components/Button';
+import Button from '@/packages/components/Button';
 
 export default function DropdownMenuPage() {
   const handleOnItemSelect = (event: Event, item: MenuItem) => {

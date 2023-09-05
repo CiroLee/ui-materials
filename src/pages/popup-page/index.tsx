@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ShowBox from '@/components/ShowBox';
 import Popup from '@/packages/components/Popup';
-import Button from '@/components/Button';
+import Button from '@/packages/components/Button';
 import Switch from '@/packages/components/Switch';
 import CodeView from '@/components/CodeView';
 import { html as useHtml } from './docs/use.md';

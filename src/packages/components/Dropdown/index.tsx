@@ -1,6 +1,6 @@
 import { type FC, forwardRef, useState } from 'react';
 import cn from 'classnames';
-import { ChevronRightIcon } from '@radix-ui/react-icons';
+import { ChevronRight } from 'lucide-react';
 import * as DropDownMenu from '@radix-ui/react-dropdown-menu';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 
@@ -51,7 +51,7 @@ function renderSubMenu(menu: MenuItem, onSelect?: MenuItemOnSelectEvent) {
           {menu.prefix}
           <span>{menu.label}</span>
         </div>
-        <ChevronRightIcon />
+        <ChevronRight size={16} />
       </DropDownMenu.SubTrigger>
       <DropDownMenu.Portal>
         <DropDownMenu.SubContent className="bg-white rounded-[6px] border border-gray-200 p-[4px]">
