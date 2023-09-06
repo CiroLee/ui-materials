@@ -11,6 +11,7 @@ import DropdownMenuPage from '@/pages/dropdown-page';
 import PopupPage from '@/pages/popup-page';
 import SwitchPage from '@/pages/switch-page';
 import ButtonPage from '@/pages/button-page';
+import CheckboxPage from '@/pages/checkbox-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -58,6 +59,14 @@ export const router = createHashRouter([
         element: <SwitchPage />,
         meta: {
           title: 'Switch',
+        },
+      },
+      {
+        path: 'checkbox',
+        id: 'checkbox',
+        element: <CheckboxPage />,
+        meta: {
+          title: 'Checkbox',
         },
       },
     ] as MyRouteObject[],
