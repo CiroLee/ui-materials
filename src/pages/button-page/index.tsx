@@ -1,6 +1,6 @@
 import { User, Upload, Loader } from 'lucide-react';
 import ShowBox from '@/components/ShowBox';
-import Button from '@/packages/components/Button';
+import Button, { ButtonGroup } from '@/packages/components/Button';
 import CodeView from '@/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as outlineHtml } from './docs/outline.md';
@@ -8,6 +8,7 @@ import { html as sizeHtml } from './docs/size.md';
 import { html as shapeHtml } from './docs/shape.md';
 import { html as blockHtml } from './docs/block.md';
 import { html as iconsHtml } from './docs/icons.md';
+import { html as buttonGroupHtml } from './docs/button-group.md';
 export default function ButtonPage() {
   return (
     <>
@@ -100,6 +101,31 @@ export default function ButtonPage() {
           </Button>
         </div>
         <CodeView content={iconsHtml} />
+      </ShowBox>
+      <ShowBox className="mb-4">
+        <h4 className="mb-2">buttonGroup</h4>
+        <ButtonGroup className="mb-2">
+          <Button>apple</Button>
+          <Button>banana</Button>
+          <Button>orange</Button>
+        </ButtonGroup>
+        <ButtonGroup className="mb-2">
+          <Button outline>apple</Button>
+          <Button outline>banana</Button>
+          <Button outline>orange</Button>
+        </ButtonGroup>
+        <ButtonGroup className="mb-2">
+          <Button shape="round" outline>
+            apple
+          </Button>
+          <Button shape="round" outline>
+            banana
+          </Button>
+          <Button shape="round" outline>
+            orange
+          </Button>
+        </ButtonGroup>
+        <CodeView content={buttonGroupHtml} />
       </ShowBox>
     </>
   );
