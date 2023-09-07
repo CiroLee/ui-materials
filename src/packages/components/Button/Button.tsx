@@ -1,13 +1,13 @@
 import { forwardRef } from 'react';
 import cn from 'classnames';
 import { omit } from '@/libs/utils';
+import type { Size } from '@/types/common';
 export type ButtonType = 'primary' | 'success' | 'danger' | 'warn' | 'text';
-export type ButtonSize = 'tiny' | 'small' | 'medium' | 'large';
 export type ButtonShape = 'default' | 'round' | 'circle' | 'square';
 
 export interface ButtonProps {
   type?: ButtonType;
-  size?: ButtonSize;
+  size?: Size;
   outline?: boolean;
   disabled?: boolean;
   block?: boolean;
@@ -37,7 +37,7 @@ function getTypeTheme(type: ButtonType) {
   }
 }
 
-function getSizeTheme(size: ButtonSize) {
+function getSizeTheme(size: Size) {
   switch (size) {
     case 'tiny':
       return 'h-button-ty px-button-ty';
@@ -72,7 +72,7 @@ function getBorderTheme(type?: ButtonType, outline?: boolean) {
   }
 }
 
-function getShapeTheme(size: ButtonSize, shape?: ButtonShape) {
+function getShapeTheme(size: Size, shape?: ButtonShape) {
   let height =
     getSizeTheme(size)
       .match(/h-button-[^]*/)?.[0]

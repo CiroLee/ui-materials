@@ -12,6 +12,7 @@ import PopupPage from '@/pages/popup-page';
 import SwitchPage from '@/pages/switch-page';
 import ButtonPage from '@/pages/button-page';
 import CheckboxPage from '@/pages/checkbox-page';
+import AvatarPage from '@/pages/avatar-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -72,6 +73,15 @@ export const router = createHashRouter([
         element: <CheckboxPage />,
         meta: {
           title: 'Checkbox',
+          role: 'component',
+        },
+      },
+      {
+        path: 'avatar',
+        id: 'avatar',
+        element: <AvatarPage />,
+        meta: {
+          title: 'Avatar',
           role: 'component',
         },
       },
