@@ -42,7 +42,8 @@ const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps
       )}
       ref={ref}>
       <RadixAvatar.Image
-        className={cn(`w-full h-full object-${props.fit || 'cover'}`, getShapeTheme(props.shape))}
+        style={{ objectFit: props.fit || 'cover' } as React.CSSProperties}
+        className={cn('w-full h-full', getShapeTheme(props.shape))}
         src={props.src}
       />
       {!props.text ? (
