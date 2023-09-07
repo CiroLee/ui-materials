@@ -6,7 +6,9 @@ import { router } from '@/routes';
 import { type MyRouteObject } from '@/routes';
 export default function SideMenu() {
   const [collapsed, setCollapsed] = useState(false);
-  const navRoutes = (router.routes.find((r) => r.id === 'layout')?.children || []) as MyRouteObject[];
+  const head = router.routes.find((r) => r.id === 'layout') as MyRouteObject;
+  const children = router.routes.find((r) => r.id === 'layout')!.children as MyRouteObject[];
+  const navRoutes = children.filter((c) => c.meta.role !== 'title').sort((a, b) => a.id!.localeCompare(b.id!));
   const variant: Variants = {
     collapsed: {
       width: 0,
@@ -43,27 +45,24 @@ export default function SideMenu() {
         className="absolute top-[14%] right-[-16px] w-[32px] h-[32px] border rounded-full flex bg-white items-center justify-center">
         <ChevronLeft size={20} className="text-[20px]" />
       </motion.div>
-      {navRoutes.map((r) =>
-        r.meta.role === 'title' ? (
-          <motion.div key={r.id} className="overflow-hidden whitespace-nowrap">
-            <Link className="h-[36px] px-8px h-44px mb-2 flex items-center px-2 font-bold cursor-pointer" to={r.path!}>
-              {r.meta.title}
-            </Link>
-          </motion.div>
-        ) : (
-          <motion.div key={r.id} className="overflow-hidden whitespace-nowrap">
-            <NavLink
-              to={r.path!}
-              className={({ isActive }) =>
-                `h-[36px] flex items-center rounded-[4px] hover:bg-gray-200/60 transition-all duration-200 px-2 ${
-                  isActive ? 'text-brand-500' : 'text-gray-500/40'
-                }`
-              }>
-              {r.meta.title}
-            </NavLink>
-          </motion.div>
-        ),
-      )}
+      <motion.div className="overflow-hidden whitespace-nowrap">
+        <Link className="h-[36px] px-8px h-44px mb-2 flex items-center px-2 font-bold cursor-pointer" to={head.path!}>
+          {head.meta.title}
+        </Link>
+      </motion.div>
+      {navRoutes.map((r) => (
+        <motion.div key={r.id} className="overflow-hidden whitespace-nowrap">
+          <NavLink
+            to={r.path!}
+            className={({ isActive }) =>
+              `h-[36px] flex items-center rounded-[4px] hover:bg-gray-200/60 transition-all duration-200 px-2 ${
+                isActive ? 'text-brand-500' : 'text-gray-500/40'
+              }`
+            }>
+            {r.meta.title}
+          </NavLink>
+        </motion.div>
+      ))}
     </motion.aside>
   );
 }

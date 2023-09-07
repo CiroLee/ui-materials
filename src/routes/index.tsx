@@ -17,13 +17,16 @@ export const router = createHashRouter([
     path: '/',
     id: 'layout',
     element: <Layout />,
+    meta: {
+      title: 'Radix materials',
+      role: 'title',
+    },
     children: [
       {
         path: '/',
         id: 'home',
         element: <Home />,
         meta: {
-          title: 'Radix materials',
           role: 'title',
         },
       },
@@ -37,8 +40,8 @@ export const router = createHashRouter([
         },
       },
       {
-        path: '/dropdown-menu',
-        id: 'dropdown-menu',
+        path: '/dropdown',
+        id: 'dropdown',
         element: <DropdownMenuPage />,
         meta: {
           title: 'Dropdown',
@@ -51,6 +54,7 @@ export const router = createHashRouter([
         element: <PopupPage />,
         meta: {
           title: 'Popup',
+          role: 'component',
         },
       },
       {
@@ -59,6 +63,7 @@ export const router = createHashRouter([
         element: <SwitchPage />,
         meta: {
           title: 'Switch',
+          role: 'component',
         },
       },
       {
@@ -67,8 +72,9 @@ export const router = createHashRouter([
         element: <CheckboxPage />,
         meta: {
           title: 'Checkbox',
+          role: 'component',
         },
       },
     ] as MyRouteObject[],
-  },
+  } as MyRouteObject,
 ]);

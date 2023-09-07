@@ -28,7 +28,7 @@ const Checkbox = forwardRef<React.ElementRef<typeof RadixCheckbox.Root>, Checkbo
           `w-[18px] h-[18px] relative rounded-sm border border-gray-200 border-1 box-border overflow-hidden cursor-default 
         transition-colors duration-200 hover:border-brand-500 data-[state=checked]:border-brand-500 data-[disabled]:bg-gray-200 
         data-[disabled]:cursor-not-allowed data-[disabled]:border-gray-300`,
-          { '!border-brand-600/90': checked && props.disabled },
+          { '!border-brand-500/70': checked && props.disabled },
         )}>
         <AnimatePresence>
           {checked ? (
