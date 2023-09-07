@@ -19,7 +19,7 @@ export interface ButtonProps {
 }
 
 const baseCls =
-  'relative rounded-button border-box text-[14px] outline-none cursor-default transition ease-linear [&:not(:disabled)]:active:scale-[98%]';
+  'relative rounded-medium border-box text-[14px] outline-none cursor-default transition ease-linear [&:not(:disabled)]:active:scale-[98%]';
 const disabledCls = 'disabled:cursor-not-allowed disabled:!bg-black/10 disabled:!text-black/30 disabled:border-0';
 function getTypeTheme(type: ButtonType) {
   switch (type) {
@@ -80,13 +80,10 @@ function getShapeTheme(size: ButtonSize, shape?: ButtonShape) {
   height = height.replace('h-', '');
 
   switch (shape) {
-    default:
-    case 'default':
-      return 'rounded-button';
     case 'round':
-      return `!rounded-button-ty`;
+      return `rounded-button-ty`;
     case 'circle':
-      return `!p-0 aspect-square rounded-full w-${height} h-${height}`;
+      return `!p-0 aspect-square !rounded-full w-${height} h-${height}`;
     case 'square':
       return `!p-0 aspect-square w-${height} h-${height}`;
   }

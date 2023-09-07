@@ -61,10 +61,16 @@ export default function ButtonPage() {
       <ShowBox className="mb-4">
         <h4 className="mb-2">shape</h4>
         <div className="[&_button:not(:first-child)]:ml-2">
-          <Button shape="default">default</Button>
-          <Button shape="round">round</Button>
+          <Button size="tiny" shape="default">
+            default
+          </Button>
+          <Button size="small" shape="round">
+            round
+          </Button>
           <Button shape="circle">C</Button>
-          <Button shape="square">S</Button>
+          <Button size="large" shape="square">
+            S
+          </Button>
         </div>
         <CodeView content={shapeHtml} />
       </ShowBox>

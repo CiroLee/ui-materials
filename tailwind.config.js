@@ -34,7 +34,7 @@ module.exports = {
         'button-lg': '48px',
       },
       borderRadius: ({ theme }) => ({
-        button: '6px',
+        medium: '6px',
         ...theme('height'),
       }),
       zIndex: {
