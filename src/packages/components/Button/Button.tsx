@@ -20,7 +20,7 @@ export interface ButtonProps {
 
 const baseCls =
   'relative rounded-medium border-box text-[14px] outline-none cursor-default transition ease-linear [&:not(:disabled)]:active:scale-[98%]';
-const disabledCls = 'disabled:cursor-not-allowed disabled:!bg-black/10 disabled:!text-black/30 disabled:border-0';
+const disabledCls = 'disabled:cursor-not-allowed disabled:!text-black/30 disabled:border-0 disabled:!bg-black/10';
 function getTypeTheme(type: ButtonType) {
   switch (type) {
     default:
@@ -56,17 +56,17 @@ function getBorderTheme(type?: ButtonType, outline?: boolean) {
   switch (type) {
     default:
     case 'primary':
-      return `!bg-transparent border border-brand-500 !text-brand-500 hover:!bg-brand-500/5 hover:!text-brand-500/80 hover:!border-brand-500/80 
-      active:bg-transparent active:!text-brand-600 active:!border-brand-600/80`;
+      return `border border-brand-500 !text-brand-500 hover:!bg-brand-500/5 hover:border-brand-500/80
+       active:!text-brand-600 active:border-brand-600 active:!bg-brand-500/10 bg-transparent`;
     case 'success':
-      return `!bg-transparent border border-success-500 !text-success-500 hover:!bg-success-500/5 hover:!text-success-500/80 hover:!border-success-500/80 
-      active:bg-transparent active:!text-success-600 active:!border-success-600/80`;
+      return `border border-success-500 !text-success-500 hover:!bg-success-500/5 hover:border-success-500/80 
+       active:!text-success-600 active:!border-success-600 active:!bg-success-500/10 bg-transparent`;
     case 'warn':
-      return `!bg-transparent border border-warn-500 !text-warn-500 hover:!bg-warn-500/5 hover:!text-warn-500/80 hover:!border-warn-500/80 
-      active:bg-transparent active:!text-warn-600 active:!border-warn-600/80`;
+      return `border border-warn-500 !text-warn-500 hover:!bg-warn-500/5 hover:border-warn-500/80 
+       active:!text-warn-600 active:border-warn-600 active:!bg-warn-500/10 !bg-transparent`;
     case 'danger':
-      return `!bg-transparent border border-danger-500 !text-danger-500 hover:!bg-danger-500/5 hover:!text-danger-500/80 hover:!border-danger-500/80 
-      active:bg-transparent active:!text-danger-600 active:!border-danger-600/80`;
+      return `border border-danger-500 !text-danger-500 hover:!bg-danger-500/5 hover:border-danger-500/80 
+       active:!text-danger-600 active:!bg-danger-500/10 active:border-danger-600 bg-transparent`;
     case 'text':
       return 'border border-black/10';
   }
@@ -81,7 +81,7 @@ function getShapeTheme(size: Size, shape?: ButtonShape) {
 
   switch (shape) {
     case 'round':
-      return `rounded-button-ty`;
+      return `!rounded-button-ty`;
     case 'circle':
       return `!p-0 aspect-square !rounded-full w-${height} h-${height}`;
     case 'square':
@@ -97,8 +97,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
       onClick={props.onClick}
       className={cn(
         baseCls,
-        disabledCls,
-        props.className,
         getTypeTheme(props.type || 'primary'),
         getSizeTheme(props.size || 'medium'),
         getBorderTheme(props.type, props.outline),
@@ -107,6 +105,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
           'block w-full active:!scale-[99.65%]': props.block,
           'opacity-70 cursor-default active:!scale-100': props.loading,
         },
+        disabledCls,
+        props.className,
       )}>
       <div className="relative w-full h-full flex justify-center items-center">{props.children}</div>
     </button>
