@@ -2,12 +2,14 @@ import { forwardRef, useState } from 'react';
 import cn from 'classnames';
 import * as RadixCheckbox from '@radix-ui/react-checkbox';
 import { motion, AnimatePresence } from 'framer-motion';
-export interface CheckboxProps {
+export interface CheckboxType {
   value?: string | number;
   children?: React.ReactNode;
   checked?: boolean;
   disabled?: boolean;
   className?: string;
+}
+export interface CheckboxProps extends CheckboxType {
   onCheckedChange?: (checked: boolean, value?: string | number) => void;
 }
 

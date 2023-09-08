@@ -1,11 +1,11 @@
-import Checkbox, { CheckboxGroup, type CheckboxProps } from '@/packages/components/Checkbox';
+import Checkbox, { CheckboxGroup, type CheckboxType } from '@/packages/components/Checkbox';
 import ShowBox from '@/components/ShowBox';
 import CodeView from '@/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as groupHtml } from './docs/group.md';
 export default function CheckboxPage() {
-  const checkboxGroup: CheckboxProps[] = [
+  const checkboxGroup: CheckboxType[] = [
     {
       value: 'apple',
       className: '[&_button]:self-baseline [&_button]:mt-[6px]',

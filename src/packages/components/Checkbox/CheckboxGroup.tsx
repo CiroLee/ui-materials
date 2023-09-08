@@ -3,7 +3,7 @@ import Checkbox, { type CheckboxProps } from './Checkbox';
 export interface CheckboxGroupProps {
   value?: string | number;
   className?: string;
-  options: CheckboxProps[];
+  options: Omit<CheckboxProps, 'onCheckedChange'>[];
   onCheckedChange?: (list: (string | number | undefined)[]) => void;
 }
 
