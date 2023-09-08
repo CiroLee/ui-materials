@@ -26,6 +26,7 @@ module.exports = {
         'button-sm': '16px',
         'button-md': '20px',
         'button-lg': '24px',
+        cell: '14px',
       },
       height: {
         'button-ty': '28px',

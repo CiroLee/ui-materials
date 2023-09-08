@@ -51,7 +51,7 @@ const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps
           className={cn(
             getSizeTheme(props.size),
             getShapeTheme(props.shape),
-            'flex justify-center items-center text-gray-400/80 bg-gray-200 [&_svg]:w-[56%] [&_svg]:h-[56%]',
+            'flex justify-center items-center text-gray-400/60 bg-gray-200 [&_svg]:w-[52%] [&_svg]:h-[52%]',
           )}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@/packages/ui/Table';
 import ShowBox from '@/components/ShowBox';
-import Switch from '@/packages/components/Switch';
+import Switch from '@/packages/ui/Switch';
 import { Check, X } from 'lucide-react';
 import CodeView from '@/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
@@ -51,6 +52,67 @@ export default function SwitchPage() {
         />
         <CodeView content={customHtml} />
       </ShowBox>
+      <h2 className="mb-2">API</h2>
+      <Table border>
+        <TableHeader>
+          <TableHeaderCell>prop</TableHeaderCell>
+          <TableHeaderCell>desc</TableHeaderCell>
+          <TableHeaderCell>type</TableHeaderCell>
+          <TableHeaderCell>required</TableHeaderCell>
+          <TableHeaderCell>default</TableHeaderCell>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableDataCell>defaultChecked</TableDataCell>
+            <TableDataCell>default checked status</TableDataCell>
+            <TableDataCell>boolean</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>checked</TableDataCell>
+            <TableDataCell>checked</TableDataCell>
+            <TableDataCell>boolean</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>size</TableDataCell>
+            <TableDataCell>size of switch</TableDataCell>
+            <TableDataCell>enum: small | medium | large</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>medium</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>checkedThumb</TableDataCell>
+            <TableDataCell>checked tracker element</TableDataCell>
+            <TableDataCell>React.ReactNode</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>unCheckedThumb</TableDataCell>
+            <TableDataCell>unchecked tracker element</TableDataCell>
+            <TableDataCell>React.ReactNode</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>className</TableDataCell>
+            <TableDataCell></TableDataCell>
+            <TableDataCell>string</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>style</TableDataCell>
+            <TableDataCell></TableDataCell>
+            <TableDataCell>React.CSSProperties</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </div>
   );
 }

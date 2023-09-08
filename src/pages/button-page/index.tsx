@@ -1,7 +1,8 @@
 import { User, Upload, Loader } from 'lucide-react';
 import ShowBox from '@/components/ShowBox';
-import Button, { ButtonGroup } from '@/packages/components/Button';
+import Button, { ButtonGroup } from '@/packages/ui/Button';
 import CodeView from '@/components/CodeView';
+import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@/packages/ui/Table';
 import { html as baseHtml } from './docs/base.md';
 import { html as outlineHtml } from './docs/outline.md';
 import { html as sizeHtml } from './docs/size.md';
@@ -133,6 +134,94 @@ export default function ButtonPage() {
         </ButtonGroup>
         <CodeView content={buttonGroupHtml} />
       </ShowBox>
+      <h2 className="mb-2">API</h2>
+      <Table border>
+        <TableHeader>
+          <TableHeaderCell>prop</TableHeaderCell>
+          <TableHeaderCell>desc</TableHeaderCell>
+          <TableHeaderCell>type</TableHeaderCell>
+          <TableHeaderCell>required</TableHeaderCell>
+          <TableHeaderCell>default</TableHeaderCell>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableDataCell>type</TableDataCell>
+            <TableDataCell>button type</TableDataCell>
+            <TableDataCell>
+              enum: {'primary'} | {'success'} | {'danger'} | {'warn'} | {'text'}
+            </TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>primary</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>size</TableDataCell>
+            <TableDataCell>button size</TableDataCell>
+            <TableDataCell>
+              enum: {'tiny'} | {'small'} | {'medium'} | {'large'}
+            </TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>medium</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>outline</TableDataCell>
+            <TableDataCell>outline button</TableDataCell>
+            <TableDataCell>boolean</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>disabled</TableDataCell>
+            <TableDataCell>disable status</TableDataCell>
+            <TableDataCell>boolean</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>block</TableDataCell>
+            <TableDataCell>width adjust to parent</TableDataCell>
+            <TableDataCell>boolean</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>loading</TableDataCell>
+            <TableDataCell>loading status</TableDataCell>
+            <TableDataCell>boolean</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>shape</TableDataCell>
+            <TableDataCell>button shape</TableDataCell>
+            <TableDataCell>
+              enum: {'default'} | {'round'} | {'circle'} | {'square'}
+            </TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>default</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>className</TableDataCell>
+            <TableDataCell></TableDataCell>
+            <TableDataCell>string</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>children</TableDataCell>
+            <TableDataCell></TableDataCell>
+            <TableDataCell>React.ReactNode</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>onClick</TableDataCell>
+            <TableDataCell>button click event</TableDataCell>
+            <TableDataCell>{'(event: MouseEvent) => void'}</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </>
   );
 }

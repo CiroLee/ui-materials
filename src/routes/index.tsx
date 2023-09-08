@@ -13,6 +13,7 @@ import SwitchPage from '@/pages/switch-page';
 import ButtonPage from '@/pages/button-page';
 import CheckboxPage from '@/pages/checkbox-page';
 import AvatarPage from '@/pages/avatar-page';
+import TablePage from '@/pages/table-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -82,6 +83,15 @@ export const router = createHashRouter([
         element: <AvatarPage />,
         meta: {
           title: 'Avatar',
+          role: 'component',
+        },
+      },
+      {
+        path: 'table',
+        id: 'table',
+        element: <TablePage />,
+        meta: {
+          title: 'Table',
           role: 'component',
         },
       },

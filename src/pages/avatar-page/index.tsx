@@ -1,5 +1,6 @@
 import ShowBox from '@/components/ShowBox';
-import Avatar, { AvatarGroup } from '@/packages/components/Avatar';
+import Avatar, { AvatarGroup } from '@/packages/ui/Avatar';
+import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@/packages/ui/Table';
 import CodeView from '@/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as shapeHtml } from './docs/shape.md';
@@ -71,6 +72,74 @@ export default function AvatarPage() {
         </AvatarGroup>
         <CodeView content={groupHtml} />
       </ShowBox>
+      <h2 className="mb-2">API</h2>
+      <Table border>
+        <TableHeader>
+          <TableHeaderCell>prop</TableHeaderCell>
+          <TableHeaderCell>desc</TableHeaderCell>
+          <TableHeaderCell>type</TableHeaderCell>
+          <TableHeaderCell>required</TableHeaderCell>
+          <TableHeaderCell>default</TableHeaderCell>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableDataCell>src</TableDataCell>
+            <TableDataCell>image url</TableDataCell>
+            <TableDataCell>string</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>shape</TableDataCell>
+            <TableDataCell>avatar shape</TableDataCell>
+            <TableDataCell>
+              enum: {'circle'} | {'round'}
+            </TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>circle</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>fit</TableDataCell>
+            <TableDataCell>avatar fit</TableDataCell>
+            <TableDataCell>
+              enum: {'contain'} | {'cover'} | {'fill'} | {'none'} | {'scale-down'}
+            </TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>cover</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>size</TableDataCell>
+            <TableDataCell>avatar size</TableDataCell>
+            <TableDataCell>
+              {' '}
+              enum: {'tiny'} | {'small'} | {'medium'} | {'large'}
+            </TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>medium</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>text</TableDataCell>
+            <TableDataCell>text content for avatar</TableDataCell>
+            <TableDataCell>string</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>className</TableDataCell>
+            <TableDataCell></TableDataCell>
+            <TableDataCell>string</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+          <TableRow>
+            <TableDataCell>children</TableDataCell>
+            <TableDataCell></TableDataCell>
+            <TableDataCell>React.ReactNode</TableDataCell>
+            <TableDataCell>false</TableDataCell>
+            <TableDataCell>-</TableDataCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </>
   );
 }
