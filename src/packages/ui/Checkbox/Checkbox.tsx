@@ -8,6 +8,7 @@ export interface CheckboxType {
   checked?: boolean;
   disabled?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 export interface CheckboxProps extends CheckboxType {
   onCheckedChange?: (checked: boolean, value?: string | number) => void;
@@ -17,7 +18,9 @@ const Checkbox = forwardRef<React.ElementRef<typeof RadixCheckbox.Root>, Checkbo
   const [checked, setChecked] = useState(props.checked);
 
   return (
-    <label className={cn('flex items-center', props.className, { 'cursor-not-allowed': props.disabled })}>
+    <label
+      className={cn('flex items-center', props.className, { 'cursor-not-allowed': props.disabled })}
+      style={props.style}>
       <RadixCheckbox.Root
         ref={ref}
         checked={checked}

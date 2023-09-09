@@ -3,6 +3,7 @@ import Checkbox, { type CheckboxProps } from './Checkbox';
 export interface CheckboxGroupProps {
   value?: string | number;
   className?: string;
+  style?: React.CSSProperties;
   options: Omit<CheckboxProps, 'onCheckedChange'>[];
   onCheckedChange?: (list: (string | number | undefined)[]) => void;
 }
@@ -17,7 +18,7 @@ const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>((props, ref
     list.push(props.value);
   }, [props.value]);
   return (
-    <div className={props.className} ref={ref}>
+    <div className={props.className} style={props.style} ref={ref}>
       {props.options.map((option) => (
         <Checkbox
           checked={props.value === option.value}

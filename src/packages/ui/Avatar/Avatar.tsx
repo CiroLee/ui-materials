@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import cn from 'classnames';
 import * as RadixAvatar from '@radix-ui/react-avatar';
 import type { Size, ObjectFit } from '@/types/common';
@@ -11,6 +11,7 @@ export interface AvatarProps {
   text?: string;
   className?: string;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
 function getShapeTheme(shape?: 'circle' | 'round') {
@@ -40,6 +41,7 @@ const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps
         getShapeTheme(props.shape),
         props.className,
       )}
+      style={props.style}
       ref={ref}>
       <RadixAvatar.Image
         style={{ objectFit: props.fit || 'cover' } as React.CSSProperties}

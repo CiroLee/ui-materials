@@ -1,7 +1,8 @@
 import DropDown, { MenuItem } from '@/packages/ui/Dropdown';
 import ShowBox from '@/components/ShowBox';
 import CodeView from '@/components/CodeView';
-import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@/packages/ui/Table';
+import ApiTable from '@/components/ApiTable';
+import { dropDownRows, menuItemRows } from './data';
 import { html as baseHtml } from './docs/base.md';
 import { html as sideHtml } from './docs/side.md';
 import { html as separatorHtml } from './docs/separator.md';
@@ -80,127 +81,9 @@ export default function DropdownMenuPage() {
         </ShowBox>
         <h2 className="mb-2">API</h2>
         <h4 className="mb-2">Dropdown</h4>
-        <Table border>
-          <TableHeader>
-            <TableHeaderCell>prop</TableHeaderCell>
-            <TableHeaderCell>desc</TableHeaderCell>
-            <TableHeaderCell>type</TableHeaderCell>
-            <TableHeaderCell>required</TableHeaderCell>
-            <TableHeaderCell>default</TableHeaderCell>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableDataCell>menus</TableDataCell>
-              <TableDataCell>menu list</TableDataCell>
-              <TableDataCell>MenuItem[]</TableDataCell>
-              <TableDataCell>true</TableDataCell>
-              <TableDataCell></TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>align</TableDataCell>
-              <TableDataCell>alignment of the menu</TableDataCell>
-              <TableDataCell>enum: start | center | end</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>center</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>side</TableDataCell>
-              <TableDataCell>side of the menu</TableDataCell>
-              <TableDataCell>enum: top | right | bottom | left</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>bottom</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>style</TableDataCell>
-              <TableDataCell></TableDataCell>
-              <TableDataCell>React.CSSProperties</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>className</TableDataCell>
-              <TableDataCell></TableDataCell>
-              <TableDataCell>string</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>onOpenChange</TableDataCell>
-              <TableDataCell>open change event of dropdown</TableDataCell>
-              <TableDataCell>{'(open: boolean) => void'}</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>onSelect</TableDataCell>
-              <TableDataCell>select event of dropdown</TableDataCell>
-              <TableDataCell>{'(event: Event, menu: MenuItem) => void'}</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-        <h4 className="mb-2">MenuItem</h4>
-        <Table border>
-          <TableHeader>
-            <TableHeaderCell>prop</TableHeaderCell>
-            <TableHeaderCell>desc</TableHeaderCell>
-            <TableHeaderCell>type</TableHeaderCell>
-            <TableHeaderCell>required</TableHeaderCell>
-            <TableHeaderCell>default</TableHeaderCell>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableDataCell>id</TableDataCell>
-              <TableDataCell>id for dropdown menu item</TableDataCell>
-              <TableDataCell>string</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>label</TableDataCell>
-              <TableDataCell>left label to display</TableDataCell>
-              <TableDataCell>string</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>prefix</TableDataCell>
-              <TableDataCell>prefix node for menu item</TableDataCell>
-              <TableDataCell>React.ReactNode</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>suffix</TableDataCell>
-              <TableDataCell>suffix node for menu item</TableDataCell>
-              <TableDataCell>React.ReactNode</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>disabled</TableDataCell>
-              <TableDataCell>disable status</TableDataCell>
-              <TableDataCell>boolean</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>type</TableDataCell>
-              <TableDataCell>only for separator</TableDataCell>
-              <TableDataCell>string</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>separator</TableDataCell>
-            </TableRow>
-            <TableRow>
-              <TableDataCell>children</TableDataCell>
-              <TableDataCell>submenu list</TableDataCell>
-              <TableDataCell>MenuItem[]</TableDataCell>
-              <TableDataCell>false</TableDataCell>
-              <TableDataCell>-</TableDataCell>
-            </TableRow>
-          </TableBody>
-        </Table>
+        <ApiTable rows={dropDownRows} />
+        <h4 className="my-2">MenuItem</h4>
+        <ApiTable rows={menuItemRows} />
       </div>
     </>
   );

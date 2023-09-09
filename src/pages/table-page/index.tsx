@@ -1,9 +1,26 @@
 import { useState } from 'react';
 import ShowBox from '@/components/ShowBox';
+import ApiTable, { type ApiTableRow } from '@/components/ApiTable';
 import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@/packages/ui/Table';
 import Switch from '@/packages/ui/Switch';
 import CodeView from '@/components/CodeView';
 import { html as useHtml } from './docs/use.md';
+
+const rows: ApiTableRow[] = [
+  {
+    prop: 'border',
+    desc: 'whether show table border',
+    type: 'boolean',
+    required: false,
+    default: false,
+  },
+  {
+    prop: 'className',
+    type: 'string',
+    required: false,
+    default: '-',
+  },
+];
 export default function TablePage() {
   const [border, setBorder] = useState(true);
   return (
@@ -38,40 +55,7 @@ export default function TablePage() {
         <CodeView content={useHtml} />
       </ShowBox>
       <h2 className="mb-2">API</h2>
-      <Table border>
-        <TableHeader>
-          <TableHeaderCell>prop</TableHeaderCell>
-          <TableHeaderCell>desc</TableHeaderCell>
-          <TableHeaderCell>type</TableHeaderCell>
-          <TableHeaderCell>default</TableHeaderCell>
-        </TableHeader>
-        <TableBody>
-          <TableRow>
-            <TableDataCell>border</TableDataCell>
-            <TableDataCell>show table border</TableDataCell>
-            <TableDataCell>boolean</TableDataCell>
-            <TableDataCell>false</TableDataCell>
-          </TableRow>
-          <TableRow>
-            <TableDataCell>headerFixed</TableDataCell>
-            <TableDataCell>fix table header</TableDataCell>
-            <TableDataCell>boolean</TableDataCell>
-            <TableDataCell>false</TableDataCell>
-          </TableRow>
-          <TableRow>
-            <TableDataCell>className</TableDataCell>
-            <TableDataCell>-</TableDataCell>
-            <TableDataCell>string</TableDataCell>
-            <TableDataCell>-</TableDataCell>
-          </TableRow>
-          <TableRow>
-            <TableDataCell></TableDataCell>
-            <TableDataCell>-</TableDataCell>
-            <TableDataCell>string</TableDataCell>
-            <TableDataCell>-</TableDataCell>
-          </TableRow>
-        </TableBody>
-      </Table>
+      <ApiTable rows={rows} />
     </>
   );
 }
