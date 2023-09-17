@@ -10,7 +10,7 @@ import { html as shapeHtml } from './docs/shape.md';
 import { html as blockHtml } from './docs/block.md';
 import { html as iconsHtml } from './docs/icons.md';
 import { html as buttonGroupHtml } from './docs/button-group.md';
-import { rows, buttonGroupRows } from './data';
+import { rows, buttonGroupRows } from './api';
 export default function ButtonPage() {
   return (
     <>

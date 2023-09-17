@@ -1,7 +1,7 @@
 import Checkbox, { CheckboxGroup, type CheckboxType } from '@/packages/ui/Checkbox';
 import ShowBox from '@/components/ShowBox';
 import ApiTable from '@/components/ApiTable';
-import { checkboxRows, checkboxGroupRows } from './data';
+import { checkboxRows, checkboxGroupRows } from './api';
 import CodeView from '@/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as disabledHtml } from './docs/disabled.md';
@@ -10,7 +10,6 @@ export default function CheckboxPage() {
   const checkboxGroup: CheckboxType[] = [
     {
       value: 'apple',
-      className: '[&_button]:self-baseline [&_button]:mt-[6px]',
       children: (
         <div>
           <p>apple</p>
@@ -20,7 +19,6 @@ export default function CheckboxPage() {
     },
     {
       value: 'banana',
-      className: '[&_button]:self-baseline [&_button]:mt-[6px]',
       children: (
         <div>
           <p>banana</p>
@@ -30,7 +28,6 @@ export default function CheckboxPage() {
     },
     {
       value: 'orange',
-      className: '[&_button]:self-baseline [&_button]:mt-[6px]',
       children: (
         <div>
           <p>orange</p>
@@ -66,7 +63,7 @@ export default function CheckboxPage() {
         <h4 className="mb-2">checkbox group</h4>
         <CheckboxGroup
           value="orange"
-          className="flex [&>label]:mr-2"
+          className="flex [&>label]:mr-2 [&>label_button]:self-baseline [&_button]:mt-[6px]"
           options={checkboxGroup}
           onCheckedChange={(list) => console.log('what you choose:', list)}
         />

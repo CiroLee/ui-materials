@@ -5,7 +5,6 @@ export default Demo() {
   const checkboxGroup: CheckboxProps[] = [
     {
       value: 'apple',
-      className: '[&_button]:self-baseline [&_button]:mt-[6px]',
       children: (
         <div>
           <p>apple</p>
@@ -15,7 +14,6 @@ export default Demo() {
     },
     {
       value: 'banana',
-      className: '[&_button]:self-baseline [&_button]:mt-[6px]',
       children: (
         <div>
           <p>banana</p>
@@ -25,7 +23,6 @@ export default Demo() {
     },
     {
       value: 'orange',
-      className: '[&_button]:self-baseline [&_button]:mt-[6px]',
       children: (
         <div>
           <p>orange</p>
@@ -38,7 +35,7 @@ export default Demo() {
   return (
     <CheckboxGroup
       value="orange"
-      className="flex [&>label]:mr-2"
+      className="flex [&>label]:mr-2 [&>label_button]:self-baseline [&_button]:mt-[6px]"
       options={checkboxGroup}
       onCheckedChange={(list) => console.log('what you choose:', list)}
     />

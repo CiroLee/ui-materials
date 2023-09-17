@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ApiTable from '@/components/ApiTable';
-import { switchRows } from './data';
+import { switchRows } from './api';
 import ShowBox from '@/components/ShowBox';
 import Switch from '@/packages/ui/Switch';
 import { Check, X } from 'lucide-react';

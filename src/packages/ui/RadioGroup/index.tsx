@@ -8,23 +8,37 @@ export interface RadioOption {
   disabled?: boolean;
 }
 interface RadioGroupProps {
+  orientation?: 'vertical' | 'horizontal';
   value?: string;
-  className?: string;
   options: RadioOption[];
+  className?: string;
+  style?: React.CSSProperties;
+  onValueChange?: (value: string) => void;
 }
 
 const RadioGroup = forwardRef<React.ElementRef<typeof RadixRadioGroup.Root>, RadioGroupProps>((props, ref) => {
+  const { orientation = 'horizontal' } = props;
   const [indicatorIndex, setIndicatorIndex] = useState<string>(props.value || '');
   return (
     <RadixRadioGroup.Root
-      className={cn('flex items-center gap-2', props.className)}
+      className={cn(
+        'flex gap-x-2.5',
+        {
+          'flex-col': orientation === 'vertical',
+        },
+        props.className,
+      )}
+      style={props.style}
       ref={ref}
-      onValueChange={setIndicatorIndex}>
+      onValueChange={(value: string) => {
+        setIndicatorIndex(value);
+        props.onValueChange?.(value);
+      }}>
       {props.options.map((option) => (
         <label key={option.value} className="flex items-center">
           <RadixRadioGroup.Item
             className={cn(
-              `w-[18px] h-[18px] rounded-full border overflow-hidden box-border transition-colors relative
+              `w-[18px] h-[18px] rounded-full border overflow-hidden box-border transition-colors relative cursor-default
                data-[state=checked]:border-brand-500 data-[disabled]:border-gray-300 data-[disabled]:cursor-not-allowed`,
               { 'data-[disabled]:bg-gray-200': option.disabled && indicatorIndex !== option.value },
               { 'data-[disabled]:bg-brand-500/20': option.disabled && indicatorIndex === option.value },

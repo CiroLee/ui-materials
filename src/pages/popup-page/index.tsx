@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ShowBox from '@/components/ShowBox';
 import ApiTable from '@/components/ApiTable';
-import { popupRows } from './data';
+import { popupRows } from './api';
 import Popup from '@/packages/ui/Popup';
 import Button from '@/packages/ui/Button';
 import Switch from '@/packages/ui/Switch';

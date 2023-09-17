@@ -1,7 +1,7 @@
 import ShowBox from '@/components/ShowBox';
 import Avatar, { AvatarGroup } from '@/packages/ui/Avatar';
 import ApiTable from '@/components/ApiTable';
-import { rows, avatarGroupRows } from './data';
+import { rows, avatarGroupRows } from './api';
 import CodeView from '@/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as shapeHtml } from './docs/shape.md';
