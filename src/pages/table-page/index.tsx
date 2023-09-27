@@ -20,6 +20,12 @@ const rows: ApiTableRow[] = [
     required: false,
     default: '-',
   },
+  {
+    prop: 'style',
+    type: 'string',
+    required: false,
+    default: '-',
+  },
 ];
 export default function TablePage() {
   const [border, setBorder] = useState(true);
