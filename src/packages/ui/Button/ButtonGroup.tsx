@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 export interface ButtonGroupProps {
   className?: string;
   style?: React.CSSProperties;
@@ -9,7 +9,7 @@ const groupCls = `[&_button:first-child]:!rounded-r-0 [&_button:not(:last-child,
 [&_button:not(:last-child,:first-child)]:border-l-0 [&_button:not(:last-child,:first-child)]:border-r-0 [&_button:not(:last-child,:first-child)]:!rounded-0`;
 const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>((props, ref) => {
   return (
-    <div style={props.style} className={cn('flex items-center', groupCls, props.className)} ref={ref}>
+    <div style={props.style} className={clsx('flex items-center', groupCls, props.className)} ref={ref}>
       {props.children}
     </div>
   );

@@ -1,5 +1,5 @@
 import { forwardRef, useState } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 import * as RadixCheckbox from '@radix-ui/react-checkbox';
 import { motion, AnimatePresence } from 'framer-motion';
 export interface CheckboxType {
@@ -19,7 +19,7 @@ const Checkbox = forwardRef<React.ElementRef<typeof RadixCheckbox.Root>, Checkbo
 
   return (
     <label
-      className={cn('flex items-center', props.className, { 'cursor-not-allowed': props.disabled })}
+      className={clsx('flex items-center', props.className, { 'cursor-not-allowed': props.disabled })}
       style={props.style}>
       <RadixCheckbox.Root
         ref={ref}
@@ -29,7 +29,7 @@ const Checkbox = forwardRef<React.ElementRef<typeof RadixCheckbox.Root>, Checkbo
           setChecked(!!checked);
           props.onCheckedChange?.(!!checked, props.value);
         }}
-        className={cn(
+        className={clsx(
           `w-[18px] h-[18px] relative rounded-sm border border-gray-200 border-1 box-border overflow-hidden cursor-default 
         transition-colors duration-200 hover:border-brand-500 data-[state=checked]:border-brand-500 data-[disabled]:bg-gray-200 
         data-[disabled]:cursor-not-allowed data-[disabled]:border-gray-300`,
@@ -43,7 +43,7 @@ const Checkbox = forwardRef<React.ElementRef<typeof RadixCheckbox.Root>, Checkbo
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className={cn('flex items-center h-full justify-center stroke-white-500', {
+                className={clsx('flex items-center h-full justify-center stroke-white-500', {
                   'bg-brand-500': checked,
                   'bg-brand-500/70': checked && props.disabled,
                 })}>
@@ -64,7 +64,7 @@ const Checkbox = forwardRef<React.ElementRef<typeof RadixCheckbox.Root>, Checkbo
         </AnimatePresence>
       </RadixCheckbox.Root>
       {props.children ? (
-        <div className={cn('ml-[6px]', { 'text-gray-400/80': props.disabled })}>{props.children}</div>
+        <div className={clsx('ml-[6px]', { 'text-gray-400/80': props.disabled })}>{props.children}</div>
       ) : null}
     </label>
   );

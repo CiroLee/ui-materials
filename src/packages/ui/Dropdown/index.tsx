@@ -1,5 +1,5 @@
 import { type FC, forwardRef, useState } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 import { ChevronRight } from 'lucide-react';
 import * as DropDownMenu from '@radix-ui/react-dropdown-menu';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
@@ -102,7 +102,7 @@ const DropDown = forwardRef<React.ElementRef<typeof DropDownMenu.Root>, DropDown
                 side={props.side || 'bottom'}
                 align={props.align || 'start'}
                 sideOffset={8}
-                className={cn(props.className)}
+                className={clsx(props.className)}
                 style={props.style}>
                 <motion.div
                   initial="closed"

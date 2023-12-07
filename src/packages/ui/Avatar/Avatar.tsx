@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 import * as RadixAvatar from '@radix-ui/react-avatar';
 import type { Size, ObjectFit } from '@/types/common';
 
@@ -35,7 +35,7 @@ function getSizeTheme(size?: Size) {
 const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps>((props, ref) => {
   return (
     <RadixAvatar.Root
-      className={cn(
+      className={clsx(
         `inline-block relative box-border`,
         getSizeTheme(props.size),
         getShapeTheme(props.shape),
@@ -45,12 +45,12 @@ const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps
       ref={ref}>
       <RadixAvatar.Image
         style={{ objectFit: props.fit || 'cover' } as React.CSSProperties}
-        className={cn('w-full h-full', getShapeTheme(props.shape))}
+        className={clsx('w-full h-full', getShapeTheme(props.shape))}
         src={props.src}
       />
       {!props.text ? (
         <RadixAvatar.Fallback
-          className={cn(
+          className={clsx(
             getSizeTheme(props.size),
             getShapeTheme(props.shape),
             'flex justify-center items-center text-gray-400/60 bg-gray-200 [&_svg]:w-[52%] [&_svg]:h-[52%]',
