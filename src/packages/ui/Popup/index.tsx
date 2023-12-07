@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 export type Placement = 'top' | 'bottom' | 'left' | 'right' | 'center';
 export interface PopupProps {
@@ -168,7 +168,7 @@ const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
   return (
     <AnimatePresence>
       {props.show ? (
-        <div ref={ref} className={cn('fixed overflow-hidden inset-0 z-popup', props.className)} style={props.style}>
+        <div ref={ref} className={clsx('fixed overflow-hidden inset-0 z-popup', props.className)} style={props.style}>
           <motion.div
             initial="hidden"
             animate={props.show ? 'visible' : 'hidden'}
@@ -186,7 +186,7 @@ const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
                 : maskVariants
             }
             exit="hidden"
-            className={cn('w-full h-full bg-gray-900/40', { 'backdrop-blur-sm': props.isBlur })}
+            className={clsx('w-full h-full bg-gray-900/40', { 'backdrop-blur-sm': props.isBlur })}
             onClick={maskOnCLickHandler}>
             <>{placementContainer(props.placement, props.children)}</>
           </motion.div>

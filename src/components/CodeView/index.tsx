@@ -1,5 +1,5 @@
 import { type FC, useState, useEffect, useRef } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 import 'highlight.js/styles/atom-one-dark.css';
 import Button from '@/packages/ui/Button';
 
@@ -24,7 +24,7 @@ const CodeView: FC<CodeViewProps> = (props) => {
 
   return (
     <div
-      className={cn('relative my-[12px] rounded-[6px] overflow-hidden', {
+      className={clsx('relative my-[12px] rounded-[6px] overflow-hidden', {
         'max-h-[200px]': expanded && !expandedToggle,
       })}>
       <div

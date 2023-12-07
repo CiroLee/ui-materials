@@ -1,7 +1,7 @@
 import { forwardRef, useState } from 'react';
 import * as RadixRadioGroup from '@radix-ui/react-radio-group';
 import { motion, AnimatePresence } from 'framer-motion';
-import cn from 'classnames';
+import clsx from 'clsx';
 export interface RadioOption {
   value: string;
   label: React.ReactNode;
@@ -21,7 +21,7 @@ const RadioGroup = forwardRef<React.ElementRef<typeof RadixRadioGroup.Root>, Rad
   const [indicatorIndex, setIndicatorIndex] = useState<string>(props.value || '');
   return (
     <RadixRadioGroup.Root
-      className={cn(
+      className={clsx(
         'flex gap-x-2.5',
         {
           'flex-col': orientation === 'vertical',
@@ -37,7 +37,7 @@ const RadioGroup = forwardRef<React.ElementRef<typeof RadixRadioGroup.Root>, Rad
       {props.options.map((option) => (
         <label key={option.value} className="flex items-center">
           <RadixRadioGroup.Item
-            className={cn(
+            className={clsx(
               `w-[18px] h-[18px] rounded-full border overflow-hidden box-border transition-colors relative cursor-default
                data-[state=checked]:border-brand-500 data-[disabled]:border-gray-300 data-[disabled]:cursor-not-allowed`,
               { 'data-[disabled]:bg-gray-200': option.disabled && indicatorIndex !== option.value },
@@ -55,14 +55,14 @@ const RadioGroup = forwardRef<React.ElementRef<typeof RadixRadioGroup.Root>, Rad
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     exit={{ opacity: 0 }}
-                    className={cn(`w-[60%] h-[60%] rounded-full bg-brand-500`, {
+                    className={clsx(`w-[60%] h-[60%] rounded-full bg-brand-500`, {
                       'bg-brand-500/70': option.disabled,
                     })}></motion.div>
                 </RadixRadioGroup.Indicator>
               ) : null}
             </AnimatePresence>
           </RadixRadioGroup.Item>
-          <div className={cn('ml-2', { 'text-gray-400/80 cursor-not-allowed': option.disabled })}>{option.label}</div>
+          <div className={clsx('ml-2', { 'text-gray-400/80 cursor-not-allowed': option.disabled })}>{option.label}</div>
         </label>
       ))}
     </RadixRadioGroup.Root>

@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 import { omit } from '@/libs/utils';
 import type { Size } from '@/types/common';
 export type ButtonType = 'primary' | 'success' | 'danger' | 'warn' | 'text';
@@ -95,7 +95,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
       ref={ref}
       {...omit(props, ['type', 'size', 'outline', 'block', 'loading', 'shape'])}
       onClick={props.onClick}
-      className={cn(
+      className={clsx(
         baseCls,
         getTypeTheme(props.type || 'primary'),
         getSizeTheme(props.size || 'medium'),

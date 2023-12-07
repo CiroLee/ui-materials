@@ -1,6 +1,6 @@
 import { forwardRef, useState } from 'react';
 import * as RadixSwitch from '@radix-ui/react-switch';
-import cn from 'classnames';
+import clsx from 'clsx';
 type Size = 'small' | 'medium' | 'large';
 interface SwitchProps {
   defaultChecked?: boolean;
@@ -53,7 +53,7 @@ const Switch = forwardRef<React.ElementRef<typeof RadixSwitch.Root>, SwitchProps
       defaultChecked={props.defaultChecked}
       onCheckedChange={checkedChangeHandler}
       disabled={props.disabled}
-      className={cn(
+      className={clsx(
         'h-[var(--height)] w-[var(--width)] cursor-default rounded-[var(--height)] box-border bg-gray-400/40 p-[var(--padding)] transition-colors ease-linear',
         {
           'data-[state=checked]:bg-brand-500': checked && !props.disabled,
