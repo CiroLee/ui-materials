@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import { tv } from 'tailwind-variants';
 import clsx from 'clsx';
 import * as RadixAvatar from '@radix-ui/react-avatar';
 import type { Size, ObjectFit } from '@/types/common';
@@ -13,46 +14,39 @@ export interface AvatarProps {
   children?: React.ReactNode;
   style?: React.CSSProperties;
 }
-
-function getShapeTheme(shape?: 'circle' | 'round') {
-  return shape === 'round' ? 'rounded-medium' : 'rounded-full';
-}
-
-function getSizeTheme(size?: Size) {
-  switch (size) {
-    case 'tiny':
-      return 'h-[24px] w-[24px]';
-    case 'small':
-      return 'h-[32px] w-[32px]';
-    default:
-    case 'medium':
-      return 'h-[40px] w-[40px]';
-    case 'large':
-      return 'h-[48px] w-[48px]';
-  }
-}
+const avatar = tv({
+  base: 'inline-block relative box-border overflow-hidden',
+  variants: {
+    size: {
+      tiny: 'h-[24px] w-[24px]',
+      small: 'h-[32px] w-[32px]',
+      medium: 'h-[40px] w-[40px]',
+      large: 'h-[48px] w-[48px]',
+    },
+    shape: {
+      circle: 'rounded-full',
+      round: 'rounded-medium',
+    },
+  },
+  defaultVariants: {
+    size: 'medium',
+    shape: 'circle',
+  },
+});
 
 const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps>((props, ref) => {
+  const { shape, size } = props;
   return (
-    <RadixAvatar.Root
-      className={clsx(
-        `inline-block relative box-border`,
-        getSizeTheme(props.size),
-        getShapeTheme(props.shape),
-        props.className,
-      )}
-      style={props.style}
-      ref={ref}>
+    <RadixAvatar.Root className={clsx(avatar({ shape, size }), props.className)} style={props.style} ref={ref}>
       <RadixAvatar.Image
         style={{ objectFit: props.fit || 'cover' } as React.CSSProperties}
-        className={clsx('w-full h-full', getShapeTheme(props.shape))}
+        className={clsx('w-full h-full')}
         src={props.src}
       />
       {!props.text ? (
         <RadixAvatar.Fallback
           className={clsx(
-            getSizeTheme(props.size),
-            getShapeTheme(props.shape),
+            avatar({ size, shape }),
             'flex justify-center items-center text-gray-400/60 bg-gray-200 [&_svg]:w-[52%] [&_svg]:h-[52%]',
           )}>
           <svg

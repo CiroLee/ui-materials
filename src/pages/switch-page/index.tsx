@@ -23,6 +23,7 @@ export default function SwitchPage() {
       <ShowBox className="mb-4">
         <h4 className="mb-2">size</h4>
         <div className="[&_button:not(:first-child)]:ml-2">
+          <Switch size="tiny" />
           <Switch size="small" />
           <Switch size="medium" />
           <Switch size="large" />
