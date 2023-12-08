@@ -18,7 +18,7 @@ export const switchRows: ApiTableRow[] = [
   {
     prop: 'size',
     desc: 'switch size',
-    type: 'enum: small| medium | large',
+    type: 'enum: tiny | small| medium | large',
     required: false,
     default: 'medium',
   },

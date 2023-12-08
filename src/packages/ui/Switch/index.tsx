@@ -1,7 +1,7 @@
 import { forwardRef, useState } from 'react';
 import * as RadixSwitch from '@radix-ui/react-switch';
 import clsx from 'clsx';
-type Size = 'small' | 'medium' | 'large';
+import { Size } from '@/types/common';
 interface SwitchProps {
   defaultChecked?: boolean;
   checked?: boolean;
@@ -16,6 +16,10 @@ interface SwitchProps {
 }
 
 const sizeStylesMap = {
+  tiny: {
+    '--width': '32px',
+    '--height': '18px',
+  },
   small: {
     '--width': '40px',
     '--height': '22px',

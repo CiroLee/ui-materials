@@ -74,7 +74,7 @@ const button = tv({
     shape: {
       default: '',
       round: '!rounded-button-ty',
-      circle: 'aspect-square !p-0 rounded-1/2',
+      circle: 'aspect-square !p-0 !rounded-1/2',
       square: 'aspect-square !p-0',
     },
     block: {
