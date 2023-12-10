@@ -1,19 +1,9 @@
 import React, { forwardRef } from 'react';
-import { tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 import clsx from 'clsx';
 import * as RadixAvatar from '@radix-ui/react-avatar';
-import type { Size, ObjectFit } from '@/types/common';
+import type { ObjectFit } from '@/types/common';
 
-export interface AvatarProps {
-  src?: string;
-  shape?: 'circle' | 'round';
-  size?: Size;
-  fit?: ObjectFit;
-  text?: string;
-  className?: string;
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
-}
 const avatar = tv({
   base: 'inline-block relative box-border overflow-hidden',
   variants: {
@@ -33,6 +23,16 @@ const avatar = tv({
     shape: 'circle',
   },
 });
+
+type AvatarVariants = VariantProps<typeof avatar>;
+export interface AvatarProps extends AvatarVariants {
+  text?: string;
+  src?: string;
+  fit?: ObjectFit;
+  className?: string;
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+}
 
 const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps>((props, ref) => {
   const { shape, size } = props;

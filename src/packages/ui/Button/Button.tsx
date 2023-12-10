@@ -1,24 +1,9 @@
 import { forwardRef } from 'react';
 import clsx from 'clsx';
-import { tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 import { omit } from '@/libs/utils';
-import type { Size } from '@/types/common';
 export type ButtonType = 'primary' | 'success' | 'danger' | 'warn' | 'text';
 export type ButtonShape = 'default' | 'round' | 'circle' | 'square';
-
-export interface ButtonProps {
-  type?: ButtonType;
-  size?: Size;
-  outline?: boolean;
-  disabled?: boolean;
-  block?: boolean;
-  loading?: boolean;
-  shape?: ButtonShape;
-  children?: React.ReactNode;
-  className?: string;
-  style?: React.CSSProperties;
-  onClick?: React.MouseEventHandler<HTMLElement>;
-}
 
 const compoundVariants = tv({
   compoundVariants: [
@@ -52,6 +37,7 @@ const compoundVariants = tv({
       class: 'border-black/10',
     },
   ],
+  variants: {},
 });
 
 const button = tv({
@@ -96,6 +82,14 @@ const button = tv({
     shaped: 'default',
   },
 });
+
+type ButtonVariants = VariantProps<typeof button>;
+export interface ButtonProps extends ButtonVariants {
+  children?: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: React.MouseEventHandler<HTMLElement>;
+}
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const { size, type, shape, outline, block, disabled, loading, className, style } = props;
