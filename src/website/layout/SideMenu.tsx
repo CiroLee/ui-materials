@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
-import { router } from '@/routes';
-import { type MyRouteObject } from '@/routes';
+import { router } from '../routes';
+import { type MyRouteObject } from '../routes';
 export default function SideMenu() {
   const [collapsed, setCollapsed] = useState(false);
   const head = router.routes.find((r) => r.id === 'layout') as MyRouteObject;

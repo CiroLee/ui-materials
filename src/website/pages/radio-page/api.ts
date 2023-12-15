@@ -1,4 +1,4 @@
-import { type ApiTableRow } from '@/components/ApiTable';
+import { type ApiTableRow } from '@site/components/ApiTable';
 export const radioGroupRows: ApiTableRow[] = [
   {
     prop: 'orientation',

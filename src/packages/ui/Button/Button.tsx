@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import clsx from 'clsx';
 import { tv, type VariantProps } from 'tailwind-variants';
-import { omit } from '@/libs/utils';
+import { omit } from '../../libs/utils';
 export type ButtonType = 'primary' | 'success' | 'danger' | 'warn' | 'text';
 export type ButtonShape = 'default' | 'round' | 'circle' | 'square';
 

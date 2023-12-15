@@ -1,8 +1,8 @@
-import ShowBox from '@/components/ShowBox';
-import ApiTable from '@/components/ApiTable';
+import ShowBox from '@site/components/ShowBox';
+import ApiTable from '@site/components/ApiTable';
 import { radioGroupRows, radioOptionRows } from './api';
 import RadioGroup, { type RadioOption } from '@/packages/ui/RadioGroup';
-import CodeView from '@/components/CodeView';
+import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as orientationHtml } from './docs/orientation.md';
 import { html as disabledHtml } from './docs/disabled.md';

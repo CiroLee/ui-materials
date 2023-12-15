@@ -1,7 +1,7 @@
 import { forwardRef, useState } from 'react';
 import * as RadixSwitch from '@radix-ui/react-switch';
 import clsx from 'clsx';
-import { Size } from '@/types/common';
+import { Size } from '../../types/common';
 interface SwitchProps {
   defaultChecked?: boolean;
   checked?: boolean;

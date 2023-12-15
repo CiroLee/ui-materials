@@ -1,8 +1,8 @@
-import ShowBox from '@/components/ShowBox';
-import Avatar, { AvatarGroup } from '@/packages/ui/Avatar';
-import ApiTable from '@/components/ApiTable';
+import ShowBox from '@site/components/ShowBox';
+import Avatar, { AvatarGroup } from '@ui/Avatar';
+import ApiTable from '@site/components/ApiTable';
 import { rows, avatarGroupRows } from './api';
-import CodeView from '@/components/CodeView';
+import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as shapeHtml } from './docs/shape.md';
 import { html as textHtml } from './docs/text.md';

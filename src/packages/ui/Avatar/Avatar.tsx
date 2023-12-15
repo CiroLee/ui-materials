@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
 import clsx from 'clsx';
 import * as RadixAvatar from '@radix-ui/react-avatar';
-import type { ObjectFit } from '@/types/common';
+import type { ObjectFit } from '../../types/common';
 
 const avatar = tv({
   base: 'inline-block relative box-border overflow-hidden',

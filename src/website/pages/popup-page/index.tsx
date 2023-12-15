@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import ShowBox from '@/components/ShowBox';
-import ApiTable from '@/components/ApiTable';
+import ShowBox from '@site/components/ShowBox';
+import ApiTable from '@site/components/ApiTable';
 import { popupRows } from './api';
 import Popup from '@/packages/ui/Popup';
 import Button from '@/packages/ui/Button';
 import Switch from '@/packages/ui/Switch';
-import CodeView from '@/components/CodeView';
+import CodeView from '@site/components/CodeView';
 import { html as useHtml } from './docs/use.md';
 export default function PopupPage() {
   const [showCenter, setShowCenter] = useState(false);

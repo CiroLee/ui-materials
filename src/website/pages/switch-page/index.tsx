@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import ApiTable from '@/components/ApiTable';
+import ApiTable from '@site/components/ApiTable';
 import { switchRows } from './api';
-import ShowBox from '@/components/ShowBox';
+import ShowBox from '@site/components/ShowBox';
 import Switch from '@/packages/ui/Switch';
 import { Check, X } from 'lucide-react';
-import CodeView from '@/components/CodeView';
+import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as sizeHtml } from './docs/size.md';
 import { html as disabledHtml } from './docs/disabled.md';

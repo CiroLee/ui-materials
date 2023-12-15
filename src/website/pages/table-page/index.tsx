@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import ShowBox from '@/components/ShowBox';
-import ApiTable, { type ApiTableRow } from '@/components/ApiTable';
+import ShowBox from '@site/components/ShowBox';
+import ApiTable, { type ApiTableRow } from '@site/components/ApiTable';
 import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@/packages/ui/Table';
 import Switch from '@/packages/ui/Switch';
-import CodeView from '@/components/CodeView';
+import CodeView from '@site/components/CodeView';
 import { html as useHtml } from './docs/use.md';
 
 const rows: ApiTableRow[] = [

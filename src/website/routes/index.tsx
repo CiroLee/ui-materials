@@ -1,20 +1,20 @@
 import { RouteObject, createHashRouter } from 'react-router-dom';
-import Home from '@/pages/home';
-import Layout from '@/layout';
+import Home from '@site/pages/home';
+import Layout from '@site/layout';
 export type MyRouteObject = RouteObject & {
   meta: {
     title?: string;
     role?: string;
   };
 };
-import DropdownMenuPage from '@/pages/dropdown-page';
-import PopupPage from '@/pages/popup-page';
-import SwitchPage from '@/pages/switch-page';
-import ButtonPage from '@/pages/button-page';
-import CheckboxPage from '@/pages/checkbox-page';
-import AvatarPage from '@/pages/avatar-page';
-import TablePage from '@/pages/table-page';
-import RadioPage from '@/pages/radio-page';
+import DropdownMenuPage from '@site/pages/dropdown-page';
+import PopupPage from '@site/pages/popup-page';
+import SwitchPage from '@site/pages/switch-page';
+import ButtonPage from '@site/pages/button-page';
+import CheckboxPage from '@site/pages/checkbox-page';
+import AvatarPage from '@site/pages/avatar-page';
+import TablePage from '@site/pages/table-page';
+import RadioPage from '@site/pages/radio-page';
 export const router = createHashRouter([
   {
     path: '/',

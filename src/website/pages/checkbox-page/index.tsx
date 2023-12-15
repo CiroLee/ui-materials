@@ -1,8 +1,8 @@
 import Checkbox, { CheckboxGroup, type CheckboxType } from '@/packages/ui/Checkbox';
-import ShowBox from '@/components/ShowBox';
-import ApiTable from '@/components/ApiTable';
+import ShowBox from '@site/components/ShowBox';
+import ApiTable from '@site/components/ApiTable';
 import { checkboxRows, checkboxGroupRows } from './api';
-import CodeView from '@/components/CodeView';
+import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as groupHtml } from './docs/group.md';

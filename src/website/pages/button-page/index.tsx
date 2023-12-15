@@ -1,8 +1,8 @@
 import { User, Upload, Loader } from 'lucide-react';
-import ShowBox from '@/components/ShowBox';
+import ShowBox from '@site/components/ShowBox';
 import Button, { ButtonGroup } from '@/packages/ui/Button';
-import CodeView from '@/components/CodeView';
-import ApiTable from '@/components/ApiTable';
+import CodeView from '@site/components/CodeView';
+import ApiTable from '@site/components/ApiTable';
 import { html as baseHtml } from './docs/base.md';
 import { html as outlineHtml } from './docs/outline.md';
 import { html as sizeHtml } from './docs/size.md';

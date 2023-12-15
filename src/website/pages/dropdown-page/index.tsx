@@ -1,7 +1,7 @@
 import DropDown, { MenuItem } from '@/packages/ui/Dropdown';
-import ShowBox from '@/components/ShowBox';
-import CodeView from '@/components/CodeView';
-import ApiTable from '@/components/ApiTable';
+import ShowBox from '@site/components/ShowBox';
+import CodeView from '@site/components/CodeView';
+import ApiTable from '@site/components/ApiTable';
 import { dropDownRows, menuItemRows } from './api';
 import { html as baseHtml } from './docs/base.md';
 import { html as sideHtml } from './docs/side.md';
