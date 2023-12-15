@@ -176,11 +176,9 @@ const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
               props.placement === 'center'
                 ? {
                     ...maskVariants,
-                    ...{
-                      hidden: {
-                        ...maskVariants.hidden,
-                        transition: {},
-                      },
+                    hidden: {
+                      ...maskVariants.hidden,
+                      transition: {},
                     },
                   }
                 : maskVariants

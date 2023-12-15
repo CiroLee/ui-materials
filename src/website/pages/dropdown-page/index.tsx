@@ -16,75 +16,73 @@ export default function DropdownMenuPage() {
     console.log('you click:', event, item);
   };
   return (
-    <>
-      <div className="mt-4">
-        <h2>Dropdown</h2>
-        <ShowBox className="mt-4">
-          <h4 className="mb-2">basic</h4>
-          <DropDown className="w-[120px]" menus={commonMenus} onSelect={handleOnItemSelect}>
-            <Button>menu</Button>
+    <div className="mt-4">
+      <h2>Dropdown</h2>
+      <ShowBox className="mt-4">
+        <h4 className="mb-2">basic</h4>
+        <DropDown className="w-[120px]" menus={commonMenus} onSelect={handleOnItemSelect}>
+          <Button>menu</Button>
+        </DropDown>
+        <CodeView content={baseHtml} />
+      </ShowBox>
+      <ShowBox className="mt-4">
+        <h4 className="mb-2">side</h4>
+        <div className="[&_Button:not(:first-child)]:ml-2">
+          <DropDown className="w-[120px]" menus={commonMenus} side="left">
+            <Button>left</Button>
           </DropDown>
-          <CodeView content={baseHtml} />
-        </ShowBox>
-        <ShowBox className="mt-4">
-          <h4 className="mb-2">side</h4>
-          <div className="[&_Button:not(:first-child)]:ml-2">
-            <DropDown className="w-[120px]" menus={commonMenus} side="left">
-              <Button>left</Button>
-            </DropDown>
-            <DropDown className="w-[120px]" menus={commonMenus} side="top">
-              <Button>top</Button>
-            </DropDown>
-            <DropDown className="w-[120px]" menus={commonMenus} side="right">
-              <Button>right</Button>
-            </DropDown>
-            <DropDown className="w-[120px]" menus={commonMenus} side="bottom">
-              <Button>bottom</Button>
-            </DropDown>
-          </div>
-          <CodeView content={sideHtml} />
-        </ShowBox>
-        <ShowBox className="mt-4">
-          <h4 className="mb-2">align</h4>
-          <div className="[&_Button:not(:first-child)]:ml-2">
-            <DropDown className="w-[120px]" menus={commonMenus} align="start">
-              <Button>start</Button>
-            </DropDown>
-            <DropDown className="w-[120px]" menus={commonMenus} align="center">
-              <Button>center</Button>
-            </DropDown>
-            <DropDown className="w-[120px]" menus={commonMenus} align="end">
-              <Button>end</Button>
-            </DropDown>
-          </div>
-        </ShowBox>
-        <ShowBox className="mt-4">
-          <h4 className="mb-2">separator</h4>
-          <DropDown className="w-[120px]" menus={menuWidthSeparator}>
-            <Button>menu</Button>
+          <DropDown className="w-[120px]" menus={commonMenus} side="top">
+            <Button>top</Button>
           </DropDown>
-          <CodeView content={separatorHtml} />
-        </ShowBox>
-        <ShowBox className="mt-4">
-          <h4 className="mb-2">children menu</h4>
-          <DropDown className="w-[120px]" menus={menuWithChildren} onSelect={handleOnItemSelect}>
-            <Button>menu</Button>
+          <DropDown className="w-[120px]" menus={commonMenus} side="right">
+            <Button>right</Button>
           </DropDown>
-          <CodeView content={childrenMenuHtml} />
-        </ShowBox>
-        <ShowBox className="mt-4">
-          <h4 className="mb-2">custom prefix and suffix</h4>
-          <DropDown className="w-[200px]" menus={menuWidthPreAndSuffix} onSelect={handleOnItemSelect}>
-            <Button>menu</Button>
+          <DropDown className="w-[120px]" menus={commonMenus} side="bottom">
+            <Button>bottom</Button>
           </DropDown>
-          <CodeView content={preAndSuffixHtml} />
-        </ShowBox>
-        <h2 className="mb-2">API</h2>
-        <h4 className="mb-2">Dropdown</h4>
-        <ApiTable rows={dropDownRows} />
-        <h4 className="my-2">MenuItem</h4>
-        <ApiTable rows={menuItemRows} />
-      </div>
-    </>
+        </div>
+        <CodeView content={sideHtml} />
+      </ShowBox>
+      <ShowBox className="mt-4">
+        <h4 className="mb-2">align</h4>
+        <div className="[&_Button:not(:first-child)]:ml-2">
+          <DropDown className="w-[120px]" menus={commonMenus} align="start">
+            <Button>start</Button>
+          </DropDown>
+          <DropDown className="w-[120px]" menus={commonMenus} align="center">
+            <Button>center</Button>
+          </DropDown>
+          <DropDown className="w-[120px]" menus={commonMenus} align="end">
+            <Button>end</Button>
+          </DropDown>
+        </div>
+      </ShowBox>
+      <ShowBox className="mt-4">
+        <h4 className="mb-2">separator</h4>
+        <DropDown className="w-[120px]" menus={menuWidthSeparator}>
+          <Button>menu</Button>
+        </DropDown>
+        <CodeView content={separatorHtml} />
+      </ShowBox>
+      <ShowBox className="mt-4">
+        <h4 className="mb-2">children menu</h4>
+        <DropDown className="w-[120px]" menus={menuWithChildren} onSelect={handleOnItemSelect}>
+          <Button>menu</Button>
+        </DropDown>
+        <CodeView content={childrenMenuHtml} />
+      </ShowBox>
+      <ShowBox className="mt-4">
+        <h4 className="mb-2">custom prefix and suffix</h4>
+        <DropDown className="w-[200px]" menus={menuWidthPreAndSuffix} onSelect={handleOnItemSelect}>
+          <Button>menu</Button>
+        </DropDown>
+        <CodeView content={preAndSuffixHtml} />
+      </ShowBox>
+      <h2 className="mb-2">API</h2>
+      <h4 className="mb-2">Dropdown</h4>
+      <ApiTable rows={dropDownRows} />
+      <h4 className="my-2">MenuItem</h4>
+      <ApiTable rows={menuItemRows} />
+    </div>
   );
 }

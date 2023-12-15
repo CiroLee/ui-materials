@@ -90,35 +90,29 @@ const DropDown = forwardRef<React.ElementRef<typeof DropDownMenu.Root>, DropDown
     props.onOpenChange?.(open);
   };
   return (
-    <>
-      <DropDownMenu.Root open={open} onOpenChange={onOpenChangeHandler}>
-        <DropDownMenu.Trigger asChild>{props.children}</DropDownMenu.Trigger>
-        <AnimatePresence>
-          {open ? (
-            <DropDownMenu.Portal forceMount>
-              <DropDownMenu.Content
-                ref={ref}
-                loop={true}
-                side={props.side || 'bottom'}
-                align={props.align || 'start'}
-                sideOffset={8}
-                className={clsx(props.className)}
-                style={props.style}>
-                <motion.div
-                  initial="closed"
-                  animate={open ? 'open' : 'closed'}
-                  exit="closed"
-                  variants={dropdownVariants}>
-                  <DropDownMenu.Group className="bg-white rounded-[6px] border border-gray-200 p-[4px]">
-                    {renderMenuList(props.menus, props.onSelect)}
-                  </DropDownMenu.Group>
-                </motion.div>
-              </DropDownMenu.Content>
-            </DropDownMenu.Portal>
-          ) : null}
-        </AnimatePresence>
-      </DropDownMenu.Root>
-    </>
+    <DropDownMenu.Root open={open} onOpenChange={onOpenChangeHandler}>
+      <DropDownMenu.Trigger asChild>{props.children}</DropDownMenu.Trigger>
+      <AnimatePresence>
+        {open ? (
+          <DropDownMenu.Portal forceMount>
+            <DropDownMenu.Content
+              ref={ref}
+              loop={true}
+              side={props.side || 'bottom'}
+              align={props.align || 'start'}
+              sideOffset={8}
+              className={clsx(props.className)}
+              style={props.style}>
+              <motion.div initial="closed" animate={open ? 'open' : 'closed'} exit="closed" variants={dropdownVariants}>
+                <DropDownMenu.Group className="bg-white rounded-[6px] border border-gray-200 p-[4px]">
+                  {renderMenuList(props.menus, props.onSelect)}
+                </DropDownMenu.Group>
+              </motion.div>
+            </DropDownMenu.Content>
+          </DropDownMenu.Portal>
+        ) : null}
+      </AnimatePresence>
+    </DropDownMenu.Root>
   );
 });
 
