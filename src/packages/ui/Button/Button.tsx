@@ -37,7 +37,6 @@ const compoundVariants = tv({
       class: 'border-black/10',
     },
   ],
-  variants: {},
 });
 
 const button = tv({
