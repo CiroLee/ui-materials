@@ -1,6 +1,6 @@
 ```typescript
 import Avatar from 'your path';
-const IMG_URL = 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200';
+const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
 
 export default Demo() {
   return (

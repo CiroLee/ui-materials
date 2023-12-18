@@ -15,6 +15,7 @@ import CheckboxPage from '@site/pages/checkbox-page';
 import AvatarPage from '@site/pages/avatar-page';
 import TablePage from '@site/pages/table-page';
 import RadioPage from '@site/pages/radio-page';
+import BadgePage from '@site/pages/badge-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -102,6 +103,15 @@ export const router = createHashRouter([
         element: <RadioPage />,
         meta: {
           title: 'Radio Group',
+          role: 'component',
+        },
+      },
+      {
+        path: 'badge',
+        id: 'badge',
+        element: <BadgePage />,
+        meta: {
+          title: 'Badge',
           role: 'component',
         },
       },

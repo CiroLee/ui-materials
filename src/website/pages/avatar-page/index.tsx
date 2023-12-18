@@ -7,7 +7,7 @@ import { html as baseHtml } from './docs/base.md';
 import { html as shapeHtml } from './docs/shape.md';
 import { html as textHtml } from './docs/text.md';
 import { html as groupHtml } from './docs/group.md';
-const IMG_URL = 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200';
+const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
 export default function AvatarPage() {
   return (
     <>
