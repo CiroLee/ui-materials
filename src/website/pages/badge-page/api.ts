@@ -11,7 +11,7 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'size',
     desc: 'badge size',
-    type: 'enum: small | medium | large',
+    type: 'tag: small | medium | large',
     required: false,
     default: 'medium',
   },
@@ -32,7 +32,7 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'placement',
     desc: 'badge placement',
-    type: 'enum: top-right | top-left | bottom-right | bottom-left',
+    type: 'tag: top-right | top-left | bottom-right | bottom-left',
     required: false,
     default: 'top-right',
   },

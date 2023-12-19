@@ -35,7 +35,7 @@ export interface AvatarProps extends AvatarVariants {
 const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps>((props, ref) => {
   const { shape, size, text, alt, className, style } = props;
   return (
-    <RadixAvatar.Root className={clsx(avatar({ shape, size }), className)} style={style} ref={ref}>
+    <RadixAvatar.Root className={clsx(avatar({ shape, size, class: className }))} style={style} ref={ref}>
       <RadixAvatar.Image className={clsx('w-full h-full object-cover')} src={props.src} alt={alt} />
       {!text ? (
         <RadixAvatar.Fallback

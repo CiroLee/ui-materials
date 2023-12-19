@@ -11,14 +11,14 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'shape',
     desc: 'avatar shape',
-    type: 'enum: circle | round',
+    type: 'tag: circle | round',
     required: false,
     default: 'circle',
   },
   {
     prop: 'size',
     desc: 'avatar size',
-    type: 'enum: tiny | small | medium | large',
+    type: 'tag: tiny | small | medium | large',
     required: false,
     default: 'medium',
   },
@@ -47,7 +47,7 @@ export const avatarGroupRows: ApiTableRow[] = [
   {
     prop: 'direction',
     desc: 'avatar direction',
-    type: 'enum: horizontal | vertical',
+    type: 'tag: horizontal | vertical',
     required: false,
     default: 'horizontal',
   },

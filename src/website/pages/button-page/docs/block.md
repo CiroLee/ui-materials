@@ -1,17 +1,12 @@
 ```typescript
 import Button from 'your path';
 
-export default Demo() {
+export default function Demo() {
   return (
     <div className="[&_button:not(:first-child)]:ml-2">
-      <Button>primary</Button>
-      <Button type="success">success</Button>
-      <Button type="warn">warn</Button>
-      <Button type="danger">danger</Button>
-      <Button type="text">text</Button>
-      <Button disabled outline type="primary">
-        disabled
-      </Button>
+      <Button shape="pill" block>button</Button>
+      <Button block>button</Button>
+      <Button outline block>button</Button>
     </div>
   )
 }

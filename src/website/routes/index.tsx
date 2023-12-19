@@ -16,6 +16,7 @@ import AvatarPage from '@site/pages/avatar-page';
 import TablePage from '@site/pages/table-page';
 import RadioPage from '@site/pages/radio-page';
 import BadgePage from '@site/pages/badge-page';
+import TagPage from '@site/pages/tag-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -112,6 +113,15 @@ export const router = createHashRouter([
         element: <BadgePage />,
         meta: {
           title: 'Badge',
+          role: 'component',
+        },
+      },
+      {
+        path: 'tag',
+        id: 'tag',
+        element: <TagPage />,
+        meta: {
+          title: 'Tag',
           role: 'component',
         },
       },

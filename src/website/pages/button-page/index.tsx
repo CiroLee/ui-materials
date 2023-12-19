@@ -66,7 +66,7 @@ export default function ButtonPage() {
           <Button size="tiny" shape="default">
             default
           </Button>
-          <Button size="small" shape="round">
+          <Button size="small" shape="pill">
             round
           </Button>
           <Button shape="circle">C</Button>
@@ -79,7 +79,7 @@ export default function ButtonPage() {
       <ShowBox className="mb-4">
         <h4 className="mb-2">block</h4>
         <div className="[&_button:not(:first-child)]:mt-2">
-          <Button shape="round" block>
+          <Button shape="pill" block>
             button
           </Button>
           <Button block>button</Button>
@@ -123,13 +123,13 @@ export default function ButtonPage() {
           <Button outline>orange</Button>
         </ButtonGroup>
         <ButtonGroup className="mb-2">
-          <Button shape="round" outline>
+          <Button shape="pill" outline>
             apple
           </Button>
-          <Button shape="round" outline>
+          <Button shape="pill" outline>
             banana
           </Button>
-          <Button shape="round" outline>
+          <Button shape="pill" outline>
             orange
           </Button>
         </ButtonGroup>

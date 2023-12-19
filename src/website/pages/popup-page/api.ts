@@ -25,7 +25,7 @@ export const popupRows: ApiTableRow[] = [
   {
     prop: 'placement',
     desc: 'content placement',
-    type: 'enum: top | bottom | left | right | center',
+    type: 'tag: top | bottom | left | right | center',
     required: false,
     default: 'bottom',
   },
