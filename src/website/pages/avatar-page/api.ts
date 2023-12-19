@@ -16,13 +16,6 @@ export const rows: ApiTableRow[] = [
     default: 'circle',
   },
   {
-    prop: 'fit',
-    desc: 'avatar fit',
-    type: 'enum: cover | contain | fill | none | scale-down',
-    required: false,
-    default: 'cover',
-  },
-  {
     prop: 'size',
     desc: 'avatar size',
     type: 'enum: tiny | small | medium | large',
@@ -39,12 +32,6 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'className',
     type: 'string',
-    required: false,
-    default: '-',
-  },
-  {
-    prop: 'children',
-    type: 'React.ReactNode',
     required: false,
     default: '-',
   },

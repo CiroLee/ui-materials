@@ -29,6 +29,7 @@ const rows: ApiTableRow[] = [
 ];
 export default function TablePage() {
   const [border, setBorder] = useState(true);
+  const [headerFixed, setHeaderFixed] = useState(true);
   return (
     <>
       <h2 className="mb-2">Table</h2>
@@ -38,7 +39,11 @@ export default function TablePage() {
           <span className="mb-1 mr-2">border:</span>
           <Switch size="small" checked={border} onCheckedChange={setBorder} />
         </div>
-        <Table border={border} headerFixed className="h-[220px]">
+        <div className="mb-2 flex items-center">
+          <span className="mb-1 mr-2">headerFixed:</span>
+          <Switch size="small" checked={headerFixed} onCheckedChange={setHeaderFixed} />
+        </div>
+        <Table border={border} headerFixed={headerFixed} className="h-[220px]">
           <TableHeader>
             <TableHeaderCell>Name</TableHeaderCell>
             <TableHeaderCell>Desc</TableHeaderCell>
