@@ -18,7 +18,7 @@ export const switchRows: ApiTableRow[] = [
   {
     prop: 'size',
     desc: 'switch size',
-    type: 'enum: tiny | small| medium | large',
+    type: 'tag: tiny | small| medium | large',
     required: false,
     default: 'medium',
   },
@@ -46,7 +46,7 @@ export const switchRows: ApiTableRow[] = [
     prop: 'style',
     type: 'React.CssProperties',
     required: false,
-    default: '',
+    default: '-',
   },
   {
     prop: 'onCheckedChange',

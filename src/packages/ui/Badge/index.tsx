@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { type VariantProps, tv } from 'tailwind-variants';
 import clsx from 'clsx';
 const badge = tv({
@@ -95,7 +96,7 @@ export interface BadgeProps extends BadgeVariants {
   className?: string;
   style?: React.CSSProperties;
 }
-export default function Badge(props: BadgeProps) {
+const Badge = forwardRef<HTMLDivElement, BadgeProps>(function Badge(props: BadgeProps, ref) {
   const {
     size,
     placement,
@@ -108,7 +109,7 @@ export default function Badge(props: BadgeProps) {
     style,
   } = props;
   return (
-    <div className="inline-flex relative box-border">
+    <div className="inline-flex relative box-border" ref={ref}>
       {children}
       <div
         className={clsx(badge({ size, placement, outline }), className)}
@@ -117,4 +118,8 @@ export default function Badge(props: BadgeProps) {
       </div>
     </div>
   );
-}
+});
+
+Badge.displayName = 'Badge';
+
+export default Badge;

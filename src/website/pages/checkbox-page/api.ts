@@ -4,7 +4,7 @@ export const checkboxRows: ApiTableRow[] = [
   {
     prop: 'value',
     desc: 'current selected value',
-    type: 'enum: string | number',
+    type: 'tag: string | number',
     required: false,
     default: '-',
   },
@@ -53,7 +53,7 @@ export const checkboxGroupRows: ApiTableRow[] = [
   {
     prop: 'value',
     desc: 'current selected value',
-    type: 'enum: string | number',
+    type: 'tag: string | number',
     required: false,
     default: '-',
   },

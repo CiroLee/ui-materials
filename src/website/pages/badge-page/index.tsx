@@ -16,7 +16,7 @@ export default function BadgePage() {
     <>
       <h2 className="mb-4">Badge</h2>
       <ShowBox className="mb-4">
-        <h2 className="mb-4">size</h2>
+        <h4 className="mb-4">size</h4>
         <div className="flex gap-4">
           <Badge size="small" content="9">
             <Avatar src={IMG_URL} />
@@ -31,7 +31,7 @@ export default function BadgePage() {
         <CodeView content={sizeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h2 className="mb-4">bgColor & textColor</h2>
+        <h4 className="mb-4">bgColor & textColor</h4>
         <div className="flex gap-4">
           <Badge content="2" bgColor="#8749F5">
             <Avatar src={IMG_URL} />
@@ -46,7 +46,7 @@ export default function BadgePage() {
         <CodeView content={colorHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h2 className="mb-4">placements</h2>
+        <h4 className="mb-4">placements</h4>
         <div className="flex gap-4">
           <Badge className="px-1" content="99+" placement="top-right">
             <Avatar src={IMG_URL} />
@@ -64,7 +64,7 @@ export default function BadgePage() {
         <CodeView content={placementHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h2 className="mb-4">outline</h2>
+        <h4 className="mb-4">outline</h4>
         <div className="flex gap-4">
           <Badge content="2" outline={false}>
             <Avatar shape="round" src={IMG_URL} />
@@ -76,7 +76,7 @@ export default function BadgePage() {
         <CodeView content={outlineHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h2 className="mb-4">custom content</h2>
+        <h4 className="mb-4">custom content</h4>
         <div className="flex gap-4">
           <Badge content={<Bell size={12} />}>
             <Avatar shape="round" src={IMG_URL} />

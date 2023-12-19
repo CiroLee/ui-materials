@@ -1,7 +1,7 @@
 ```typescript
 import {type CheckboxProps, CheckboxGroup } from 'your path';
 
-export default Demo() {
+export default function Demo() {
   const checkboxGroup: CheckboxProps[] = [
     {
       value: 'apple',

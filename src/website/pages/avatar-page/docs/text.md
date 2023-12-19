@@ -1,7 +1,7 @@
 ```typescript
 import Avatar from 'your path';
 
-export default Demo() {
+export default function Demo() {
   return (
     <div className="flex items-end [&>*]:mr-4">
       <Avatar text="T" size="tiny" className="bg-purple-500 text-white" />

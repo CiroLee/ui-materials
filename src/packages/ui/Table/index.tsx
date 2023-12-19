@@ -16,7 +16,7 @@ const Table = forwardRef<HTMLTableElement, TableProps>(({ className, style, head
   return (
     <div
       className={clsx(
-        'rounded-[6px] overflow-hidden box-border',
+        'rounded-[6px] box-border overflow-x-auto',
         {
           'border border-gray-200/80 [&_tr:last-child]:border-0': border,
           'overflow-y-auto [&_thead]:sticky [&_thead]:top-0': headerFixed,
@@ -71,7 +71,9 @@ TableHeaderCell.displayName = 'TableHeaderCell';
 
 const TableRow = forwardRef<HTMLTableRowElement, TableBaseType>(({ className, children }, ref) => {
   return (
-    <tr ref={ref} className={clsx('transition-colors hover:bg-gray-200/30 border-b-[1px] border-gray-200/80', className)}>
+    <tr
+      ref={ref}
+      className={clsx('transition-colors hover:bg-gray-200/30 border-b-[1px] border-gray-200/80', className)}>
       {children}
     </tr>
   );

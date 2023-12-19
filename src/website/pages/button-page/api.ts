@@ -3,14 +3,14 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'type',
     desc: 'button type',
-    type: 'enum: primary | success | warn | danger',
+    type: 'tag: primary | success | warn | danger',
     required: false,
     default: 'primary',
   },
   {
     prop: 'size',
     desc: 'button size',
-    type: 'enum: tiny | small | medium | large',
+    type: 'tag: tiny | small | medium | large',
     required: false,
     default: 'medium',
   },
@@ -45,7 +45,7 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'shape',
     desc: 'button shape',
-    type: 'enum: default | round | circle | square',
+    type: 'tag: default | pill | circle | square',
     required: false,
     default: 'default',
   },

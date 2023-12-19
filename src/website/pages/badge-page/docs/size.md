@@ -1,7 +1,7 @@
 ```typescript
 import Badge from 'your path';
 
-export default Demo() {
+export default function Demo() {
   return (
     <div className="flex gap-4">
     <Badge size="small" content="9">

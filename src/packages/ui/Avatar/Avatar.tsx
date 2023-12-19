@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
 import clsx from 'clsx';
 import * as RadixAvatar from '@radix-ui/react-avatar';
-import type { ObjectFit } from '../../types/common';
 
 const avatar = tv({
   base: 'inline-block relative box-border overflow-hidden',
@@ -28,22 +27,17 @@ type AvatarVariants = VariantProps<typeof avatar>;
 export interface AvatarProps extends AvatarVariants {
   text?: string;
   src?: string;
-  fit?: ObjectFit;
+  alt?: string;
   className?: string;
-  children?: React.ReactNode;
   style?: React.CSSProperties;
 }
 
 const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps>((props, ref) => {
-  const { shape, size } = props;
+  const { shape, size, text, alt, className, style } = props;
   return (
-    <RadixAvatar.Root className={clsx(avatar({ shape, size }), props.className)} style={props.style} ref={ref}>
-      <RadixAvatar.Image
-        style={{ objectFit: props.fit || 'cover' } as React.CSSProperties}
-        className={clsx('w-full h-full')}
-        src={props.src}
-      />
-      {!props.text ? (
+    <RadixAvatar.Root className={clsx(avatar({ shape, size, class: className }))} style={style} ref={ref}>
+      <RadixAvatar.Image className={clsx('w-full h-full object-cover')} src={props.src} alt={alt} />
+      {!text ? (
         <RadixAvatar.Fallback
           className={clsx(
             avatar({ size, shape }),
@@ -66,7 +60,6 @@ const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps
       {!props.src && props.text ? (
         <div className="w-full h-full flex items-center justify-center">{props.text}</div>
       ) : null}
-      {props.children}
     </RadixAvatar.Root>
   );
 });

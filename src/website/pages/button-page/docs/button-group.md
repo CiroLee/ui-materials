@@ -1,7 +1,7 @@
 ```typescript
 import Button, { ButtonGroup } from 'your path';
 
-export default Demo() {
+export default function Demo() {
   return (
     <div>
       <ButtonGroup className="mb-2">

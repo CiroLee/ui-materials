@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Switch from 'your path';
 
-export default Demo() {
+export default function Demo() {
   const [checked, setChecked] = useState(false);
   return (
     <div>

@@ -3,7 +3,7 @@ export const radioGroupRows: ApiTableRow[] = [
   {
     prop: 'orientation',
     desc: 'item orientation',
-    type: 'enum: horizontal | vertical',
+    type: 'tag: horizontal | vertical',
     required: false,
     default: 'horizontal',
   },

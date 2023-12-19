@@ -1,7 +1,7 @@
 ```typescript
 import Checkbox from 'your path';
 
-export default Demo() {
+export default function Demo() {
   return (
     <Checkbox
       checked

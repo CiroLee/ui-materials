@@ -2,7 +2,7 @@
 import Badge from 'your path';
 import { Bell, Check } from 'lucide-react';
 
-export default Demo() {
+export default function Demo() {
   return (
     <div className="flex gap-4">
       <Badge content={<Bell size={12} />}>

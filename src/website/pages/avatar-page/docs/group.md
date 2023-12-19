@@ -2,7 +2,7 @@
 import Avatar from 'your path';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
 
-export default Demo() {
+export default function Demo() {
   return (
     <AvatarGroup>
       <Avatar src={IMG_URL} />

@@ -2,7 +2,7 @@
 import Switch from 'your path';
 import { Check, X } from 'lucide-react';
 
-export default Demo() {
+export default function Demo() {
   return (
     <Switch
       checkedThumb={

@@ -1,7 +1,7 @@
 ```typescript
 import Button from 'your path';
 import { User, Upload, Loader } from 'lucide-react';
-export default Demo() {
+export default function Demo() {
   return (
     <div className="flex items-center [&_button:not(:first-child)]:ml-2">
       <Button type="primary">

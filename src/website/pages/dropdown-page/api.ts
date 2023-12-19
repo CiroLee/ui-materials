@@ -11,14 +11,14 @@ export const dropDownRows: ApiTableRow[] = [
   {
     prop: 'align',
     desc: 'alignment of menu',
-    type: 'enum: start | center | end',
+    type: 'tag: start | center | end',
     required: false,
     default: 'center',
   },
   {
     prop: 'side',
     desc: 'side of menu',
-    type: 'enum: top | right | bottom | left',
+    type: 'tag: top | right | bottom | left',
     required: false,
     default: 'bottom',
   },
