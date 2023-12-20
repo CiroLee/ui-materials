@@ -17,6 +17,7 @@ import TablePage from '@site/pages/table-page';
 import RadioPage from '@site/pages/radio-page';
 import BadgePage from '@site/pages/badge-page';
 import TagPage from '@site/pages/tag-page';
+import KbdPage from '@site/pages/kbd-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -122,6 +123,15 @@ export const router = createHashRouter([
         element: <TagPage />,
         meta: {
           title: 'Tag',
+          role: 'component',
+        },
+      },
+      {
+        path: 'kbd',
+        id: 'kbd',
+        element: <KbdPage />,
+        meta: {
+          title: 'Kbd',
           role: 'component',
         },
       },
