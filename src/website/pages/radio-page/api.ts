@@ -1,8 +1,8 @@
 import { type ApiTableRow } from '@site/components/ApiTable';
 export const radioGroupRows: ApiTableRow[] = [
   {
-    prop: 'orientation',
-    desc: 'item orientation',
+    prop: 'direction',
+    desc: 'item direction',
     type: 'tag: horizontal | vertical',
     required: false,
     default: 'horizontal',

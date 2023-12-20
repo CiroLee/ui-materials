@@ -20,9 +20,7 @@ function renderType(type: string) {
       <>
         {tags.map((item, index) => (
           <div className="inline-flex items-center relative" key={index}>
-            <Tag color="primary" className="">
-              {item}
-            </Tag>
+            <Tag color="primary">{item}</Tag>
             {index !== tags.length - 1 && (
               <span className="relative inline-block w-px h-[16px] top-[10%] mx-2 bg-black/10"></span>
             )}

@@ -13,10 +13,10 @@ const tag = tv({
       danger: 'bg-danger-500/10 text-danger-500',
     },
     size: {
-      tiny: 'h-[18px] px-1 text-[12px] rounded-tiny',
-      small: 'h-[22px] px-2 text-[14px] rounded-small',
-      medium: 'h-[26px] px-2 text-[16px] rounded-medium',
-      large: 'h-[30px] px-3 text-[18px] rounded-large',
+      tiny: 'h-[18px] px-1 text-[12px]',
+      small: 'h-[22px] px-2 text-[14px]',
+      medium: 'h-[26px] px-2 text-[16px]',
+      large: 'h-[30px] px-3 text-[18px]',
     },
     shape: {
       pill: '',
@@ -43,6 +43,26 @@ const tag = tv({
       size: 'large',
       shape: 'pill',
       class: 'rounded-[15px]',
+    },
+    {
+      size: 'tiny',
+      shape: 'default',
+      class: 'rounded-tiny',
+    },
+    {
+      size: 'small',
+      shape: 'default',
+      class: 'rounded-small',
+    },
+    {
+      size: 'medium',
+      shape: 'default',
+      class: 'rounded-medium',
+    },
+    {
+      size: 'large',
+      shape: 'default',
+      class: 'rounded-large',
     },
   ],
   defaultVariants: {

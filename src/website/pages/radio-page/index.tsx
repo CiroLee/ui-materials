@@ -4,7 +4,7 @@ import { radioGroupRows, radioOptionRows } from './api';
 import RadioGroup, { type RadioOption } from '@/packages/ui/RadioGroup';
 import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
-import { html as orientationHtml } from './docs/orientation.md';
+import { html as orientationHtml } from './docs/direction.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as customHtml } from './docs/custom.md';
 const options1: RadioOption[] = [
@@ -72,14 +72,14 @@ export default function RadioPage() {
         <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">orientation</h4>
+        <h4 className="mb-2">direction</h4>
         <RadioGroup
           options={options1}
           className="pb-3 mb-3 border-b"
-          orientation="horizontal"
+          direction="horizontal"
           onValueChange={(v) => console.log('you choose: ', v)}
         />
-        <RadioGroup options={options1} orientation="vertical" onValueChange={(v) => console.log('you choose: ', v)} />
+        <RadioGroup options={options1} direction="vertical" onValueChange={(v) => console.log('you choose: ', v)} />
         <CodeView content={orientationHtml} />
       </ShowBox>
       <ShowBox className="mb-4">

@@ -8,7 +8,7 @@ export interface RadioOption {
   disabled?: boolean;
 }
 interface RadioGroupProps {
-  orientation?: 'vertical' | 'horizontal';
+  direction?: 'vertical' | 'horizontal';
   value?: string;
   options: RadioOption[];
   className?: string;
@@ -17,14 +17,14 @@ interface RadioGroupProps {
 }
 
 const RadioGroup = forwardRef<React.ElementRef<typeof RadixRadioGroup.Root>, RadioGroupProps>((props, ref) => {
-  const { orientation = 'horizontal' } = props;
+  const { direction = 'horizontal' } = props;
   const [indicatorIndex, setIndicatorIndex] = useState<string>(props.value || '');
   return (
     <RadixRadioGroup.Root
       className={clsx(
         'flex gap-x-2.5',
         {
-          'flex-col': orientation === 'vertical',
+          'flex-col': direction === 'vertical',
         },
         props.className,
       )}
