@@ -94,6 +94,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.3.6
     version: 3.3.6
+  tailwindcss-extra:
+    specifier: ^0.0.1
+    version: 0.0.1(tailwindcss@3.3.6)
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -4431,6 +4434,14 @@ packages:
       tailwind-merge: 1.14.0
       tailwindcss: 3.3.6
     dev: false
+
+  /tailwindcss-extra@0.0.1(tailwindcss@3.3.6):
+    resolution: {integrity: sha512-TdUgjqfAzZ0r+hOKAufVEmyV6JBrf6gPl1hR7O2oml4BsSOU/pWe0QGlx3A08uhy9HCeOCI6hgw9YLxE3u/bOQ==}
+    peerDependencies:
+      tailwindcss: ^3.0.0
+    dependencies:
+      tailwindcss: 3.3.6
+    dev: true
 
   /tailwindcss@3.3.6:
     resolution: {integrity: sha512-AKjF7qbbLvLaPieoKeTjG1+FyNZT6KaJMJPFeQyLfIp7l82ggH1fbHJSsYIvnbTFQOlkh+gBYpyby5GT1LIdLw==}
