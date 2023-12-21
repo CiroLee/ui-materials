@@ -67,7 +67,7 @@ export default function ButtonPage() {
             default
           </Button>
           <Button size="small" shape="pill">
-            round
+            pill
           </Button>
           <Button shape="circle">C</Button>
           <Button size="large" shape="square">
