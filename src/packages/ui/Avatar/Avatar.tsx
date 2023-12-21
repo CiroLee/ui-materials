@@ -14,7 +14,10 @@ const avatar = tv({
     },
     shape: {
       circle: 'rounded-full',
-      round: 'rounded-medium',
+      round: 'rounded-large',
+    },
+    bordered: {
+      true: 'outline outline-2 outline-[var(--border-color)] border-2 border-solid border-white',
     },
   },
   defaultVariants: {
@@ -28,14 +31,18 @@ export interface AvatarProps extends AvatarVariants {
   text?: string;
   src?: string;
   alt?: string;
+  color?: string;
   className?: string;
   style?: React.CSSProperties;
 }
 
 const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps>((props, ref) => {
-  const { shape, size, text, alt, className, style } = props;
+  const { shape, size, text, alt, bordered, color = '#eae8e8', className, style } = props;
   return (
-    <RadixAvatar.Root className={clsx(avatar({ shape, size, class: className }))} style={style} ref={ref}>
+    <RadixAvatar.Root
+      className={clsx(avatar({ shape, size, bordered, class: className }))}
+      style={{ '--border-color': color, ...style } as React.CSSProperties}
+      ref={ref}>
       <RadixAvatar.Image className={clsx('w-full h-full object-cover')} src={props.src} alt={alt} />
       {!text ? (
         <RadixAvatar.Fallback

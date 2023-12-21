@@ -64,7 +64,7 @@ export default function BadgePage() {
         <CodeView content={placementHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">outline</h4>
+        <h4 className="mb-4">disabled outline</h4>
         <div className="flex gap-4">
           <Badge content="2" outline={false}>
             <Avatar shape="round" src={IMG_URL} />
@@ -85,7 +85,7 @@ export default function BadgePage() {
             <Avatar src={IMG_URL} />
           </Badge>
           <Badge size="small" placement="bottom-right" bgColor="#5bce5b">
-            <Avatar src={IMG_URL} />
+            <Avatar bordered color="#5bce5b" src={IMG_URL} />
           </Badge>
         </div>
         <CodeView content={contentHtml} />

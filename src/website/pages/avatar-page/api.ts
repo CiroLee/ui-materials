@@ -23,6 +23,27 @@ export const rows: ApiTableRow[] = [
     default: 'medium',
   },
   {
+    prop: 'bordered',
+    desc: 'whether add border around the avatar',
+    type: 'boolean',
+    required: false,
+    default: false,
+  },
+  {
+    prop: 'color',
+    desc: 'avatar border color',
+    type: 'string',
+    required: false,
+    default: '#eae8e8',
+  },
+  {
+    prop: 'alt',
+    desc: 'alt text for avatar',
+    type: 'string',
+    required: false,
+    default: '-',
+  },
+  {
     prop: 'text',
     desc: 'text content for avatar',
     type: 'string',
@@ -32,6 +53,12 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'className',
     type: 'string',
+    required: false,
+    default: '-',
+  },
+  {
+    prop: 'style',
+    type: 'React.CSSProperties',
     required: false,
     default: '-',
   },
