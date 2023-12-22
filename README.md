@@ -1,6 +1,6 @@
 # radix-materials
 
-materials of modern react components based on radix-ui
+modern ui materials about react aiming to use easily
 
 # Stack
 

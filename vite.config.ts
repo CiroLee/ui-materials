@@ -7,7 +7,7 @@ import hljs from 'highlight.js/lib/common';
 import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/radix-materials/',
+  base: '/ui-materials/',
   plugins: [
     react(),
     mdPlugin({
