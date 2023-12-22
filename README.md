@@ -1,4 +1,4 @@
-# radix-materials
+# ui-materials
 
 modern ui materials about react aiming to use easily
 
