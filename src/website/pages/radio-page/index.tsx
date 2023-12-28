@@ -1,7 +1,8 @@
 import ShowBox from '@site/components/ShowBox';
+import Heading from '@ui/Heading';
 import ApiTable from '@site/components/ApiTable';
 import { radioGroupRows, radioOptionRows } from './api';
-import RadioGroup, { type RadioOption } from '@/packages/ui/RadioGroup';
+import RadioGroup, { type RadioOption } from '@ui/RadioGroup';
 import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as orientationHtml } from './docs/direction.md';
@@ -65,14 +66,20 @@ const customOptions: RadioOption[] = [
 export default function RadioPage() {
   return (
     <>
-      <h2 className="mb-4">Radio Group</h2>
+      <Heading as="h2" className="mb-4">
+        Radio Group
+      </Heading>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">basic</h4>
+        <Heading as="h4" className="mb-2">
+          basic
+        </Heading>
         <RadioGroup options={options1} onValueChange={(v) => console.log('you choose: ', v)} />
         <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">direction</h4>
+        <Heading as="h4" className="mb-2">
+          direction
+        </Heading>
         <RadioGroup
           options={options1}
           className="pb-3 mb-3 border-b"
@@ -83,12 +90,16 @@ export default function RadioPage() {
         <CodeView content={orientationHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">disabled</h4>
+        <Heading as="h4" className="mb-2">
+          disabled
+        </Heading>
         <RadioGroup options={disabledOptions} onValueChange={(v) => console.log('you choose: ', v)} />
         <CodeView content={disabledHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">custom</h4>
+        <Heading as="h4" className="mb-2">
+          custom
+        </Heading>
         <RadioGroup
           className="[&>label_button]:self-baseline [&_button]:mt-[6px]"
           options={customOptions}
@@ -96,10 +107,16 @@ export default function RadioPage() {
         />
         <CodeView content={customHtml} />
       </ShowBox>
-      <h2 className="mb-2">API</h2>
-      <h4 className="mb-2">RadioGroup</h4>
+      <Heading as="h2" className="mb-2">
+        API
+      </Heading>
+      <Heading as="h4" className="mb-2">
+        RadioGroup
+      </Heading>
       <ApiTable rows={radioGroupRows} />
-      <h4 className="my-2">RadioOption</h4>
+      <Heading as="h4" className="my-2">
+        RadioOption
+      </Heading>
       <ApiTable rows={radioOptionRows} />
     </>
   );

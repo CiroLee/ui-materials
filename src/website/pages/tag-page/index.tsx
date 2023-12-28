@@ -1,4 +1,5 @@
 import Tag from '@ui/Tag';
+import Heading from '@ui/Heading';
 import ShowBox from '@/website/components/ShowBox';
 import { Smile } from 'lucide-react';
 import Avatar from '@ui/Avatar';
@@ -14,9 +15,13 @@ const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6D
 export default function TagPage() {
   return (
     <>
-      <h2 className="mb-4">Tag</h2>
+      <Heading as="h2" className="mb-4">
+        Tag
+      </Heading>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">size</h4>
+        <Heading as="h4" className="mb-4">
+          size
+        </Heading>
         <div className="flex items-center [&>div]:mr-2">
           <Tag size="tiny">tiny</Tag>
           <Tag size="small">small</Tag>
@@ -26,7 +31,9 @@ export default function TagPage() {
         <CodeView content={sizeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">color</h4>
+        <Heading as="h4" className="mb-4">
+          color
+        </Heading>
         <div className="flex items-center [&>div]:mr-2">
           <Tag color="default">default</Tag>
           <Tag color="primary">primary</Tag>
@@ -39,7 +46,9 @@ export default function TagPage() {
         <CodeView content={colorHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">shape</h4>
+        <Heading as="h4" className="mb-4">
+          shape
+        </Heading>
         <div className="flex items-center [&>div]:mr-2">
           <Tag size="medium" shape="default" color="primary">
             primary
@@ -51,7 +60,9 @@ export default function TagPage() {
         <CodeView content={shapeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">custom children</h4>
+        <Heading as="h4" className="mb-4">
+          custom children
+        </Heading>
         <div className="flex items-center [&>div]:mr-2">
           <Tag color="primary">
             <Smile size={12} className="mr-1" />
@@ -64,7 +75,9 @@ export default function TagPage() {
         </div>
         <CodeView content={customHtml} />
       </ShowBox>
-      <h2 className="my-4">API</h2>
+      <Heading as="h2" className="my-4">
+        API
+      </Heading>
       <ApiTable rows={rows} />
     </>
   );

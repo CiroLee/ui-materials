@@ -1,4 +1,5 @@
-import Checkbox, { CheckboxGroup, type CheckboxType } from '@/packages/ui/Checkbox';
+import Checkbox, { CheckboxGroup, type CheckboxType } from '@ui/Checkbox';
+import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import ApiTable from '@site/components/ApiTable';
 import { checkboxRows, checkboxGroupRows } from './api';
@@ -40,17 +41,21 @@ export default function CheckboxPage() {
   return (
     <>
       <div className="mb-4">
-        <h2>Checkbox</h2>
+        <Heading as="h2">Checkbox</Heading>
       </div>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">basic</h4>
+        <Heading as="h4" className="mb-2">
+          basic
+        </Heading>
         <Checkbox checked value="apple" onCheckedChange={(checked, value) => console.log(checked, value)}>
           apple
         </Checkbox>
         <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">disabled</h4>
+        <Heading as="h4" className="mb-2">
+          disabled
+        </Heading>
         <div className="flex items-center [&>*]:mr-2">
           <Checkbox disabled>disabled</Checkbox>
           <Checkbox checked disabled>
@@ -60,7 +65,9 @@ export default function CheckboxPage() {
         <CodeView content={disabledHtml} />
       </ShowBox>
       <ShowBox>
-        <h4 className="mb-2">checkbox group</h4>
+        <Heading as="h4" className="mb-2">
+          checkbox group
+        </Heading>
         <CheckboxGroup
           value="orange"
           className="flex [&>label]:mr-2 [&>label_button]:self-baseline [&_button]:mt-[6px]"
@@ -69,10 +76,16 @@ export default function CheckboxPage() {
         />
         <CodeView content={groupHtml} />
       </ShowBox>
-      <h2 className="mb-2">API</h2>
-      <h4 className="mb-2">Checkbox</h4>
+      <Heading as="h2" className="mb-2">
+        API
+      </Heading>
+      <Heading as="h4" className="mb-2">
+        Checkbox
+      </Heading>
       <ApiTable rows={checkboxRows} />
-      <h4 className="my-2">CheckboxGroup</h4>
+      <Heading as="h4" className="my-2">
+        CheckboxGroup
+      </Heading>
       <ApiTable rows={checkboxGroupRows} />
     </>
   );

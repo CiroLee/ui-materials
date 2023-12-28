@@ -1,7 +1,7 @@
 import { type FC, useState, useEffect, useRef } from 'react';
 import clsx from 'clsx';
 import 'highlight.js/styles/atom-one-dark.css';
-import Button from '@/packages/ui/Button';
+import Button from '@ui/Button';
 
 interface CodeViewProps {
   content: string;

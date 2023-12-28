@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import ApiTable from '@site/components/ApiTable';
 import { popupRows } from './api';
-import Popup from '@/packages/ui/Popup';
-import Button from '@/packages/ui/Button';
-import Switch from '@/packages/ui/Switch';
+import Popup from '@ui/Popup';
+import Button from '@ui/Button';
+import Switch from '@ui/Switch';
 import CodeView from '@site/components/CodeView';
 import { html as useHtml } from './docs/use.md';
 export default function PopupPage() {
@@ -17,7 +18,7 @@ export default function PopupPage() {
   const [blur, setBlur] = useState(false);
   return (
     <>
-      <h2>Popup</h2>
+      <Heading as="h2">Popup</Heading>
       <ShowBox className="my-4">
         <p className="mb-3 flex items-center">
           <span>blur mask:</span>
@@ -57,7 +58,9 @@ export default function PopupPage() {
         </Popup>
         <CodeView content={useHtml} />
       </ShowBox>
-      <h2 className="mb-2">API</h2>
+      <Heading as="h2" className="mb-2">
+        API
+      </Heading>
       <ApiTable rows={popupRows} />
     </>
   );

@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@/packages/ui/Table';
-import Tag from '@/packages/ui/Tag';
+import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@ui/Table';
+import Tag from '@ui/Tag';
 
 export interface ApiTableRow {
   prop: string;
