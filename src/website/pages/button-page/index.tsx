@@ -1,6 +1,7 @@
 import { User, Upload, Loader } from 'lucide-react';
+import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
-import Button, { ButtonGroup } from '@/packages/ui/Button';
+import Button, { ButtonGroup } from '@ui/Button';
 import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
 import { html as baseHtml } from './docs/base.md';
@@ -15,10 +16,12 @@ export default function ButtonPage() {
   return (
     <>
       <div className="mb-4">
-        <h2>Button</h2>
+        <Heading as="h2">Button</Heading>
       </div>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">basic</h4>
+        <Heading as="h4" className="mb-2">
+          basic
+        </Heading>
         <div className="[&_button:not(:first-child)]:ml-2">
           <Button>primary</Button>
           <Button type="success">success</Button>
@@ -32,7 +35,9 @@ export default function ButtonPage() {
         <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">outline</h4>
+        <Heading as="h4" className="mb-2">
+          outline
+        </Heading>
         <div className="[&_button:not(:first-child)]:ml-2">
           <Button outline>primary</Button>
           <Button outline type="success">
@@ -51,7 +56,9 @@ export default function ButtonPage() {
         <CodeView content={outlineHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">size</h4>
+        <Heading as="h4" className="mb-2">
+          size
+        </Heading>
         <div className="[&_button:not(:first-child)]:ml-2">
           <Button size="tiny">tiny</Button>
           <Button size="small">small</Button>
@@ -61,7 +68,9 @@ export default function ButtonPage() {
         <CodeView content={sizeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">shape</h4>
+        <Heading as="h4" className="mb-2">
+          shape
+        </Heading>
         <div className="[&_button:not(:first-child)]:ml-2">
           <Button size="tiny" shape="default">
             default
@@ -77,7 +86,9 @@ export default function ButtonPage() {
         <CodeView content={shapeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">block</h4>
+        <Heading as="h4" className="mb-2">
+          block
+        </Heading>
         <div className="[&_button:not(:first-child)]:mt-2">
           <Button shape="pill" block>
             button
@@ -90,7 +101,9 @@ export default function ButtonPage() {
         <CodeView content={blockHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">width icon</h4>
+        <Heading as="h4" className="mb-2">
+          width icon
+        </Heading>
         <div className="flex items-center [&_button:not(:first-child)]:ml-2">
           <Button type="primary">
             <User size={16} className="mr-1" />
@@ -111,7 +124,9 @@ export default function ButtonPage() {
         <CodeView content={iconsHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">buttonGroup</h4>
+        <Heading as="h4" className="mb-2">
+          buttonGroup
+        </Heading>
         <ButtonGroup className="mb-2">
           <Button>apple</Button>
           <Button>banana</Button>
@@ -135,10 +150,16 @@ export default function ButtonPage() {
         </ButtonGroup>
         <CodeView content={buttonGroupHtml} />
       </ShowBox>
-      <h2 className="mb-2">API</h2>
-      <h4 className="mb-2">Button</h4>
+      <Heading as="h2" className="mb-2">
+        API
+      </Heading>
+      <Heading as="h4" className="mb-2">
+        Button
+      </Heading>
       <ApiTable rows={rows} />
-      <h4 className="my-2">ButtonGroup</h4>
+      <Heading as="h4" className="my-2">
+        ButtonGroup
+      </Heading>
       <ApiTable rows={buttonGroupRows} />
     </>
   );

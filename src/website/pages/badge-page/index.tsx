@@ -1,5 +1,6 @@
-import Badge from '@/packages/ui/Badge';
-import Avatar from '@/packages/ui/Avatar';
+import Badge from '@ui/Badge';
+import Heading from '@ui/Heading';
+import Avatar from '@ui/Avatar';
 import ShowBox from '@/website/components/ShowBox';
 import CodeView from '@/website/components/CodeView';
 import { Bell, Check } from 'lucide-react';
@@ -14,9 +15,13 @@ const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6D
 export default function BadgePage() {
   return (
     <>
-      <h2 className="mb-4">Badge</h2>
+      <Heading as="h2" className="mb-4">
+        Badge
+      </Heading>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">size</h4>
+        <Heading as="h4" className="mb-4">
+          size
+        </Heading>
         <div className="flex gap-4">
           <Badge size="small" content="9">
             <Avatar src={IMG_URL} />
@@ -31,7 +36,9 @@ export default function BadgePage() {
         <CodeView content={sizeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">bgColor & textColor</h4>
+        <Heading as="h4" className="mb-4">
+          bgColor & textColor
+        </Heading>
         <div className="flex gap-4">
           <Badge content="2" bgColor="#8749F5">
             <Avatar src={IMG_URL} />
@@ -46,7 +53,9 @@ export default function BadgePage() {
         <CodeView content={colorHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">placements</h4>
+        <Heading as="h4" className="mb-4">
+          placements
+        </Heading>
         <div className="flex gap-4">
           <Badge className="px-1" content="99+" placement="top-right">
             <Avatar src={IMG_URL} />
@@ -64,7 +73,9 @@ export default function BadgePage() {
         <CodeView content={placementHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">disabled outline</h4>
+        <Heading as="h4" className="mb-4">
+          disabled outline
+        </Heading>
         <div className="flex gap-4">
           <Badge content="2" outline={false}>
             <Avatar shape="round" src={IMG_URL} />
@@ -76,7 +87,9 @@ export default function BadgePage() {
         <CodeView content={outlineHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">custom content</h4>
+        <Heading as="h4" className="mb-4">
+          custom content
+        </Heading>
         <div className="flex gap-4">
           <Badge content={<Bell size={12} />}>
             <Avatar shape="round" src={IMG_URL} />
@@ -90,7 +103,9 @@ export default function BadgePage() {
         </div>
         <CodeView content={contentHtml} />
       </ShowBox>
-      <h4 className="my-2">API</h4>
+      <Heading as="h4" className="my-2">
+        API
+      </Heading>
       <ApiTable rows={rows} />
     </>
   );

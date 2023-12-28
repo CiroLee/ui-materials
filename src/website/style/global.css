@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 @layer base {
-  h2 {
+  /* h2 {
     @apply text-2xl font-semibold;
   }
   h4 {
     @apply text-lg;
-  }
+  } */
 }

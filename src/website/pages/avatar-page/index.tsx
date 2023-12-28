@@ -1,3 +1,4 @@
+import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import Avatar, { AvatarGroup } from '@ui/Avatar';
 import ApiTable from '@site/components/ApiTable';
@@ -12,9 +13,13 @@ const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6D
 export default function AvatarPage() {
   return (
     <>
-      <h2 className="mb-4">Avatar</h2>
+      <Heading as="h2" className="mb-4">
+        Avatar
+      </Heading>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">size</h4>
+        <Heading as="h4" className="mb-2">
+          size
+        </Heading>
         <div className="flex items-end [&>*]:mr-4 text-gray-600 text-sm">
           <div className="flex flex-col items-center justify-center">
             <Avatar size="tiny" src={IMG_URL} />
@@ -40,7 +45,9 @@ export default function AvatarPage() {
         <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">shape</h4>
+        <Heading as="h4" className="mb-2">
+          shape
+        </Heading>
         <div className="flex items-end [&>*]:mr-4">
           <Avatar size="large" src={IMG_URL} />
           <Avatar size="large" shape="round" src={IMG_URL} />
@@ -48,7 +55,9 @@ export default function AvatarPage() {
         <CodeView content={shapeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-4">bordered</h4>
+        <Heading as="h4" className="mb-4">
+          bordered
+        </Heading>
         <div className="flex items-end [&>*]:mr-4">
           <Avatar bordered src={IMG_URL} />
           <Avatar bordered color="#8749F5" src={IMG_URL} />
@@ -57,7 +66,9 @@ export default function AvatarPage() {
         <CodeView content={borderedHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">text avatar</h4>
+        <Heading as="h4" className="mb-2">
+          text avatar
+        </Heading>
         <div className="flex items-end [&>*]:mr-4">
           <Avatar text="T" size="tiny" className="bg-purple-500 text-white" />
           <Avatar text="S" size="small" className="bg-orange-500 text-white" />
@@ -68,7 +79,9 @@ export default function AvatarPage() {
         <CodeView content={textHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
-        <h4 className="mb-2">avatar group</h4>
+        <Heading as="h4" className="mb-2">
+          avatar group
+        </Heading>
         <AvatarGroup>
           <Avatar src={IMG_URL} />
           <Avatar src={IMG_URL} />
@@ -83,10 +96,16 @@ export default function AvatarPage() {
         </AvatarGroup>
         <CodeView content={groupHtml} />
       </ShowBox>
-      <h2 className="mb-2">API</h2>
-      <h4 className="mb-2">Avatar</h4>
+      <Heading as="h2" className="mb-2">
+        API
+      </Heading>
+      <Heading as="h4" className="mb-2">
+        Avatar
+      </Heading>
       <ApiTable rows={rows} />
-      <h4 className="my-2">AvatarGroup</h4>
+      <Heading as="h4" className="my-2">
+        AvatarGroup
+      </Heading>
       <ApiTable rows={avatarGroupRows} />
     </>
   );

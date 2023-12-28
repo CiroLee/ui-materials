@@ -1,4 +1,4 @@
-import { MenuItem } from '@/packages/ui/Dropdown';
+import { MenuItem } from '@ui/Dropdown';
 import { Layers, Droplet, Globe, Pipette } from 'lucide-react';
 
 export const commonMenus: MenuItem[] = [

@@ -1,4 +1,5 @@
-import DropDown, { MenuItem } from '@/packages/ui/Dropdown';
+import DropDown, { MenuItem } from '@ui/Dropdown';
+import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
@@ -9,7 +10,7 @@ import { html as separatorHtml } from './docs/separator.md';
 import { html as childrenMenuHtml } from './docs/children-menu.md';
 import { html as preAndSuffixHtml } from './docs/custom.md';
 import { commonMenus, menuWidthSeparator, menuWithChildren, menuWidthPreAndSuffix } from './mock';
-import Button from '@/packages/ui/Button';
+import Button from '@ui/Button';
 
 export default function DropdownMenuPage() {
   const handleOnItemSelect = (event: Event, item: MenuItem) => {
@@ -17,16 +18,20 @@ export default function DropdownMenuPage() {
   };
   return (
     <div className="mt-4">
-      <h2>Dropdown</h2>
+      <Heading as="h2">Dropdown</Heading>
       <ShowBox className="mt-4">
-        <h4 className="mb-2">basic</h4>
+        <Heading as="h4" className="mb-2">
+          basic
+        </Heading>
         <DropDown className="w-[120px]" menus={commonMenus} onSelect={handleOnItemSelect}>
           <Button>menu</Button>
         </DropDown>
         <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mt-4">
-        <h4 className="mb-2">side</h4>
+        <Heading as="h4" className="mb-2">
+          side
+        </Heading>
         <div className="[&_Button:not(:first-child)]:ml-2">
           <DropDown className="w-[120px]" menus={commonMenus} side="left">
             <Button>left</Button>
@@ -44,7 +49,9 @@ export default function DropdownMenuPage() {
         <CodeView content={sideHtml} />
       </ShowBox>
       <ShowBox className="mt-4">
-        <h4 className="mb-2">align</h4>
+        <Heading as="h4" className="mb-2">
+          align
+        </Heading>
         <div className="[&_Button:not(:first-child)]:ml-2">
           <DropDown className="w-[120px]" menus={commonMenus} align="start">
             <Button>start</Button>
@@ -58,30 +65,42 @@ export default function DropdownMenuPage() {
         </div>
       </ShowBox>
       <ShowBox className="mt-4">
-        <h4 className="mb-2">separator</h4>
+        <Heading as="h4" className="mb-2">
+          separator
+        </Heading>
         <DropDown className="w-[120px]" menus={menuWidthSeparator}>
           <Button>menu</Button>
         </DropDown>
         <CodeView content={separatorHtml} />
       </ShowBox>
       <ShowBox className="mt-4">
-        <h4 className="mb-2">children menu</h4>
+        <Heading as="h4" className="mb-2">
+          children menu
+        </Heading>
         <DropDown className="w-[120px]" menus={menuWithChildren} onSelect={handleOnItemSelect}>
           <Button>menu</Button>
         </DropDown>
         <CodeView content={childrenMenuHtml} />
       </ShowBox>
       <ShowBox className="mt-4">
-        <h4 className="mb-2">custom prefix and suffix</h4>
+        <Heading as="h4" className="mb-2">
+          custom prefix and suffix
+        </Heading>
         <DropDown className="w-[200px]" menus={menuWidthPreAndSuffix} onSelect={handleOnItemSelect}>
           <Button>menu</Button>
         </DropDown>
         <CodeView content={preAndSuffixHtml} />
       </ShowBox>
-      <h2 className="mb-2">API</h2>
-      <h4 className="mb-2">Dropdown</h4>
+      <Heading as="h2" className="mb-2">
+        API
+      </Heading>
+      <Heading as="h4" className="mb-2">
+        Dropdown
+      </Heading>
       <ApiTable rows={dropDownRows} />
-      <h4 className="my-2">MenuItem</h4>
+      <Heading as="h4" className="my-2">
+        MenuItem
+      </Heading>
       <ApiTable rows={menuItemRows} />
     </div>
   );

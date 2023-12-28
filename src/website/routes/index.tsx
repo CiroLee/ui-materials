@@ -18,13 +18,14 @@ import RadioPage from '@site/pages/radio-page';
 import BadgePage from '@site/pages/badge-page';
 import TagPage from '@site/pages/tag-page';
 import KbdPage from '@site/pages/kbd-page';
+import HeadingPage from '../pages/heading-page';
 export const router = createHashRouter([
   {
     path: '/',
     id: 'layout',
     element: <Layout />,
     meta: {
-      title: 'Radix materials',
+      title: 'ui materials',
       role: 'title',
     },
     children: [
@@ -132,6 +133,15 @@ export const router = createHashRouter([
         element: <KbdPage />,
         meta: {
           title: 'Kbd',
+          role: 'component',
+        },
+      },
+      {
+        path: 'heading',
+        id: 'heading',
+        element: <HeadingPage />,
+        meta: {
+          title: 'Heading',
           role: 'component',
         },
       },
