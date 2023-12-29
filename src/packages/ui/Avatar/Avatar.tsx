@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
-import clsx from 'clsx';
 import * as RadixAvatar from '@radix-ui/react-avatar';
 
 const avatar = tv({
@@ -40,16 +39,17 @@ const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps
   const { shape, size, text, alt, bordered, color = '#eae8e8', className, style } = props;
   return (
     <RadixAvatar.Root
-      className={clsx(avatar({ shape, size, bordered, class: className }))}
+      className={avatar({ shape, size, bordered, class: className })}
       style={{ '--border-color': color, ...style } as React.CSSProperties}
       ref={ref}>
-      <RadixAvatar.Image className={clsx('w-full h-full object-cover')} src={props.src} alt={alt} />
+      <RadixAvatar.Image className="w-full h-full object-cover" src={props.src} alt={alt} />
       {!text ? (
         <RadixAvatar.Fallback
-          className={clsx(
-            avatar({ size, shape }),
-            'flex justify-center items-center text-gray-400/60 bg-gray-200 [&_svg]:w-[52%] [&_svg]:h-[52%]',
-          )}>
+          className={avatar({
+            size,
+            shape,
+            class: 'flex justify-center items-center text-gray-400/60 bg-gray-200 [&_svg]:w-[52%] [&_svg]:h-[52%]',
+          })}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

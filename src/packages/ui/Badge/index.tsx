@@ -1,6 +1,5 @@
 import { forwardRef } from 'react';
 import { type VariantProps, tv } from 'tailwind-variants';
-import clsx from 'clsx';
 const badge = tv({
   base: 'flex justify-center items-center absolute bg-[var(--bg-color)] text-[--text-color] border-[2px] border-white box-border origin-center -translate-y-1/2',
   variants: {
@@ -112,7 +111,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(function Badge(props: Badge
     <div className="inline-flex relative box-border" ref={ref}>
       {children}
       <div
-        className={clsx(badge({ size, placement, outline }), className)}
+        className={badge({ size, placement, outline, class: className })}
         style={{ '--bg-color': bgColor, '--text-color': textColor, ...style } as React.CSSProperties}>
         {content}
       </div>

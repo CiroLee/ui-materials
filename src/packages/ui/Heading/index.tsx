@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, forwardRef } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
 interface HeadingBase extends PropsWithChildren {
   className?: string;
@@ -20,12 +20,15 @@ const heading = tv({
 
 type HeadingVariants = Required<VariantProps<typeof heading>>;
 export interface HeadingProps extends HeadingVariants, HeadingBase {}
-const Heading = ({ as: Tag, children, className, ...props }: HeadingProps) => {
+
+const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(({ as: Tag, children, className, ...props }, ref) => {
   return (
-    <Tag className={heading({ as: Tag, class: className })} {...props}>
+    <Tag ref={ref} className={heading({ as: Tag, class: className })} {...props}>
       {children}
     </Tag>
   );
-};
+});
+
+Heading.displayName = 'Heading';
 
 export default Heading;

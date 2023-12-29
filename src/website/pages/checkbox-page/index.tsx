@@ -7,6 +7,7 @@ import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as groupHtml } from './docs/group.md';
+import SourceButton from '@/website/components/SourceButton';
 export default function CheckboxPage() {
   const checkboxGroup: CheckboxType[] = [
     {
@@ -40,8 +41,11 @@ export default function CheckboxPage() {
   ];
   return (
     <>
-      <div className="mb-4">
-        <Heading as="h2">Checkbox</Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Checkbox
+        </Heading>
+        <SourceButton name="Checkbox" />
       </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">

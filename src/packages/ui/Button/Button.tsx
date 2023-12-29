@@ -1,9 +1,6 @@
 import { forwardRef } from 'react';
-import clsx from 'clsx';
 import { tv, type VariantProps } from 'tailwind-variants';
 import { omit } from '../../libs/utils';
-export type ButtonType = 'primary' | 'success' | 'danger' | 'warn' | 'text';
-export type ButtonShape = 'default' | 'round' | 'circle' | 'square';
 
 const compoundVariants = tv({
   compoundVariants: [
@@ -96,7 +93,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     <button
       ref={ref}
       {...omit(props, ['size', 'type', 'shape', 'outline', 'block', 'loading'])}
-      className={clsx(button({ type, size, outline, block, shape, disabled, loading }), className)}
+      className={button({ type, size, outline, block, shape, disabled, loading, class: className })}
       style={style}>
       <div className="relative w-full h-full flex justify-center items-center">{props.children}</div>
     </button>
