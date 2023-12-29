@@ -23,7 +23,7 @@ export default function DropdownMenuPage() {
         <Heading as="h2" className="mb-4">
           Dropdown
         </Heading>
-        <SourceButton name="Dropdown" />
+        <SourceButton name="Source" />
       </div>
       <ShowBox className="mt-4">
         <Heading as="h4" className="mb-2">

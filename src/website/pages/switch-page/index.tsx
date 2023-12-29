@@ -19,7 +19,7 @@ export default function SwitchPage() {
         <Heading as="h2" className="mb-4">
           Switch
         </Heading>
-        <SourceButton name="Switch" />
+        <SourceButton name="Source" />
       </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
