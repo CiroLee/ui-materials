@@ -23,7 +23,7 @@ export default function PopupPage() {
         <Heading as="h2" className="mb-4">
           Popup
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Popup" />
       </div>
       <ShowBox className="my-4">
         <p className="mb-3 flex items-center">

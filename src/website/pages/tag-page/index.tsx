@@ -20,7 +20,7 @@ export default function TagPage() {
         <Heading as="h2" className="mb-4">
           Tag
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Tag" />
       </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">

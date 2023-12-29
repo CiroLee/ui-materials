@@ -12,7 +12,7 @@ export default function HeadingPage() {
         <Heading as="h2" className="mb-4">
           Heading
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Heading" />
       </div>
       <ShowBox className="mb-4 [&_*]:mb-2">
         <Heading as="h1">h1 Heading</Heading>

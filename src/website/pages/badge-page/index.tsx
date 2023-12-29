@@ -20,7 +20,7 @@ export default function BadgePage() {
         <Heading as="h2" className="mb-4">
           Badge
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Badge" />
       </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">

@@ -18,7 +18,7 @@ export default function AvatarPage() {
         <Heading as="h2" className="mb-4">
           Avatar
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Avatar" />
       </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">

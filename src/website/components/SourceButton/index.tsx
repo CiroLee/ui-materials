@@ -18,7 +18,7 @@ export default function SourceButton(props: SourceButtonProps) {
       href={`https://github.com/CiroLee/ui-materials/tree/main/src/packages/ui/${name}`}>
       <Button type="text" outline size="small" className="cursor-pointer">
         <Github className="mr-1" size="16px" />
-        <span>{name}</span>
+        <span>Source</span>
       </Button>
     </a>
   );

@@ -18,12 +18,12 @@ export default function DropdownMenuPage() {
     console.log('you click:', event, item);
   };
   return (
-    <div className="mt-4">
+    <>
       <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
+        <Heading as="h2" className="">
           Dropdown
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Dropdown" />
       </div>
       <ShowBox className="mt-4">
         <Heading as="h4" className="mb-2">
@@ -108,6 +108,6 @@ export default function DropdownMenuPage() {
         MenuItem
       </Heading>
       <ApiTable rows={menuItemRows} />
-    </div>
+    </>
   );
 }

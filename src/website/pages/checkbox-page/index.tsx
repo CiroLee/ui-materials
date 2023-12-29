@@ -45,7 +45,7 @@ export default function CheckboxPage() {
         <Heading as="h2" className="mb-4">
           Checkbox
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Checkbox" />
       </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">

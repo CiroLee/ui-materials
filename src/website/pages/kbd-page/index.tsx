@@ -14,7 +14,7 @@ export default function KbdPage() {
         <Heading as="h2" className="mb-4">
           Kbd
         </Heading>
-        <SourceButton name="Source" />
+        <SourceButton name="Kbd" />
       </div>
       <ShowBox className="mb-4 [&>div]:mr-2">
         <Kbd keys={['command']} />
