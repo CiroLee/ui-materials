@@ -10,13 +10,13 @@ export default function HeadingPage() {
       <Heading as="h2" className="mb-4">
         Heading
       </Heading>
-      <ShowBox className="mb-4">
-        <Heading as="h1">Heading</Heading>
-        <Heading as="h2">Heading</Heading>
-        <Heading as="h3">Heading</Heading>
-        <Heading as="h4">Heading</Heading>
-        <Heading as="h5">Heading</Heading>
-        <Heading as="h6">Heading</Heading>
+      <ShowBox className="mb-4 [&_*]:mb-2">
+        <Heading as="h1">h1 Heading</Heading>
+        <Heading as="h2">h2 Heading</Heading>
+        <Heading as="h3">h3 Heading</Heading>
+        <Heading as="h4">h4 Heading</Heading>
+        <Heading as="h5">h5 Heading</Heading>
+        <Heading as="h6">h6 Heading</Heading>
       </ShowBox>
       <CodeView content={HeadingHtml} />
       <Heading as="h2" className="my-4">

@@ -2,12 +2,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  /* h2 {
-    @apply text-2xl font-semibold;
-  }
-  h4 {
-    @apply text-lg;
-  } */
-}
