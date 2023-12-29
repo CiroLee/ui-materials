@@ -2,6 +2,7 @@ import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import Avatar, { AvatarGroup } from '@ui/Avatar';
 import ApiTable from '@site/components/ApiTable';
+import SourceButton from '@/website/components/SourceButton';
 import { rows, avatarGroupRows } from './api';
 import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
@@ -13,9 +14,12 @@ const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6D
 export default function AvatarPage() {
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        Avatar
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Avatar
+        </Heading>
+        <SourceButton name="Avatar" />
+      </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           size

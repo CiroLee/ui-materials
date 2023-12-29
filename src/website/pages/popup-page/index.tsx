@@ -8,6 +8,7 @@ import Button from '@ui/Button';
 import Switch from '@ui/Switch';
 import CodeView from '@site/components/CodeView';
 import { html as useHtml } from './docs/use.md';
+import SourceButton from '@/website/components/SourceButton';
 export default function PopupPage() {
   const [showCenter, setShowCenter] = useState(false);
   const [showLeft, setShowLeft] = useState(false);
@@ -18,7 +19,12 @@ export default function PopupPage() {
   const [blur, setBlur] = useState(false);
   return (
     <>
-      <Heading as="h2">Popup</Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Popup
+        </Heading>
+        <SourceButton name="Popup" />
+      </div>
       <ShowBox className="my-4">
         <p className="mb-3 flex items-center">
           <span>blur mask:</span>

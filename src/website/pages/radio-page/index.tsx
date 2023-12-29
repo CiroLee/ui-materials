@@ -8,6 +8,7 @@ import { html as baseHtml } from './docs/base.md';
 import { html as orientationHtml } from './docs/direction.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as customHtml } from './docs/custom.md';
+import SourceButton from '@/website/components/SourceButton';
 const options1: RadioOption[] = [
   {
     value: 'apple',
@@ -66,9 +67,12 @@ const customOptions: RadioOption[] = [
 export default function RadioPage() {
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        Radio Group
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          RadioGroup
+        </Heading>
+        <SourceButton name="RadioGroup" />
+      </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

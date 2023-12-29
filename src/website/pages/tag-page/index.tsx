@@ -10,14 +10,18 @@ import { html as colorHtml } from './docs/color.md';
 import { html as shapeHtml } from './docs/shape.md';
 import { html as customHtml } from './docs/custom.md';
 import { rows } from './api';
+import SourceButton from '@/website/components/SourceButton';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
 
 export default function TagPage() {
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        Tag
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Tag
+        </Heading>
+        <SourceButton name="Tag" />
+      </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
           size

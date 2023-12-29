@@ -11,6 +11,7 @@ import { html as childrenMenuHtml } from './docs/children-menu.md';
 import { html as preAndSuffixHtml } from './docs/custom.md';
 import { commonMenus, menuWidthSeparator, menuWithChildren, menuWidthPreAndSuffix } from './mock';
 import Button from '@ui/Button';
+import SourceButton from '@/website/components/SourceButton';
 
 export default function DropdownMenuPage() {
   const handleOnItemSelect = (event: Event, item: MenuItem) => {
@@ -18,7 +19,12 @@ export default function DropdownMenuPage() {
   };
   return (
     <div className="mt-4">
-      <Heading as="h2">Dropdown</Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Dropdown
+        </Heading>
+        <SourceButton name="Dropdown" />
+      </div>
       <ShowBox className="mt-4">
         <Heading as="h4" className="mb-2">
           basic

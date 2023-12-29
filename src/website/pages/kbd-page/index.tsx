@@ -6,12 +6,16 @@ import { html as baseHtml } from './docs/base.md';
 import { html as keyHtml } from './docs/keys.md';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
+import SourceButton from '@/website/components/SourceButton';
 export default function KbdPage() {
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        Kbd
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Kbd
+        </Heading>
+        <SourceButton name="Kbd" />
+      </div>
       <ShowBox className="mb-4 [&>div]:mr-2">
         <Kbd keys={['command']} />
         <Kbd keys={['command']}>K</Kbd>

@@ -1,6 +1,5 @@
 import { forwardRef } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
-import clsx from 'clsx';
 
 const tag = tv({
   base: 'inline-flex items-center',
@@ -80,7 +79,7 @@ export interface TagProps extends TagVariants {
 const Tag = forwardRef<HTMLDivElement, TagProps>(function Tag(props, ref) {
   const { color, size, shape, className, style } = props;
   return (
-    <div ref={ref} className={clsx(tag({ size, color, shape, class: className }))} style={style}>
+    <div ref={ref} className={tag({ size, color, shape, class: className })} style={style}>
       {props.children}
     </div>
   );

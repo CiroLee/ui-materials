@@ -4,12 +4,16 @@ import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import { html as HeadingHtml } from './docs/heading.md';
+import SourceButton from '@/website/components/SourceButton';
 export default function HeadingPage() {
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        Heading
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Heading
+        </Heading>
+        <SourceButton name="Heading" />
+      </div>
       <ShowBox className="mb-4 [&_*]:mb-2">
         <Heading as="h1">h1 Heading</Heading>
         <Heading as="h2">h2 Heading</Heading>
