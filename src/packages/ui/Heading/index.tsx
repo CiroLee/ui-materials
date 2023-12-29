@@ -5,15 +5,15 @@ interface HeadingBase extends PropsWithChildren {
   style?: React.CSSProperties;
 }
 const heading = tv({
-  base: 'font-bold',
+  base: 'font-medium',
   variants: {
     as: {
-      h1: 'text-[2rem]',
-      h2: 'text-[1.5rem]',
-      h3: 'text-[1.33rem]',
-      h4: 'text-[1.17rem]',
-      h5: 'text-[0.83rem]',
-      h6: 'text-[0.67rem]',
+      h1: 'text-[2.25rem] leading-[1.22]',
+      h2: 'text-[2rem] leading-[1.24]',
+      h3: 'text-[1.75rem] leading-[1.28]',
+      h4: 'text-[1.5rem] leading-[1.34]',
+      h5: 'text-[1.25rem] leading-[1.4]',
+      h6: 'text-[1rem] leading-[1.5]',
     },
   },
 });
