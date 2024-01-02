@@ -40,6 +40,22 @@ const themeExtends = {
   zIndex: {
     popup: 100,
   },
+  animation: {
+    flicker: 'flicker 2s infinite ease',
+    shimmer: 'shimmer 2s infinite linear',
+  },
+  keyframes: {
+    flicker: {
+      '0%': { backgroundPosition: '100% 50%' },
+      '100%': { backgroundPosition: '0 50%' },
+    },
+    shimmer: {
+      '50%': { opacity: 0.5 },
+    },
+  },
+  backgroundImage: {
+    'skeleton-flicker': 'linear-gradient(90deg, rgb(0 0 0 / 5%) 20%, rgb(0 0 0 / 10%) 40%, rgb(0 0 0 / 5%) 60%)',
+  },
 };
 
 export default themeExtends;
