@@ -18,7 +18,8 @@ import RadioPage from '@site/pages/radio-page';
 import BadgePage from '@site/pages/badge-page';
 import TagPage from '@site/pages/tag-page';
 import KbdPage from '@site/pages/kbd-page';
-import HeadingPage from '../pages/heading-page';
+import HeadingPage from '@site/pages/heading-page';
+import SkeletonPage from '@site/pages/skeleton-page';
 export const router = createHashRouter([
   {
     path: '/',
@@ -142,6 +143,15 @@ export const router = createHashRouter([
         element: <HeadingPage />,
         meta: {
           title: 'Heading',
+          role: 'component',
+        },
+      },
+      {
+        path: 'skeleton',
+        id: 'skeleton',
+        element: <SkeletonPage />,
+        meta: {
+          title: 'Skeleton',
           role: 'component',
         },
       },
