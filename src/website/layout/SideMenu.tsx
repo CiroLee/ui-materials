@@ -46,7 +46,7 @@ export default function SideMenu() {
         <ChevronLeft size={20} className="text-[20px]" />
       </motion.div>
       <motion.div className="overflow-hidden whitespace-nowrap">
-        <Link className="h-[36px] px-8px h-44px mb-2 flex items-center px-2 font-bold cursor-pointer" to={head.path!}>
+        <Link className="h-[36px] px-8px h-44px mb-2 flex items-center px-2 font-bold cursor-default" to={head.path!}>
           {head.meta.title}
         </Link>
       </motion.div>
@@ -55,7 +55,7 @@ export default function SideMenu() {
           <NavLink
             to={r.path!}
             className={({ isActive }) =>
-              `h-[36px] flex items-center rounded-[4px] hover:bg-gray-200/60 transition-all duration-200 px-2 ${
+              `h-[36px] flex items-center rounded-[4px] hover:bg-gray-200/60 transition-all duration-200 px-2 cursor-default ${
                 isActive ? 'text-brand-500' : 'text-gray-500/40'
               }`
             }>

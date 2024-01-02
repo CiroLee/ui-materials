@@ -1,6 +1,5 @@
 import { forwardRef } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
-import { omit } from '../../libs/utils';
 
 const compoundVariants = tv({
   compoundVariants: [
@@ -88,11 +87,11 @@ export interface ButtonProps extends ButtonVariants {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const { size, type, shape, outline, block, disabled, loading, className, style } = props;
+  const { size, type, shape, outline, block, disabled, loading, className, style, ...rest } = props;
   return (
     <button
       ref={ref}
-      {...omit(props, ['size', 'type', 'shape', 'outline', 'block', 'loading'])}
+      {...{ disabled, rest }}
       className={button({ type, size, outline, block, shape, disabled, loading, class: className })}
       style={style}>
       <div className="relative w-full h-full flex justify-center items-center">{props.children}</div>
