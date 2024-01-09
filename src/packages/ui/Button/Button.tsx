@@ -91,7 +91,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   return (
     <button
       ref={ref}
-      {...{ disabled, rest }}
+      {...{ disabled, ...rest }}
       className={button({ type, size, outline, block, shape, disabled, loading, class: className })}
       style={style}>
       <div className="relative w-full h-full flex justify-center items-center">{props.children}</div>
