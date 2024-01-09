@@ -20,6 +20,8 @@ import TagPage from '@site/pages/tag-page';
 import KbdPage from '@site/pages/kbd-page';
 import HeadingPage from '@site/pages/heading-page';
 import SkeletonPage from '@site/pages/skeleton-page';
+import PopoverPage from '@site/pages/popover-page';
+
 export const router = createHashRouter([
   {
     path: '/',
@@ -152,6 +154,15 @@ export const router = createHashRouter([
         element: <SkeletonPage />,
         meta: {
           title: 'Skeleton',
+          role: 'component',
+        },
+      },
+      {
+        path: 'popover',
+        id: 'popover',
+        element: <PopoverPage />,
+        meta: {
+          title: 'Popover',
           role: 'component',
         },
       },
