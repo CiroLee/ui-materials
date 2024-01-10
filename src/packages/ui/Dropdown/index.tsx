@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { ChevronRight } from 'lucide-react';
 import * as DropDownMenu from '@radix-ui/react-dropdown-menu';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import { Align, Side } from '@/packages/types/common';
 
 export type MenuItemOnSelectEvent = (event: Event, menu: MenuItem) => void;
 export interface MenuItem {
@@ -16,8 +17,8 @@ export interface MenuItem {
 }
 export interface DropDownProps {
   menus: MenuItem[];
-  align?: 'start' | 'center' | 'end';
-  side?: 'top' | 'right' | 'bottom' | 'left';
+  align?: Align;
+  side?: Side;
   children?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
@@ -104,7 +105,7 @@ const DropDown = forwardRef<React.ElementRef<typeof DropDownMenu.Root>, DropDown
               className={clsx(props.className)}
               style={props.style}>
               <motion.div initial="closed" animate={open ? 'open' : 'closed'} exit="closed" variants={dropdownVariants}>
-                <DropDownMenu.Group className="bg-white rounded-[6px] border border-gray-200 p-[4px]">
+                <DropDownMenu.Group className="bg-white rounded-large border border-gray-200 p-[4px]">
                   {renderMenuList(props.menus, props.onSelect)}
                 </DropDownMenu.Group>
               </motion.div>
