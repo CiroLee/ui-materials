@@ -21,6 +21,7 @@ import KbdPage from '@site/pages/kbd-page';
 import HeadingPage from '@site/pages/heading-page';
 import SkeletonPage from '@site/pages/skeleton-page';
 import PopoverPage from '@site/pages/popover-page';
+import TooltipPage from '@site/pages/tooltip-page';
 
 export const router = createHashRouter([
   {
@@ -163,6 +164,15 @@ export const router = createHashRouter([
         element: <PopoverPage />,
         meta: {
           title: 'Popover',
+          role: 'component',
+        },
+      },
+      {
+        path: 'tooltip',
+        id: 'tooltip',
+        element: <TooltipPage />,
+        meta: {
+          title: 'Tooltip',
           role: 'component',
         },
       },

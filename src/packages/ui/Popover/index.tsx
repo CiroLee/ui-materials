@@ -2,7 +2,8 @@ import { PropsWithChildren, forwardRef, isValidElement, useState, useEffect } fr
 import { AnimatePresence, Variants, motion } from 'framer-motion';
 import * as RadixPopover from '@radix-ui/react-popover';
 import { tv } from 'tailwind-variants';
-import { Align, Side } from '@/packages/types/common';
+import { placementOrigins } from '@/packages/constants/variants';
+import type { Align, Side } from '@/packages/types/common';
 
 const popover = tv({
   slots: {
@@ -11,44 +12,7 @@ const popover = tv({
     content: 'text-sm text-zinc-400',
   },
   variants: {
-    placement: {
-      'top-start': {
-        base: 'origin-bottom-left',
-      },
-      'top-center': {
-        base: 'origin-bottom',
-      },
-      'top-end': {
-        base: 'origin-bottom-right',
-      },
-      'right-start': {
-        base: 'origin-top-left',
-      },
-      'right-center': {
-        base: 'origin-left',
-      },
-      'right-end': {
-        base: 'origin-bottom-left',
-      },
-      'bottom-start': {
-        base: 'origin-top-left',
-      },
-      'bottom-center': {
-        base: 'origin-top',
-      },
-      'bottom-end': {
-        base: 'origin-top-right',
-      },
-      'left-start': {
-        base: 'origin-top-right',
-      },
-      'left-center': {
-        base: 'origin-right',
-      },
-      'left-end': {
-        base: 'origin-top-right',
-      },
-    },
+    placement: placementOrigins,
   },
   defaultVariants: {
     placement: 'bottom-center',

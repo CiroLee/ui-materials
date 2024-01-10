@@ -92,7 +92,7 @@ export default function PopoverPage() {
         <Heading as="h4" className="mb-2">
           placement(side & align)
         </Heading>
-        <div className="w-[440px] grid grid-cols-3 grid-rows-4 gap-3">
+        <div className="inline-grid grid-cols-3 grid-rows-4 gap-3">
           {placements.map((item, index) => (
             <Popover key={index} title="title" content="this is popover contents" side={item.side} align={item.align}>
               <Button>
