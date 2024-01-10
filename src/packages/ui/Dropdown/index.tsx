@@ -105,7 +105,7 @@ const DropDown = forwardRef<React.ElementRef<typeof DropDownMenu.Root>, DropDown
               className={clsx(props.className)}
               style={props.style}>
               <motion.div initial="closed" animate={open ? 'open' : 'closed'} exit="closed" variants={dropdownVariants}>
-                <DropDownMenu.Group className="bg-white rounded-[6px] border border-gray-200 p-[4px]">
+                <DropDownMenu.Group className="bg-white rounded-large border border-gray-200 p-[4px]">
                   {renderMenuList(props.menus, props.onSelect)}
                 </DropDownMenu.Group>
               </motion.div>

@@ -6,7 +6,7 @@ import { Align, Side } from '@/packages/types/common';
 
 const popover = tv({
   slots: {
-    base: 'p-3 rounded-medium bg-white shadow-[0_20px_50px_-10px,0_-10px_32px_-5px] shadow-black/[0.15]',
+    base: 'p-3 rounded-large bg-white shadow-[0_20px_50px_-10px,0_-10px_32px_-5px] shadow-black/[0.15]',
     title: 'font-bold',
     content: 'text-sm text-zinc-400',
   },
@@ -63,6 +63,8 @@ interface PopoverProps extends PropsWithChildren {
   showArrow?: boolean;
   align?: Align;
   side?: Side;
+  className?: string;
+  style?: React.CSSProperties;
   onOpenChange?: (open: boolean) => void;
 }
 
@@ -88,6 +90,8 @@ const Popover = forwardRef<React.ElementRef<typeof RadixPopover.Root>, PopoverPr
     side = 'bottom',
     onOpenChange,
     children,
+    className,
+    style,
   } = props;
   const [open, setOpen] = useState(isOpen);
   const { base, title: titleStyle, content: contentStyle } = popover();
@@ -103,15 +107,16 @@ const Popover = forwardRef<React.ElementRef<typeof RadixPopover.Root>, PopoverPr
           <RadixPopover.Portal forceMount>
             <RadixPopover.Content className="outline-0" ref={ref} sideOffset={sideOffset} align={align} side={side}>
               <motion.div
-                className={base({ placement: `${side}-${align}` })}
+                className={base({ placement: `${side}-${align}`, class: className })}
+                style={style}
                 initial="closed"
                 animate={open ? 'open' : 'closed'}
                 exit="closed"
                 variants={popoverVariants}>
                 {isValidElement(title) ? title : title ? <div className={titleStyle()}>{title}</div> : null}
                 {isValidElement(content) ? content : content ? <div className={contentStyle()}>{content}</div> : null}
+                {showArrow ? <RadixPopover.Arrow className="fill-white" /> : null}
               </motion.div>
-              {showArrow ? <RadixPopover.Arrow className="fill-white" /> : null}
             </RadixPopover.Content>
           </RadixPopover.Portal>
         ) : null}
