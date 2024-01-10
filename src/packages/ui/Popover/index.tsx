@@ -1,4 +1,4 @@
-import { PropsWithChildren, forwardRef, isValidElement, useState } from 'react';
+import { PropsWithChildren, forwardRef, isValidElement, useState, useEffect } from 'react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
 import * as RadixPopover from '@radix-ui/react-popover';
 import { tv } from 'tailwind-variants';
@@ -57,6 +57,7 @@ const popover = tv({
 
 interface PopoverProps extends PropsWithChildren {
   isOpen?: boolean;
+  disabled?: boolean;
   title?: React.ReactNode;
   content?: React.ReactNode;
   sideOffset?: number;
@@ -82,6 +83,7 @@ const popoverVariants: Variants = {
 const Popover = forwardRef<React.ElementRef<typeof RadixPopover.Root>, PopoverProps>((props, ref) => {
   const {
     isOpen,
+    disabled,
     title,
     content,
     sideOffset = 5,
@@ -93,12 +95,20 @@ const Popover = forwardRef<React.ElementRef<typeof RadixPopover.Root>, PopoverPr
     className,
     style,
   } = props;
-  const [open, setOpen] = useState(isOpen);
+  const [open, setOpen] = useState<boolean>(false);
   const { base, title: titleStyle, content: contentStyle } = popover();
   const onOpenChangeHandler = (open: boolean) => {
+    if (disabled) return;
     setOpen(open);
     onOpenChange?.(open);
   };
+
+  useEffect(() => {
+    if (disabled) {
+      setOpen(false);
+    }
+    setOpen(!!isOpen);
+  }, [isOpen, disabled]);
   return (
     <RadixPopover.Root onOpenChange={onOpenChangeHandler}>
       <RadixPopover.Trigger asChild>{children}</RadixPopover.Trigger>

@@ -2,10 +2,12 @@ import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import Popover from '@ui/Popover';
 import Button from '@ui/Button';
+import Switch from '@ui/Switch';
 import { useState } from 'react';
 import type { Align, Side } from '@/packages/types/common';
 import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
+import { html as disabledHtml } from './docs/disabled.md';
 import { html as placementHtml } from './docs/placement.md';
 import { html as arrowHtml } from './docs/arrow.md';
 import { html as sideOffsetHtml } from './docs/side-offset.md';
@@ -65,6 +67,7 @@ const placements: { side: Side; align: Align }[] = [
 ];
 export default function PopoverPage() {
   const [status, setStatus] = useState(false);
+  const [disabled, setDisabled] = useState(true);
   return (
     <>
       <Heading as="h2" className="mv-4">
@@ -99,6 +102,21 @@ export default function PopoverPage() {
           ))}
         </div>
         <CodeView content={placementHtml} />
+      </ShowBox>
+      <ShowBox className="mb-4">
+        <Heading as="h4" className="mb-2">
+          disabled
+        </Heading>
+        <div>
+          <div className="flex items-center mb-2">
+            <Switch checked={disabled} onCheckedChange={setDisabled} />
+            <span className="text-zinc-500 ml-2">disabled: {String(disabled)}</span>
+          </div>
+          <Popover title="title" content="this is popover texts and it is long" disabled={disabled} side="right">
+            <Button>popover</Button>
+          </Popover>
+        </div>
+        <CodeView content={disabledHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">

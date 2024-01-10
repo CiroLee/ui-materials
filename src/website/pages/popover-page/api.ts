@@ -9,6 +9,13 @@ export const rows: ApiTableRow[] = [
     required: false,
   },
   {
+    prop: 'disabled',
+    desc: 'whether the popover is disabled',
+    type: 'boolean',
+    required: false,
+    default: false,
+  },
+  {
     prop: 'title',
     desc: 'popover title',
     type: 'React.ReactNode',
