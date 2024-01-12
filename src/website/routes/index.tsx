@@ -22,6 +22,7 @@ import HeadingPage from '@site/pages/heading-page';
 import SkeletonPage from '@site/pages/skeleton-page';
 import PopoverPage from '@site/pages/popover-page';
 import TooltipPage from '@site/pages/tooltip-page';
+import ProgressPage from '@site/pages/progress-page';
 
 export const router = createHashRouter([
   {
@@ -173,6 +174,15 @@ export const router = createHashRouter([
         element: <TooltipPage />,
         meta: {
           title: 'Tooltip',
+          role: 'component',
+        },
+      },
+      {
+        path: 'progress',
+        id: 'progress',
+        element: <ProgressPage />,
+        meta: {
+          title: 'Progress',
           role: 'component',
         },
       },
