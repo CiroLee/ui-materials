@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
-import { CircleProgress } from '@ui/Progress';
+import CircleProgress from '@ui/CircleProgress';
 import Button, { ButtonGroup } from '@ui/Button';
 import { AlertTriangle } from 'lucide-react';
 export default function ProgressPage() {
@@ -70,8 +70,13 @@ export default function ProgressPage() {
         <Heading as="h4" className="mb-2">
           custom
         </Heading>
-        <CircleProgress percent={60} className="square-[100px]" rootClassName="stroke-[#333]" svgClassName="stroke-[3]">
-          <AlertTriangle size={32} />
+        <CircleProgress
+          percent={60}
+          className="square-[110px]"
+          trackerClassName="stroke-[rgba(45,117,117,0.5)]"
+          indicatorClassName="stroke-[#2558d0]"
+          svgClassName="stroke-[3]">
+          <AlertTriangle size={32} color="red" />
         </CircleProgress>
       </ShowBox>
     </>

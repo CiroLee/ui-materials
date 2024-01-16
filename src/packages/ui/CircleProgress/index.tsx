@@ -5,7 +5,7 @@ const circleProgressStyle = tv({
   slots: {
     base: 'relative inline-block overflow-hidden',
     svg: 'stroke-2',
-    root: 'transition-all',
+    indicator: 'transition-all',
     tracker: 'stroke-black/10',
   },
   variants: {
@@ -22,16 +22,16 @@ const circleProgressStyle = tv({
     },
     colors: {
       primary: {
-        root: 'stroke-brand-500',
+        indicator: 'stroke-brand-500',
       },
       success: {
-        root: 'stroke-success-500',
+        indicator: 'stroke-success-500',
       },
       warn: {
-        root: 'stroke-warn-500',
+        indicator: 'stroke-warn-500',
       },
       danger: {
-        root: 'stroke-danger-500',
+        indicator: 'stroke-danger-500',
       },
     },
   },
@@ -43,10 +43,9 @@ const circleProgressStyle = tv({
 
 type CircleProgressVariants = VariantProps<typeof circleProgressStyle>;
 interface CircleProgress extends CircleProgressVariants, PropsWithChildren {
-  colors?: 'primary' | 'success' | 'warn' | 'danger';
   percent?: number;
   svgClassName?: string;
-  rootClassName?: string;
+  indicatorClassName?: string;
   trackerClassName?: string;
   className?: string;
   style?: React.CSSProperties;
@@ -58,13 +57,13 @@ const CircleProgress = forwardRef<HTMLDivElement, CircleProgress>((props, ref) =
     size,
     colors,
     svgClassName,
-    rootClassName,
+    indicatorClassName,
     trackerClassName,
     className,
     style,
     children,
   } = props;
-  const { svg, root, base, tracker } = circleProgressStyle();
+  const { svg, indicator, base, tracker } = circleProgressStyle();
   const svgRef = useRef<SVGSVGElement>(null);
   const [strokeDashLength, setStrokeDashLength] = useState<number>(0);
   const calcStrokeDashLength = () => {
@@ -99,7 +98,7 @@ const CircleProgress = forwardRef<HTMLDivElement, CircleProgress>((props, ref) =
           r="10"
           transform="rotate(-90 12 12)"
           strokeLinecap="round"
-          className={root({ colors, class: rootClassName })}
+          className={indicator({ colors, class: indicatorClassName })}
           strokeDashoffset={updateOffset()}
           strokeDasharray={`${strokeDashLength} ${strokeDashLength}`}
         />
@@ -111,4 +110,4 @@ const CircleProgress = forwardRef<HTMLDivElement, CircleProgress>((props, ref) =
 
 CircleProgress.displayName = 'CircleProgress';
 
-export { CircleProgress };
+export default CircleProgress;

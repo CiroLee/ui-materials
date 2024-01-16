@@ -22,7 +22,7 @@ import HeadingPage from '@site/pages/heading-page';
 import SkeletonPage from '@site/pages/skeleton-page';
 import PopoverPage from '@site/pages/popover-page';
 import TooltipPage from '@site/pages/tooltip-page';
-import ProgressPage from '@site/pages/progress-page';
+import CircleProgressPage from '@site/pages/circle-progress-page';
 
 export const router = createHashRouter([
   {
@@ -180,7 +180,7 @@ export const router = createHashRouter([
       {
         path: 'progress',
         id: 'progress',
-        element: <ProgressPage />,
+        element: <CircleProgressPage />,
         meta: {
           title: 'Progress',
           role: 'component',
