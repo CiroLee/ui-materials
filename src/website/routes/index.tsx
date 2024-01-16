@@ -182,7 +182,7 @@ export const router = createHashRouter([
         id: 'progress',
         element: <CircleProgressPage />,
         meta: {
-          title: 'Progress',
+          title: 'CircleProgress',
           role: 'component',
         },
       },

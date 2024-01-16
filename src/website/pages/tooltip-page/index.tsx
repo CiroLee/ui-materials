@@ -11,6 +11,7 @@ import { html as customHtml } from './docs/custom.md';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
 import type { Align, Side } from '@/packages/types/common';
+import SourceButton from '@/website/components/SourceButton';
 
 const placements: { side: Side; align: Align }[] = [
   {
@@ -66,9 +67,12 @@ const placements: { side: Side; align: Align }[] = [
 export default function TooltipPage() {
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        Tooltip
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Tooltip
+        </Heading>
+        <SourceButton name="Tooltip" />
+      </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

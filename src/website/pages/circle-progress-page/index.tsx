@@ -4,6 +4,15 @@ import ShowBox from '@site/components/ShowBox';
 import CircleProgress from '@ui/CircleProgress';
 import Button, { ButtonGroup } from '@ui/Button';
 import { AlertTriangle } from 'lucide-react';
+import CodeView from '@/website/components/CodeView';
+import { html as baseHtml } from './docs/base.md';
+import { html as sizeHtml } from './docs/size.md';
+import { html as colorsHtml } from './docs/colors.md';
+import { html as dynamicHtml } from './docs/dynamic.md';
+import { html as customHtml } from './docs/custom.md';
+import SourceButton from '@site/components/SourceButton';
+import ApiTable from '@/website/components/ApiTable';
+import { rows } from './api';
 export default function ProgressPage() {
   const [percent, setPercent] = useState(20);
   const handlePercentChange = (value: number) => {
@@ -18,14 +27,18 @@ export default function ProgressPage() {
   };
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        CircleProgress
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          CircleProgress
+        </Heading>
+        <SourceButton name="CircleProgress" />
+      </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic
         </Heading>
         <CircleProgress percent={20} />
+        <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -36,6 +49,7 @@ export default function ProgressPage() {
           <CircleProgress percent={20} size="medium" />
           <CircleProgress percent={20} size="large" />
         </div>
+        <CodeView content={sizeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -47,6 +61,7 @@ export default function ProgressPage() {
           <CircleProgress percent={20} colors="warn" />
           <CircleProgress percent={20} colors="danger" />
         </div>
+        <CodeView content={colorsHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -55,16 +70,15 @@ export default function ProgressPage() {
         <CircleProgress percent={percent} size="large">
           <span>{percent}%</span>
         </CircleProgress>
-        <div>
-          <ButtonGroup>
-            <Button outline onClick={() => handlePercentChange(-10)}>
-              -
-            </Button>
-            <Button outline onClick={() => handlePercentChange(10)}>
-              +
-            </Button>
-          </ButtonGroup>
-        </div>
+        <ButtonGroup>
+          <Button outline onClick={() => handlePercentChange(-10)}>
+            -
+          </Button>
+          <Button outline onClick={() => handlePercentChange(10)}>
+            +
+          </Button>
+        </ButtonGroup>
+        <CodeView content={dynamicHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -78,7 +92,12 @@ export default function ProgressPage() {
           svgClassName="stroke-[3]">
           <AlertTriangle size={32} color="red" />
         </CircleProgress>
+        <CodeView content={customHtml} />
       </ShowBox>
+      <Heading as="h2" className="mb-4">
+        API
+      </Heading>
+      <ApiTable rows={rows} />
     </>
   );
 }

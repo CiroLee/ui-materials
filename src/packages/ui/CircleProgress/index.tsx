@@ -72,7 +72,8 @@ const CircleProgress = forwardRef<HTMLDivElement, CircleProgress>((props, ref) =
   };
 
   const updateOffset = useCallback(() => {
-    const offset = strokeDashLength - (strokeDashLength * percent) / 100;
+    const percentage = percent < 0 ? 0 : percent > 100 ? 100 : percent;
+    const offset = strokeDashLength - (strokeDashLength * percentage) / 100;
     return offset >= strokeDashLength ? strokeDashLength : offset;
   }, [percent, strokeDashLength]);
 
@@ -82,8 +83,8 @@ const CircleProgress = forwardRef<HTMLDivElement, CircleProgress>((props, ref) =
     }
   }, []);
   return (
-    <div className={base({ size, class: className })} ref={ref}>
-      <svg ref={svgRef} viewBox="0 0 24 24" fill="none" className={svg({ size, class: svgClassName })} style={style}>
+    <div className={base({ size, class: className })} style={style} ref={ref}>
+      <svg ref={svgRef} viewBox="0 0 24 24" fill="none" className={svg({ size, class: svgClassName })}>
         <circle
           cx="12"
           cy="12"
