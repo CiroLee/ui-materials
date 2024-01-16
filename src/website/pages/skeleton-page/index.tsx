@@ -8,12 +8,16 @@ import { html as shimmerHtml } from './docs/type-flicker.md';
 import { html as childrenHtml } from './docs/children.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import SourceButton from '@/website/components/SourceButton';
 export default function SkeletonPage() {
   return (
     <>
-      <Heading as="h2" className="mb-4">
-        Skeleton
-      </Heading>
+      <div className="flex justify-between items-center">
+        <Heading as="h2" className="mb-4">
+          Skeleton
+        </Heading>
+        <SourceButton name="Skeleton" />
+      </div>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           type: flicker
