@@ -11,13 +11,13 @@ const circleProgressStyle = tv({
   variants: {
     size: {
       small: {
-        base: 'square-[32px]',
+        base: 'w-[32px] h-[32px]',
       },
       medium: {
-        base: 'square-[56px]',
+        base: 'w-[56px] h-[56px]',
       },
       large: {
-        base: 'square-[80px]',
+        base: 'w-[80px] h-[56px]',
       },
     },
     colors: {
