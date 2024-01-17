@@ -1,21 +1,16 @@
 import ShowBox from '@site/components/ShowBox';
 import Kbd from '@ui/Kbd';
 import Heading from '@ui/Heading';
-import CodeView from '@/website/components/CodeView';
+import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as keyHtml } from './docs/keys.md';
-import ApiTable from '@/website/components/ApiTable';
+import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
-import SourceButton from '@/website/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 export default function KbdPage() {
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Kbd
-        </Heading>
-        <SourceButton name="Kbd" />
-      </div>
+      <NavTitle title="Kbd" sourceName="Kbd" />
       <ShowBox className="mb-4 [&>div]:mr-2">
         <Kbd keys={['command']} />
         <Kbd keys={['command']}>K</Kbd>

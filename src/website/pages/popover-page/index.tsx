@@ -14,7 +14,7 @@ import { html as sideOffsetHtml } from './docs/side-offset.md';
 import { html as titleContentHtml } from './docs/title-content.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
-import SourceButton from '@/website/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 
 const placements: { side: Side; align: Align }[] = [
   {
@@ -71,12 +71,7 @@ export default function PopoverPage() {
   const [disabled, setDisabled] = useState(true);
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Popover
-        </Heading>
-        <SourceButton name="Popover" />
-      </div>
+      <NavTitle title="Popover" sourceName="Popover" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

@@ -6,7 +6,7 @@ import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow
 import Switch from '@ui/Switch';
 import CodeView from '@site/components/CodeView';
 import { html as useHtml } from './docs/use.md';
-import SourceButton from '@/website/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 
 const rows: ApiTableRow[] = [
   {
@@ -34,12 +34,7 @@ export default function TablePage() {
   const [headerFixed, setHeaderFixed] = useState(true);
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Table
-        </Heading>
-        <SourceButton name="Table" />
-      </div>
+      <NavTitle title="Table" sourceName="Table" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

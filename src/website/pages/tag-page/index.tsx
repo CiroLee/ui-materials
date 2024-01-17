@@ -1,27 +1,22 @@
 import Tag from '@ui/Tag';
 import Heading from '@ui/Heading';
-import ShowBox from '@/website/components/ShowBox';
+import ShowBox from '@site/components/ShowBox';
 import { Smile } from 'lucide-react';
 import Avatar from '@ui/Avatar';
-import CodeView from '@/website/components/CodeView';
-import ApiTable from '@/website/components/ApiTable';
+import CodeView from '@site/components/CodeView';
+import ApiTable from '@site/components/ApiTable';
 import { html as sizeHtml } from './docs/size.md';
 import { html as colorHtml } from './docs/color.md';
 import { html as shapeHtml } from './docs/shape.md';
 import { html as customHtml } from './docs/custom.md';
 import { rows } from './api';
-import SourceButton from '@/website/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
 
 export default function TagPage() {
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Tag
-        </Heading>
-        <SourceButton name="Tag" />
-      </div>
+      <NavTitle title="Tag" sourceName="Tag" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
           size

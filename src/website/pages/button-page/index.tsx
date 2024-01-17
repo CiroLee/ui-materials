@@ -12,16 +12,11 @@ import { html as blockHtml } from './docs/block.md';
 import { html as iconsHtml } from './docs/icons.md';
 import { html as buttonGroupHtml } from './docs/button-group.md';
 import { rows, buttonGroupRows } from './api';
-import SourceButton from '@/website/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 export default function ButtonPage() {
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Button
-        </Heading>
-        <SourceButton name="Button" />
-      </div>
+      <NavTitle title="Button" sourceName="Button" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

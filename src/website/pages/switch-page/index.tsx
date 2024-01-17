@@ -10,17 +10,12 @@ import { html as baseHtml } from './docs/base.md';
 import { html as sizeHtml } from './docs/size.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as customHtml } from './docs/custom.md';
-import SourceButton from '@/website/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 export default function SwitchPage() {
   const [checked, setChecked] = useState(false);
   return (
     <div>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Switch
-        </Heading>
-        <SourceButton name="Switch" />
-      </div>
+      <NavTitle title="Switch" sourceName="Switch" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic
