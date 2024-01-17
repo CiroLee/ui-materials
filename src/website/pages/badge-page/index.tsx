@@ -11,17 +11,12 @@ import { html as outlineHtml } from './docs/outline.md';
 import { html as contentHtml } from './docs/content.md';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
-import SourceButton from '@site/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
 export default function BadgePage() {
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Badge
-        </Heading>
-        <SourceButton name="Badge" />
-      </div>
+      <NavTitle title="Badge" sourceName="Badge" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
           size

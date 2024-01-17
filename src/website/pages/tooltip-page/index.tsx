@@ -8,10 +8,10 @@ import { html as placementHtml } from './docs/placement.md';
 import { html as arrowHtml } from './docs/arrow.md';
 import { html as sideOffsetHtml } from './docs/side-offset.md';
 import { html as customHtml } from './docs/custom.md';
-import ApiTable from '@/website/components/ApiTable';
+import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import type { Align, Side } from '@/packages/types/common';
-import SourceButton from '@/website/components/SourceButton';
+import NavTitle from '@site/components/NavTitle';
 
 const placements: { side: Side; align: Align }[] = [
   {
@@ -67,12 +67,7 @@ const placements: { side: Side; align: Align }[] = [
 export default function TooltipPage() {
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          Tooltip
-        </Heading>
-        <SourceButton name="Tooltip" />
-      </div>
+      <NavTitle title="Tooltip" sourceName="Tooltip" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

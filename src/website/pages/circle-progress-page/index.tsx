@@ -10,10 +10,11 @@ import { html as sizeHtml } from './docs/size.md';
 import { html as colorsHtml } from './docs/colors.md';
 import { html as dynamicHtml } from './docs/dynamic.md';
 import { html as customHtml } from './docs/custom.md';
-import SourceButton from '@site/components/SourceButton';
+import NavTitle from '@/website/components/NavTitle';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
-export default function ProgressPage() {
+
+export default function CircleProgressPage() {
   const [percent, setPercent] = useState(20);
   const handlePercentChange = (value: number) => {
     const newVal = value + percent;
@@ -27,12 +28,7 @@ export default function ProgressPage() {
   };
   return (
     <>
-      <div className="flex justify-between items-center">
-        <Heading as="h2" className="mb-4">
-          CircleProgress
-        </Heading>
-        <SourceButton name="CircleProgress" />
-      </div>
+      <NavTitle title="CircleProgress" sourceName="CircleProgress" />
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic
