@@ -24,6 +24,7 @@ import PopoverPage from '@site/pages/popover-page';
 import TooltipPage from '@site/pages/tooltip-page';
 import CircleProgressPage from '@site/pages/circle-progress-page';
 import ProgressPage from '@site/pages/progress-page';
+import ModalPage from '@site/pages/modal-page';
 
 export const router = createHashRouter([
   {
@@ -193,6 +194,15 @@ export const router = createHashRouter([
         element: <ProgressPage />,
         meta: {
           title: 'Progress',
+          role: 'component',
+        },
+      },
+      {
+        path: 'modal',
+        id: 'modal',
+        element: <ModalPage />,
+        meta: {
+          title: 'Modal',
           role: 'component',
         },
       },

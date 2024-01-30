@@ -161,8 +161,11 @@ const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
     },
   };
 
-  const maskOnCLickHandler = () => {
-    props.maskClosable && props.onClose();
+  const maskOnCLickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const target = e.target as HTMLElement;
+    if (Array.from(target.classList).includes('popup-mask')) {
+      props.maskClosable && props.onClose();
+    }
   };
 
   return (
@@ -184,7 +187,7 @@ const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
                 : maskVariants
             }
             exit="hidden"
-            className={clsx('w-full h-full bg-gray-900/40', { 'backdrop-blur-sm': props.isBlur })}
+            className={clsx('popup-mask w-full h-full bg-black/[0.45]', { 'backdrop-blur-sm': props.isBlur })}
             onClick={maskOnCLickHandler}>
             <>{placementContainer(props.placement, props.children)}</>
           </motion.div>
