@@ -44,7 +44,7 @@ const button = tv({
       success: 'bg-success-500 text-white hover:bg-success-500/90 active:bg-success-600',
       warn: 'bg-warn-500 text-white hover:bg-warn-500/90 active:bg-warn-600',
       danger: 'bg-danger-500 text-white hover:bg-danger-500/90 active:bg-danger-600',
-      text: 'bg-transparent text-black hover:bg-black/5 active:bg-black/10',
+      text: 'bg-transparent text-black hover:bg-black/[0.03] active:bg-black/5',
     },
     size: {
       tiny: 'h-button-ty px-button-ty',
