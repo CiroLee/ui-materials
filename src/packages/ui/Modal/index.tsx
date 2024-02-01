@@ -51,10 +51,10 @@ export interface ModalProps extends ModalVariants, PropsWithChildren {
   enableEsc?: boolean;
   maskClosable?: boolean;
   backdrop?: 'translucent' | 'blur' | 'transparent';
-  className?: string;
-  style?: React.CSSProperties;
   cancelText?: string;
   confirmText?: string;
+  className?: string;
+  style?: React.CSSProperties;
   onClose: () => void;
   onConfirm?: () => void;
 }
@@ -76,7 +76,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
     footerAlign,
     footer,
     cancelText = '取消',
-    confirmText = '确认',
+    confirmText = '确定',
     children,
     onClose,
     onConfirm,

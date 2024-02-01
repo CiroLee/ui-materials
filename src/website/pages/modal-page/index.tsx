@@ -16,6 +16,9 @@ import { html as closeIconHtml } from './docs/close-icon.md';
 import { html as footerAlignHtml } from './docs/align.md';
 import { html as footerHtml } from './docs/footer.md';
 import { html as eventHtml } from './docs/event.md';
+import { html as scrollContentHtml } from './docs/scroll-content.md';
+import ApiTable from '@site/components/ApiTable';
+import { rows } from './api';
 
 type FooterALign = 'start' | 'center' | 'end';
 export default function ModalPage() {
@@ -34,6 +37,7 @@ export default function ModalPage() {
   const [modal6, setModal6] = useState(false);
   const [modal7, setModal7] = useState(false);
   const [modal8, setModal8] = useState(false);
+  const [modal9, setModal9] = useState(false);
 
   return (
     <>
@@ -282,6 +286,24 @@ export default function ModalPage() {
         </Modal>
         <CodeView content={eventHtml} />
       </ShowBox>
+      <ShowBox className="mb-4">
+        <Heading as="h4" className="mb-2">
+          scroll content
+        </Heading>
+        <Button className="mt-4" onClick={() => setModal9(true)}>
+          open modal
+        </Button>
+        <Modal title="title" show={modal9} onClose={() => setModal9(false)}>
+          {new Array(30).fill(0).map((_, index) => (
+            <p key={index}>this is text {index} ...</p>
+          ))}
+        </Modal>
+        <CodeView content={scrollContentHtml} />
+      </ShowBox>
+      <Heading as="h2" className="mb-4">
+        API
+      </Heading>
+      <ApiTable rows={rows} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 import Checkbox, { type CheckboxProps } from './Checkbox';
 export interface CheckboxGroupProps {
   value?: string | number;
@@ -9,13 +9,15 @@ export interface CheckboxGroupProps {
 }
 
 const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>((props, ref) => {
-  let list: (string | number | undefined)[] = [];
+  const listRef = useRef<(string | number | undefined)[]>([]);
   const onCheckedChangeHandler = (checked?: boolean, value?: string | number) => {
-    list = checked ? [...list, value] : list.filter((item) => item !== value);
-    props.onCheckedChange?.(list);
+    listRef.current = checked ? [...listRef.current, value] : listRef.current.filter((item) => item !== value);
+    props.onCheckedChange?.(listRef.current);
   };
   useEffect(() => {
-    list.push(props.value);
+    if (props.value !== undefined) {
+      listRef.current.push(props.value);
+    }
   }, [props.value]);
   return (
     <div className={props.className} style={props.style} ref={ref}>
