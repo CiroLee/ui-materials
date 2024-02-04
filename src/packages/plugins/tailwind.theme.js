@@ -25,10 +25,10 @@ const themeExtends = {
     cell: '14px',
   },
   height: {
-    'button-ty': '28px',
-    'button-sm': '32px',
-    'button-md': '40px',
-    'button-lg': '48px',
+    'global-ty': '28px',
+    'global-sm': '32px',
+    'global-md': '40px',
+    'global-lg': '48px',
   },
   borderRadius: ({ theme }) => ({
     tiny: '2px',

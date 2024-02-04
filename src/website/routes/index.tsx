@@ -25,6 +25,7 @@ import TooltipPage from '@site/pages/tooltip-page';
 import CircleProgressPage from '@site/pages/circle-progress-page';
 import ProgressPage from '@site/pages/progress-page';
 import ModalPage from '@site/pages/modal-page';
+import InputPage from '@site/pages/input-page';
 
 export const router = createHashRouter([
   {
@@ -203,6 +204,15 @@ export const router = createHashRouter([
         element: <ModalPage />,
         meta: {
           title: 'Modal',
+          role: 'component',
+        },
+      },
+      {
+        path: 'input',
+        id: 'input',
+        element: <InputPage />,
+        meta: {
+          title: 'Input',
           role: 'component',
         },
       },
