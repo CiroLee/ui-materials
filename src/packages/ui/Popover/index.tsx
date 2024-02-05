@@ -2,12 +2,12 @@ import { PropsWithChildren, forwardRef, isValidElement, useState, useEffect } fr
 import { AnimatePresence, Variants, motion } from 'framer-motion';
 import * as RadixPopover from '@radix-ui/react-popover';
 import { tv } from 'tailwind-variants';
-import { placementOrigins } from '@/packages/constants/variants';
+import { placementOrigins } from '@/packages/plugins/placement.style';
 import type { Align, Side } from '@/packages/types/common';
 
 const popover = tv({
   slots: {
-    base: 'p-3 rounded-large bg-white shadow-[0_20px_50px_-10px,0_-10px_32px_-5px] shadow-black/[0.15]',
+    base: 'p-3 rounded-large bg-white drop-shadow-around',
     title: 'font-bold',
     content: 'text-sm text-zinc-400',
   },

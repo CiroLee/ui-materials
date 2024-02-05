@@ -1,0 +1,23 @@
+export const globalInputStyle = {
+  base: 'flex overflow-hidden rounded-medium border border-black/10 has-[:focus]:border-brand-500 hover:border-brand-500/60 transition-colors ease-linear',
+  input: 'full px-[8px] outline-0 placeholder:text-black/30 bg-transparent',
+  tinyBase: 'h-global-ty text-[14px]',
+  smallBase: 'h-global-sm text-[14px]',
+  smallInput: 'placeholder:text-[14px] text-[14px]',
+  mediumBase: 'h-global-md',
+  mediumInput: 'placeholder:text-[16px] text-[16px]',
+  largeBase: 'h-global-lg',
+  largeInput: 'placeholder:text-[18px] text-[18px]',
+  disabledBase: 'bg-black/[0.02] text-black/30 border-black/10 hover:border-black/10',
+  disabledInput: 'cursor-not-allowed',
+  errorBase: 'border-danger-500 hover:border-danger-500/60 has-[:focus]:border-danger-500',
+  warnBase: 'border-warn-500 hover:border-warn-500/60 has-[:focus]:border-warn-500',
+  prefix: 'flex flex-center pl-[8px]',
+  suffix: 'flex flex-center pr-[8px]',
+  clear: `rounded-[12px] flex flex-center duration-200 transition-all scale-0 bg-gray-300/30 after:absolute after:rotate-45 after:w-[1px] after:rounded-[1px]  
+    after:bg-gray-400 before:absolute before:-rotate-45 before:w-[1px] before:rounded-[1px] before:bg-gray-400 hover:bg-gray-400/40 hover:after:bg-gray-800 hover:before:bg-gray-800`,
+  tinyClear: 'size-[12px] before:h-[6px] after:h-[6px]',
+  smallClear: 'size-[14px] before:h-[6px] after:h-[6px]',
+  mediumClear: 'size-[16px] before:h-[8px] after:h-[8px]',
+  largeClear: 'size-[18px] before:h-[10px] after:h-[10px]',
+};

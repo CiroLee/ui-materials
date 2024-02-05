@@ -58,6 +58,9 @@ const themeExtends = {
     'striped-gradient':
       'linear-gradient(45deg,rgba(0,0,0,.1) 25%,transparent 0,transparent 50%,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 75%,transparent 0,transparent)',
   },
+  dropShadow: {
+    around: ['6px 14px 8px rgba(0, 0, 0, 0.07)', '-10px -14px 8px rgba(0,0,0,0.07)'],
+  },
 };
 
 export default themeExtends;
