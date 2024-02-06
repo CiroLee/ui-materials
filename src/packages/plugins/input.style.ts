@@ -1,6 +1,6 @@
 export const globalInputStyle = {
   base: 'flex overflow-hidden rounded-medium border border-black/10 has-[:focus]:border-brand-500 hover:border-brand-500/60 transition-colors ease-linear',
-  input: 'full px-[8px] outline-0 placeholder:text-black/30 bg-transparent',
+  input: 'full outline-0 placeholder:text-black/30 bg-transparent',
   tinyBase: 'h-global-ty text-[14px]',
   smallBase: 'h-global-sm text-[14px]',
   smallInput: 'placeholder:text-[14px] text-[14px]',
@@ -8,7 +8,7 @@ export const globalInputStyle = {
   mediumInput: 'placeholder:text-[16px] text-[16px]',
   largeBase: 'h-global-lg',
   largeInput: 'placeholder:text-[18px] text-[18px]',
-  disabledBase: 'bg-black/[0.02] text-black/30 border-black/10 hover:border-black/10',
+  disabledBase: 'bg-black/[0.02] text-black/30 border-black/10 hover:border-black/10 cursor-not-allowed',
   disabledInput: 'cursor-not-allowed',
   errorBase: 'border-danger-500 hover:border-danger-500/60 has-[:focus]:border-danger-500',
   warnBase: 'border-warn-500 hover:border-warn-500/60 has-[:focus]:border-warn-500',
