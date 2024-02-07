@@ -27,6 +27,7 @@ import ProgressPage from '@site/pages/progress-page';
 import ModalPage from '@site/pages/modal-page';
 import InputPage from '@site/pages/input-page';
 import InputNumberPage from '@site/pages/input-number-page';
+import TextareaPage from '@site/pages/textarea-page';
 
 export const router = createHashRouter([
   {
@@ -223,6 +224,15 @@ export const router = createHashRouter([
         element: <InputNumberPage />,
         meta: {
           title: 'InputNumber',
+          role: 'component',
+        },
+      },
+      {
+        path: 'textarea',
+        id: 'textarea',
+        element: <TextareaPage />,
+        meta: {
+          title: 'Textarea',
           role: 'component',
         },
       },

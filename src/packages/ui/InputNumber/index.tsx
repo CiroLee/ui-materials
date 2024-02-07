@@ -46,7 +46,7 @@ const inputNumberStyle = tv({
     disabled: {
       true: {
         base: gInput.disabledBase,
-        input: 'cursor-not-allowed',
+        input: gInput.disabledInput,
         rightBlock: 'opacity-0',
       },
     },
@@ -127,18 +127,18 @@ const InputNumber = forwardRef<HTMLLabelElement, InputNumberProps>((props, ref) 
   };
 
   const onInputHandler = (e: React.FormEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
+    const target = e.currentTarget;
     setVal(target.value);
     onInput?.(wrapReturnedValue(target.value));
   };
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
+    const target = e.currentTarget;
     onChange?.(wrapReturnedValue(target.value));
   };
 
   const onBlurHandler = (e: React.FocusEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
+    const target = e.currentTarget;
     if (target.value === '') return;
     const value = Number(target.value);
     if (value > max) {
