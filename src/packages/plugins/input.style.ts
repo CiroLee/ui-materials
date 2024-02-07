@@ -1,5 +1,5 @@
 export const globalInputStyle = {
-  base: 'flex overflow-hidden rounded-medium border border-black/10 has-[:focus]:border-brand-500 hover:border-brand-500/60 transition-colors ease-linear',
+  base: 'flex relative rounded-medium border border-black/10 has-[:focus]:border-brand-500 hover:border-brand-500/60 transition-colors ease-linear',
   input: 'full outline-0 placeholder:text-black/30 bg-transparent',
   tinyBase: 'h-global-ty text-[14px]',
   smallBase: 'h-global-sm text-[14px]',
@@ -14,8 +14,8 @@ export const globalInputStyle = {
   warnBase: 'border-warn-500 hover:border-warn-500/60 has-[:focus]:border-warn-500',
   prefix: 'flex flex-center pl-[8px]',
   suffix: 'flex flex-center pr-[8px]',
-  clear: `rounded-[12px] flex flex-center duration-200 transition-all scale-0 bg-gray-300/30 after:absolute after:rotate-45 after:w-[1px] after:rounded-[1px]  
-    after:bg-gray-400 before:absolute before:-rotate-45 before:w-[1px] before:rounded-[1px] before:bg-gray-400 hover:bg-gray-400/40 hover:after:bg-gray-800 hover:before:bg-gray-800`,
+  clear: `rounded-[12px] flex flex-center duration-200 transition-all scale-0 bg-zinc-300 after:absolute after:rotate-45 after:w-[1px] after:rounded-[1px] select-none 
+    after:bg-white before:absolute before:-rotate-45 before:w-[1px] before:rounded-[1px] before:bg-white hover:bg-zinc-400`,
   tinyClear: 'size-[12px] before:h-[6px] after:h-[6px]',
   smallClear: 'size-[14px] before:h-[6px] after:h-[6px]',
   mediumClear: 'size-[16px] before:h-[8px] after:h-[8px]',

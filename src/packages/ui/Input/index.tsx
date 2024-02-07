@@ -22,7 +22,7 @@ const inputStyle = tv({
         eyeIcon: 'size-[12px]',
       },
       small: {
-        base: 'h-global-sm text-[14px]',
+        base: gInput.smallBase,
         clear: gInput.smallClear,
         input: `${gInput.smallInput} px-[6px]`,
         eyeIcon: 'size-[14px]',
@@ -43,7 +43,7 @@ const inputStyle = tv({
     disabled: {
       true: {
         base: gInput.disabledBase,
-        input: 'cursor-not-allowed',
+        input: gInput.disabledInput,
       },
     },
     status: {
@@ -126,7 +126,7 @@ const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
   }, [maxLength, val.length, showCount]);
 
   const onInputHandler = (e: React.FormEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
+    const target = e.currentTarget;
     setVal(target.value);
     onInput?.(e);
   };
@@ -157,7 +157,7 @@ const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
         onBlur={onBlur}
         onFocus={onFocus}
       />
-      {allowClear ? (
+      {allowClear && !disabled ? (
         <div className={rightBlock()}>
           <div className={clear({ size, allowClear: showClear })} onClick={handleClear}></div>
         </div>
