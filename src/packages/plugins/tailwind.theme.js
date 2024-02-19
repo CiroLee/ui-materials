@@ -39,6 +39,7 @@ const themeExtends = {
   }),
   zIndex: {
     popup: 100,
+    toast: 101,
   },
   animation: {
     flicker: 'flicker 2s infinite ease',
@@ -57,6 +58,9 @@ const themeExtends = {
     'skeleton-flicker': 'linear-gradient(90deg, rgb(0 0 0 / 5%) 20%, rgb(0 0 0 / 10%) 40%, rgb(0 0 0 / 5%) 60%)',
     'striped-gradient':
       'linear-gradient(45deg,rgba(0,0,0,.1) 25%,transparent 0,transparent 50%,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 75%,transparent 0,transparent)',
+  },
+  boxShadow: {
+    around: ['4px 14px 20px -6px rgba(0, 0, 0, 0.1)', '-4px -4px 16px -4px rgba(0,0,0,0.1)'],
   },
   dropShadow: {
     around: ['6px 14px 8px rgba(0, 0, 0, 0.07)', '-10px -14px 8px rgba(0,0,0,0.07)'],
