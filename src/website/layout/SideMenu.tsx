@@ -55,7 +55,7 @@ export default function SideMenu() {
           <NavLink
             to={r.path!}
             className={({ isActive }) =>
-              `h-[36px] flex items-center rounded-[4px] hover:bg-gray-200/60 hover:text-brand-500/40 transition-all duration-200 px-2 cursor-default ${
+              `h-[36px] flex items-center rounded-[4px] hover:bg-gray-200/60 hover:text-brand-500/50 transition-all duration-200 px-2 cursor-default ${
                 isActive ? 'text-brand-500 hover:text-brand-500' : 'text-gray-500/40'
               }`
             }>

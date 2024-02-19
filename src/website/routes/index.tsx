@@ -28,6 +28,7 @@ import ModalPage from '@site/pages/modal-page';
 import InputPage from '@site/pages/input-page';
 import InputNumberPage from '@site/pages/input-number-page';
 import TextareaPage from '@site/pages/textarea-page';
+import ToastPage from '@site/pages/toast-page';
 
 export const router = createHashRouter([
   {
@@ -233,6 +234,15 @@ export const router = createHashRouter([
         element: <TextareaPage />,
         meta: {
           title: 'Textarea',
+          role: 'component',
+        },
+      },
+      {
+        path: 'toast',
+        id: 'toast',
+        element: <ToastPage />,
+        meta: {
+          title: 'Toast',
           role: 'component',
         },
       },
