@@ -25,7 +25,7 @@ export default function DropdownMenuPage() {
           basic
         </Heading>
         <DropDown className="w-[120px]" menus={commonMenus} onSelect={handleOnItemSelect}>
-          <Button>menu</Button>
+          <Button type="primary">menu</Button>
         </DropDown>
         <CodeView content={baseHtml} />
       </ShowBox>
@@ -35,16 +35,16 @@ export default function DropdownMenuPage() {
         </Heading>
         <div className="[&_Button:not(:first-child)]:ml-2">
           <DropDown className="w-[120px]" menus={commonMenus} side="left">
-            <Button>left</Button>
+            <Button type="primary">left</Button>
           </DropDown>
           <DropDown className="w-[120px]" menus={commonMenus} side="top">
-            <Button>top</Button>
+            <Button type="primary">top</Button>
           </DropDown>
           <DropDown className="w-[120px]" menus={commonMenus} side="right">
-            <Button>right</Button>
+            <Button type="primary">right</Button>
           </DropDown>
           <DropDown className="w-[120px]" menus={commonMenus} side="bottom">
-            <Button>bottom</Button>
+            <Button type="primary">bottom</Button>
           </DropDown>
         </div>
         <CodeView content={sideHtml} />
@@ -55,13 +55,13 @@ export default function DropdownMenuPage() {
         </Heading>
         <div className="[&_Button:not(:first-child)]:ml-2">
           <DropDown className="w-[120px]" menus={commonMenus} align="start">
-            <Button>start</Button>
+            <Button type="primary">start</Button>
           </DropDown>
           <DropDown className="w-[120px]" menus={commonMenus} align="center">
-            <Button>center</Button>
+            <Button type="primary">center</Button>
           </DropDown>
           <DropDown className="w-[120px]" menus={commonMenus} align="end">
-            <Button>end</Button>
+            <Button type="primary">end</Button>
           </DropDown>
         </div>
       </ShowBox>
@@ -70,7 +70,7 @@ export default function DropdownMenuPage() {
           separator
         </Heading>
         <DropDown className="w-[120px]" menus={menuWidthSeparator}>
-          <Button>menu</Button>
+          <Button type="primary">menu</Button>
         </DropDown>
         <CodeView content={separatorHtml} />
       </ShowBox>
@@ -79,7 +79,7 @@ export default function DropdownMenuPage() {
           children menu
         </Heading>
         <DropDown className="w-[120px]" menus={menuWithChildren} onSelect={handleOnItemSelect}>
-          <Button>menu</Button>
+          <Button type="primary">menu</Button>
         </DropDown>
         <CodeView content={childrenMenuHtml} />
       </ShowBox>
@@ -88,7 +88,7 @@ export default function DropdownMenuPage() {
           custom prefix and suffix
         </Heading>
         <DropDown className="w-[200px]" menus={menuWidthPreAndSuffix} onSelect={handleOnItemSelect}>
-          <Button>menu</Button>
+          <Button type="primary">menu</Button>
         </DropDown>
         <CodeView content={preAndSuffixHtml} />
       </ShowBox>
