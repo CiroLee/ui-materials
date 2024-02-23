@@ -30,39 +30,41 @@ export default function SideMenu() {
       initial="expanded"
       animate={collapsed ? 'collapsed' : 'expanded'}
       variants={variant}
-      className="relative flex flex-col shrink-0 w-[200px] h-[100vh] border-r px-3">
-      <motion.div
-        variants={{
-          collapsed: {
-            x: 20,
-            rotateZ: 180,
-          },
-          expanded: {
-            x: 0,
-          },
-        }}
-        onClick={() => setCollapsed(!collapsed)}
-        className="absolute top-[14%] right-[-16px] w-[32px] h-[32px] border rounded-full flex bg-white items-center justify-center">
-        <ChevronLeft size={20} className="text-[20px]" />
-      </motion.div>
+      className="relative flex flex-col shrink-0 w-[200px] h-[100vh] border-r">
       <motion.div className="overflow-hidden whitespace-nowrap">
-        <Link className="h-[36px] px-8px h-44px mb-2 flex items-center px-2 font-bold cursor-default" to={head.path!}>
+        <Link className="h-[36px] px-8px h-44px mb-2 flex items-center px-2 font-bold cursor-pointer" to={head.path!}>
           {head.meta.title}
         </Link>
-      </motion.div>
-      {navRoutes.map((r) => (
-        <motion.div key={r.id} className="overflow-hidden whitespace-nowrap">
-          <NavLink
-            to={r.path!}
-            className={({ isActive }) =>
-              `h-[36px] flex items-center rounded-[4px] hover:bg-gray-200/60 hover:text-brand-500/50 transition-all duration-200 px-2 cursor-default ${
-                isActive ? 'text-brand-500 hover:text-brand-500' : 'text-gray-500/40'
-              }`
-            }>
-            {r.meta.title}
-          </NavLink>
+        <motion.div
+          variants={{
+            collapsed: {
+              x: 20,
+              rotateZ: 180,
+            },
+            expanded: {
+              x: 0,
+            },
+          }}
+          onClick={() => setCollapsed(!collapsed)}
+          className="absolute top-[14%] right-[-16px] w-[32px] h-[32px] border rounded-full flex bg-white items-center justify-center">
+          <ChevronLeft size={20} className="text-[20px]" />
         </motion.div>
-      ))}
+      </motion.div>
+      <div className="flex-1 overflow-y-auto pb-4 site-scrollbar">
+        {navRoutes.map((r) => (
+          <motion.div key={r.id} className="overflow-hidden whitespace-nowrap">
+            <NavLink
+              to={r.path!}
+              className={({ isActive }) =>
+                `h-[36px] flex items-center hover:bg-gray-200/60 hover:text-brand-500/50 transition-all duration-200 px-2 cursor-default ${
+                  isActive ? 'text-brand-500 hover:text-brand-500' : 'text-gray-500/40'
+                }`
+              }>
+              {r.meta.title}
+            </NavLink>
+          </motion.div>
+        ))}
+      </div>
     </motion.aside>
   );
 }

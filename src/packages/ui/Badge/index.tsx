@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import { type VariantProps, tv } from 'tailwind-variants';
 const badge = tv({
-  base: 'flex justify-center items-center absolute bg-[var(--bg-color)] text-[--text-color] border-[2px] border-white box-border origin-center -translate-y-1/2',
+  base: 'flex justify-center items-center absolute bg-[var(--bg-color)] text-[--text-color]  border-white box-border origin-center -translate-y-1/2',
   variants: {
     size: {
       small: 'min-w-[16px] h-[16px] text-[10px] rounded-[8px]',
@@ -16,6 +16,7 @@ const badge = tv({
     },
     outline: {
       false: 'border-0',
+      true: 'border-[2px]',
     },
   },
   compoundVariants: [
