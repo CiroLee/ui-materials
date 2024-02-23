@@ -29,6 +29,7 @@ import InputPage from '@site/pages/input-page';
 import InputNumberPage from '@site/pages/input-number-page';
 import TextareaPage from '@site/pages/textarea-page';
 import ToastPage from '@site/pages/toast-page';
+import CalendarPage from '@site/pages/calendar-page';
 
 export const router = createHashRouter([
   {
@@ -243,6 +244,15 @@ export const router = createHashRouter([
         element: <ToastPage />,
         meta: {
           title: 'Toast',
+          role: 'component',
+        },
+      },
+      {
+        path: 'Calendar',
+        id: 'Calendar',
+        element: <CalendarPage />,
+        meta: {
+          title: 'Calendar',
           role: 'component',
         },
       },

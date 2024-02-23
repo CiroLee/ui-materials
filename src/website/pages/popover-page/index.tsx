@@ -82,7 +82,7 @@ export default function PopoverPage() {
           side="top"
           align="start"
           onOpenChange={setStatus}>
-          <Button>popover</Button>
+          <Button type="primary">popover</Button>
         </Popover>
         <p className="mt-2 text-zinc-500">status: {String(status)}</p>
         <CodeView content={baseHtml} />
@@ -94,7 +94,7 @@ export default function PopoverPage() {
         <div className="inline-grid grid-cols-3 grid-rows-4 gap-3">
           {placements.map((item, index) => (
             <Popover key={index} title="title" content="this is popover contents" side={item.side} align={item.align}>
-              <Button>
+              <Button type="primary">
                 {item.side}-{item.align}
               </Button>
             </Popover>
@@ -112,7 +112,7 @@ export default function PopoverPage() {
             <span className="text-zinc-500 ml-2">disabled: {String(disabled)}</span>
           </div>
           <Popover title="title" content="this is popover texts and it is long" disabled={disabled} side="right">
-            <Button>popover</Button>
+            <Button type="primary">popover</Button>
           </Popover>
         </div>
         <CodeView content={disabledHtml} />
@@ -123,10 +123,10 @@ export default function PopoverPage() {
         </Heading>
         <div className="flex gap-3">
           <Popover title="title" content="this is popover texts and it is long">
-            <Button>with arrow</Button>
+            <Button type="primary">with arrow</Button>
           </Popover>
           <Popover title="title" showArrow={false} content="this is popover texts and it is long">
-            <Button>without arrow</Button>
+            <Button type="primary">without arrow</Button>
           </Popover>
         </div>
         <CodeView content={arrowHtml} />
@@ -136,7 +136,7 @@ export default function PopoverPage() {
           sideOffset
         </Heading>
         <Popover title="title" sideOffset={20} content="this is popover texts and it is long">
-          <Button>popover</Button>
+          <Button type="primary">popover</Button>
         </Popover>
         <CodeView content={sideOffsetHtml} />
       </ShowBox>
@@ -147,7 +147,7 @@ export default function PopoverPage() {
         <Popover
           title={<p className="text-brand-500 font-bold">custom title</p>}
           content={<p className="text-sm text-danger-500">use as custom contents</p>}>
-          <Button>popover</Button>
+          <Button type="primary">popover</Button>
         </Popover>
         <CodeView content={titleContentHtml} />
       </ShowBox>

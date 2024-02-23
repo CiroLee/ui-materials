@@ -3,5 +3,5 @@
   "editor.formatOnSave": true,
   "tailwindCSS.experimental.classRegex": [["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["clsx", "tailwindCSS"]
+  "cSpell.words": ["clsx", "tailwindcss", "lucide"]
 }
