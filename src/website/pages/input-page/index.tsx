@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { User, Search } from 'lucide-react';
+import { RiUserLine, RiSearchLine } from '@remixicon/react';
 import ShowBox from '@site/components/ShowBox';
 import NavTitle from '@site/components/NavTitle';
 import Heading from '@ui/Heading';
@@ -61,9 +61,9 @@ export default function InputPage() {
           prefix and suffix
         </Heading>
         <div className="w-[400px] space-y-3">
-          <Input placeholder="icon prefix..." prefix={<User size={18} />} />
+          <Input placeholder="icon prefix..." prefix={<RiUserLine size={18} />} />
           <Input placeholder="text prefix..." prefix={<span>+86</span>} />
-          <Input placeholder="icon suffix..." suffix={<Search size={18} />} />
+          <Input placeholder="icon suffix..." suffix={<RiSearchLine size={18} />} />
         </div>
         <CodeView content={prefixAndSuffixHtml} />
       </ShowBox>
@@ -84,8 +84,8 @@ export default function InputPage() {
           status
         </Heading>
         <div className="w-[400px] space-y-3">
-          <Input status="error" placeholder="error" prefix={<User size={18} />} />
-          <Input status="warn" placeholder="warn" prefix={<User size={18} />} />
+          <Input status="error" placeholder="error" prefix={<RiUserLine size={18} />} />
+          <Input status="warn" placeholder="warn" prefix={<RiUserLine size={18} />} />
           <Input status="readonly" placeholder="readonly" value="readonly..." />
         </div>
         <CodeView content={statusHtml} />

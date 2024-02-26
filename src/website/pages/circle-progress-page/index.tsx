@@ -3,7 +3,7 @@ import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import CircleProgress from '@ui/CircleProgress';
 import Button, { ButtonGroup } from '@ui/Button';
-import { AlertTriangle } from 'lucide-react';
+import { RiAlertLine } from '@remixicon/react';
 import CodeView from '@/website/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as sizeHtml } from './docs/size.md';
@@ -86,7 +86,7 @@ export default function CircleProgressPage() {
           trackerClassName="stroke-[rgba(45,117,117,0.5)]"
           indicatorClassName="stroke-[#2558d0]"
           svgClassName="stroke-[3]">
-          <AlertTriangle size={32} color="red" />
+          <RiAlertLine size={34} color="red" />
         </CircleProgress>
         <CodeView content={customHtml} />
       </ShowBox>

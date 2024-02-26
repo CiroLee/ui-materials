@@ -1,5 +1,5 @@
 import { forwardRef, useState, useRef, useEffect, useMemo } from 'react';
-import { ChevronUp } from 'lucide-react';
+import { RiArrowUpSLine } from '@remixicon/react';
 import { tv, type VariantProps } from 'tailwind-variants';
 import { globalInputStyle as gInput } from '@/packages/plugins/input.style';
 const inputNumberStyle = tv({
@@ -198,12 +198,12 @@ const InputNumber = forwardRef<HTMLLabelElement, InputNumberProps>((props, ref) 
         <div
           className={spinButton({ status, size, class: `${increaseDisabled ? 'cursor-not-allowed' : ''}` })}
           onClick={() => handleStepChange(step, 'increase', true)}>
-          <ChevronUp className={spinArrow()} />
+          <RiArrowUpSLine className={spinArrow()} />
         </div>
         <div
           className={spinButton({ status, size, class: `${decreaseDisabled ? 'cursor-not-allowed' : ''}` })}
           onClick={() => handleStepChange(step, 'decrease', true)}>
-          <ChevronUp className={spinArrow({ class: 'rotate-180' })} />
+          <RiArrowUpSLine className={spinArrow({ class: 'rotate-180' })} />
         </div>
       </div>
     </label>

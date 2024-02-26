@@ -1,6 +1,6 @@
 ```ts
 import { useState } from 'react';
-import { Power } from 'lucide-react';
+import { RiShutDownLine } from '@remixicon/react';
 import Modal from 'your path/Modal';
 import Button, { ButtonGroup } from 'your path/Button';
 
@@ -31,7 +31,7 @@ export default function Demo() {
           closeIcon={
             showCloseIcon ? (
               <div className="size-[24px] rounded flex flex-center transition-colors group hover:bg-gray-200/40">
-                <Power className="text-gray-300 group-hover:text-red-500" size={16} />
+                <RiShutDownLine className="text-gray-300 group-hover:text-red-500" size={16} />
               </div>
             ) : null
           }

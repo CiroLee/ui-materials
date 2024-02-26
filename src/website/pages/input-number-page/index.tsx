@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PiggyBank, BarChart3 } from 'lucide-react';
+import { RiMoneyCnyBoxLine, RiBarChartLine } from '@remixicon/react';
 import Checkbox from '@ui/Checkbox';
 import ShowBox from '@site/components/ShowBox';
 import Heading from '@ui/Heading';
@@ -47,8 +47,8 @@ export default function InputNumberPage() {
           prefix
         </Heading>
         <div className="w-[400px] flex flex-col space-y-3">
-          <InputNumber prefix={<PiggyBank size={18} />} />
-          <InputNumber prefix={<BarChart3 size={18} />} />
+          <InputNumber prefix={<RiMoneyCnyBoxLine size={18} />} />
+          <InputNumber prefix={<RiBarChartLine size={18} />} />
         </div>
         <CodeView content={prefixHtml} />
       </ShowBox>
@@ -76,7 +76,7 @@ export default function InputNumberPage() {
         <Heading as="h4" className="mb-2">
           disabled
         </Heading>
-        <InputNumber className="w-[400px]" disabled value={10} prefix={<PiggyBank size={18} />} />
+        <InputNumber className="w-[400px]" disabled value={10} prefix={<RiMoneyCnyBoxLine size={18} />} />
         <CodeView content={disabledHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
@@ -84,9 +84,9 @@ export default function InputNumberPage() {
           status
         </Heading>
         <div className="flex flex-col space-y-3 w-[400px]">
-          <InputNumber status="error" prefix={<PiggyBank size={18} />} />
-          <InputNumber status="warn" prefix={<PiggyBank size={18} />} />
-          <InputNumber status="readonly" prefix={<PiggyBank size={18} />} value={666} />
+          <InputNumber status="error" prefix={<RiMoneyCnyBoxLine size={18} />} />
+          <InputNumber status="warn" prefix={<RiMoneyCnyBoxLine size={18} />} />
+          <InputNumber status="readonly" prefix={<RiMoneyCnyBoxLine size={18} />} value={666} />
         </div>
         <CodeView content={statusHtml} />
       </ShowBox>

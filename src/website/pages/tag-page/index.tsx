@@ -1,7 +1,7 @@
 import Tag from '@ui/Tag';
 import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
-import { Smile } from 'lucide-react';
+import { RiUserSmileLine } from '@remixicon/react';
 import Avatar from '@ui/Avatar';
 import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
@@ -64,7 +64,7 @@ export default function TagPage() {
         </Heading>
         <div className="flex items-center [&>div]:mr-2">
           <Tag color="primary">
-            <Smile size={12} className="mr-1" />
+            <RiUserSmileLine size={13} className="mr-1" />
             <span className="h-full">icon smile</span>
           </Tag>
           <Tag shape="pill">

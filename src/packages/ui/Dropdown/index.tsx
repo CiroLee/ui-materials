@@ -1,6 +1,6 @@
 import { type FC, forwardRef, useState } from 'react';
 import clsx from 'clsx';
-import { ChevronRight } from 'lucide-react';
+import { RiArrowRightSLine } from '@remixicon/react';
 import * as DropDownMenu from '@radix-ui/react-dropdown-menu';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Align, Side } from '@/packages/types/common';
@@ -52,7 +52,7 @@ function renderSubMenu(menu: MenuItem, onSelect?: MenuItemOnSelectEvent) {
           {menu.prefix}
           <span>{menu.label}</span>
         </div>
-        <ChevronRight size={16} />
+        <RiArrowRightSLine size={16} className="text-zinc-400" />
       </DropDownMenu.SubTrigger>
       <DropDownMenu.Portal>
         <DropDownMenu.SubContent className="bg-white rounded-[6px] border border-gray-200 p-[4px]">

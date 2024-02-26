@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { ChevronLeft } from 'lucide-react';
+import { RiArrowLeftSLine } from '@remixicon/react';
 import { motion, type Variants } from 'framer-motion';
 import { router } from '../routes';
 import { type MyRouteObject } from '../routes';
@@ -47,7 +47,7 @@ export default function SideMenu() {
           }}
           onClick={() => setCollapsed(!collapsed)}
           className="absolute top-[14%] right-[-16px] w-[32px] h-[32px] border rounded-full flex bg-white items-center justify-center">
-          <ChevronLeft size={20} className="text-[20px]" />
+          <RiArrowLeftSLine size={20} className="text-[20px]" />
         </motion.div>
       </motion.div>
       <div className="flex-1 overflow-y-auto pb-4 site-scrollbar">

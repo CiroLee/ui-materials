@@ -4,7 +4,7 @@ import ApiTable from '@site/components/ApiTable';
 import { switchRows } from './api';
 import ShowBox from '@site/components/ShowBox';
 import Switch from '@ui/Switch';
-import { Check, X } from 'lucide-react';
+import { RiCheckLine, RiCloseLine } from '@remixicon/react';
 import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as sizeHtml } from './docs/size.md';
@@ -53,12 +53,12 @@ export default function SwitchPage() {
         <Switch
           checkedThumb={
             <div className="w-full h-full flex justify-center items-center">
-              <Check size={12} />
+              <RiCheckLine size={12} />
             </div>
           }
           unCheckedThumb={
             <div className="w-full h-full flex justify-center items-center">
-              <X size={12} />
+              <RiCloseLine size={12} />
             </div>
           }
         />

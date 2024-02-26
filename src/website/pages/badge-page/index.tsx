@@ -3,7 +3,7 @@ import Heading from '@ui/Heading';
 import Avatar from '@ui/Avatar';
 import ShowBox from '@/website/components/ShowBox';
 import CodeView from '@/website/components/CodeView';
-import { Bell, Check } from 'lucide-react';
+import { RiNotification2Line, RiCheckLine } from '@remixicon/react';
 import { html as sizeHtml } from './docs/size.md';
 import { html as colorHtml } from './docs/color.md';
 import { html as placementHtml } from './docs/placement.md';
@@ -90,10 +90,10 @@ export default function BadgePage() {
           custom content
         </Heading>
         <div className="flex gap-4">
-          <Badge content={<Bell size={12} />}>
+          <Badge content={<RiNotification2Line size={12} />}>
             <Avatar shape="round" src={IMG_URL} />
           </Badge>
-          <Badge content={<Check size={12} />} bgColor="#5bce5b">
+          <Badge content={<RiCheckLine size={12} />} bgColor="#5bce5b">
             <Avatar src={IMG_URL} />
           </Badge>
           <Badge size="small" placement="bottom-right" bgColor="#5bce5b">

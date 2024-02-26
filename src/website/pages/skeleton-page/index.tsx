@@ -1,7 +1,7 @@
 import ShowBox from '@site/components/ShowBox';
 import Heading from '@ui/Heading';
 import Skeleton from '@ui/Skeleton';
-import { Image } from 'lucide-react';
+import { RiImageLine } from '@remixicon/react';
 import CodeView from '@site/components/CodeView';
 import { html as flickerHtml } from './docs/type-flicker.md';
 import { html as shimmerHtml } from './docs/type-flicker.md';
@@ -44,7 +44,7 @@ export default function SkeletonPage() {
           width children
         </Heading>
         <Skeleton type="flicker" className="size-[48px] flex flex-center rounded-md">
-          <Image size="24px" className="text-black/20" />
+          <RiImageLine size="24px" className="text-black/20" />
         </Skeleton>
         <CodeView content={childrenHtml} />
       </ShowBox>

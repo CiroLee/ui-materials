@@ -1,5 +1,5 @@
 import { MenuItem } from '@ui/Dropdown';
-import { Layers, Droplet, Globe, Pipette } from 'lucide-react';
+import { RiStackLine, RiDropLine, RiGlobalLine, RiSipLine } from '@remixicon/react';
 
 export const commonMenus: MenuItem[] = [
   {
@@ -73,24 +73,24 @@ export const menuWidthPreAndSuffix: MenuItem[] = [
   {
     id: 'layer',
     label: 'Layer',
-    prefix: <Layers size={16} className="mr-1" />,
+    prefix: <RiStackLine size={16} className="mr-1" />,
     suffix: <div className="text-gray-400">⌘ + L</div>,
   },
   {
     id: 'opacity',
     label: 'Opacity',
-    prefix: <Droplet size={16} className="mr-1" />,
+    prefix: <RiDropLine size={16} className="mr-1" />,
     suffix: <div className="text-gray-400">⌘ + O</div>,
   },
   {
     id: 'more',
     label: 'More tools',
-    prefix: <Globe size={16} className="mr-1" />,
+    prefix: <RiGlobalLine size={16} className="mr-1" />,
     children: [
       {
         id: 'tool-trans',
         label: 'Pipette',
-        prefix: <Pipette size={15} className="mr-1" />,
+        prefix: <RiSipLine size={15} className="mr-1" />,
         suffix: <div className="text-gray-400 ml-10">⌘ + ⌥ + T</div>,
       },
     ],

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Power } from 'lucide-react';
+import { RiShutDownLine } from '@remixicon/react';
 import ShowBox from '@site/components/ShowBox';
 import NavTitle from '@site/components/NavTitle';
 import Heading from '@ui/Heading';
@@ -180,7 +180,7 @@ export default function ModalPage() {
           closeIcon={
             showCloseIcon ? (
               <div className="size-[24px] rounded flex flex-center transition-colors group hover:bg-gray-200/40">
-                <Power className="text-gray-300 group-hover:text-red-500" size={16} />
+                <RiShutDownLine className="text-gray-300 group-hover:text-red-500" size={16} />
               </div>
             ) : null
           }

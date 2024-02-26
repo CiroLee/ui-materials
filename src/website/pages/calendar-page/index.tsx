@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { RiArrowLeftSLine, RiArrowRightSLine } from '@remixicon/react';
 import NavTitle from '@site/components/NavTitle';
 import ShowBox from '@site/components/ShowBox';
 import Heading from '@ui/Heading';
@@ -56,7 +56,7 @@ export default function CalendarPage() {
                     const newDate = dateChangeHandler(value, 'prev');
                     onChange(newDate);
                   }}>
-                  <ChevronLeft strokeWidth={1.5} />
+                  <RiArrowLeftSLine />
                 </Button>
                 <span className="mx-2 text-lg">{value.toLocaleDateString()}</span>
                 <Button
@@ -67,7 +67,7 @@ export default function CalendarPage() {
                     const newDate = dateChangeHandler(value, 'next');
                     onChange(newDate);
                   }}>
-                  <ChevronRight strokeWidth={1.5} />
+                  <RiArrowRightSLine />
                 </Button>
                 <Button
                   outline

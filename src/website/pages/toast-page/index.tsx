@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Check, Send, AlertTriangle } from 'lucide-react';
+import { RiCheckLine, RiSendPlaneLine, RiAlertLine } from '@remixicon/react';
 import ShowBox from '@site/components/ShowBox';
 import NavTitle from '@site/components/NavTitle';
 import Button from '@ui/Button';
@@ -89,7 +89,7 @@ export default function ToastPage() {
           <Button
             onClick={() => {
               toast(text, {
-                icon: <Check size={18} className="text-green-500" />,
+                icon: <RiCheckLine size={18} className="text-green-500" />,
               });
             }}>
             info
@@ -97,7 +97,7 @@ export default function ToastPage() {
           <Button
             onClick={() => {
               toast(text, {
-                icon: <Send size={18} className="text-blue-500" />,
+                icon: <RiSendPlaneLine size={18} className="text-blue-500" />,
               });
             }}>
             success
@@ -113,7 +113,7 @@ export default function ToastPage() {
           onClick={() => {
             toast(text, {
               autoClose: false,
-              icon: <AlertTriangle size={18} className="text-red-500" />,
+              icon: <RiAlertLine size={18} className="text-red-500" />,
               action: (
                 <Button size="tiny" outline type="text" onClick={closeToast}>
                   action

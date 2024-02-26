@@ -1,5 +1,5 @@
 import { forwardRef, useState, useEffect, useMemo } from 'react';
-import { EyeOff, Eye } from 'lucide-react';
+import { RiEyeLine, RiEyeOffLine } from '@remixicon/react';
 import { VariantProps, tv } from 'tailwind-variants';
 import { globalInputStyle as gInput } from '@/packages/plugins/input.style';
 const inputStyle = tv({
@@ -165,7 +165,7 @@ const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
       {showCount ? <div className={count({ class: rightBlock() })}>{counts}</div> : null}
       {type === 'password' ? (
         <div className={rightBlock()} onClick={() => setShowPassword(!showPassword)}>
-          {showPassword ? <Eye className={eyeIcon()} /> : <EyeOff className={eyeIcon()} />}
+          {showPassword ? <RiEyeLine className={eyeIcon()} /> : <RiEyeOffLine className={eyeIcon()} />}
         </div>
       ) : null}
       {suffix ? <div className={suffixStyle()}>{suffix}</div> : null}
