@@ -1,6 +1,6 @@
 # ui-materials
 
-modern ui materials about react aiming to use easily
+modern ui materials for PC about react aiming to use easily
 
 # Stack
 
