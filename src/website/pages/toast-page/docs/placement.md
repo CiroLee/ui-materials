@@ -1,7 +1,7 @@
 ```ts
-import { useToast, type ToastPlacement  } from 'your path';
-import Button from 'your path';
-import RadioGroup, { type RadioOption } from 'your path';
+import { useToast, type ToastPlacement  } from 'your path/Toast';
+import Button from 'your path/Button';
+import RadioGroup, { type RadioOption } from 'your path/RadioGroup';
 const text = 'this is a toast message';
 
 const placementOption: RadioOption[] = [

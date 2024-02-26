@@ -1,8 +1,8 @@
 ```ts
 import { useState } from 'react';
 import { Power } from 'lucide-react';
-import Modal from 'your path';
-import Button, { ButtonGroup } from 'your path';
+import Modal from 'your path/Modal';
+import Button, { ButtonGroup } from 'your path/Button';
 
 export default function Demo() {
   const [showCloseIcon, setShowCloseIcon] = useState(true);

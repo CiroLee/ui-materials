@@ -1,5 +1,5 @@
 ```typescript
-import Switch from 'your path';
+import Switch from 'your path/Switch';
 import { Check, X } from 'lucide-react';
 
 export default function Demo() {

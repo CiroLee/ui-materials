@@ -1,5 +1,5 @@
 ```typescript
-import Badge from 'your path';
+import Checkbox from 'your path/Badge';
 import { Bell, Check } from 'lucide-react';
 
 export default function Demo() {

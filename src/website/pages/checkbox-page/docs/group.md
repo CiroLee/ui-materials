@@ -1,11 +1,11 @@
 ```typescript
-import {type CheckboxProps, CheckboxGroup } from 'your path';
+import {type CheckboxProps, CheckboxGroup } from 'your path/Checkbox';
 
 export default function Demo() {
   const checkboxGroup: CheckboxProps[] = [
     {
       value: 'apple',
-      children: (
+      label: (
         <div>
           <p>apple</p>
           <p>🍎</p>
@@ -14,7 +14,7 @@ export default function Demo() {
     },
     {
       value: 'banana',
-      children: (
+      label: (
         <div>
           <p>banana</p>
           <p>🍌</p>
@@ -23,7 +23,7 @@ export default function Demo() {
     },
     {
       value: 'orange',
-      children: (
+      label: (
         <div>
           <p>orange</p>
           <p>🍊</p>

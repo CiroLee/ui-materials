@@ -1,7 +1,7 @@
 ```ts
 import { useState } from 'react';
-import Modal from 'your path';
-import Button from 'your path';
+import Modal from 'your path/Modal';
+import Button from 'your path/Button';
 
 export default function Demo() {
   const [show, setShow] = useState(false)

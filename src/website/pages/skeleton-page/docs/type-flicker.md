@@ -1,5 +1,5 @@
 ```typescript
-import Skeleton from 'your path';
+import Skeleton from 'your path/Skeleton';
 
 export default function Demo() {
   return (

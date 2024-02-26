@@ -1,6 +1,6 @@
 ```typescript
 import { useState } from 'react';
-import Switch from 'your path';
+import Switch from 'your path/Switch';
 
 export default function Demo() {
   const [checked, setChecked] = useState(false);

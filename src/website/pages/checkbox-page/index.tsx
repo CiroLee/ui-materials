@@ -1,4 +1,4 @@
-import Checkbox, { CheckboxGroup, type CheckboxType } from '@ui/Checkbox';
+import Checkbox, { CheckboxGroup, type CheckboxGroupOption } from '@ui/Checkbox';
 import Heading from '@ui/Heading';
 import ShowBox from '@site/components/ShowBox';
 import ApiTable from '@site/components/ApiTable';
@@ -9,10 +9,10 @@ import { html as disabledHtml } from './docs/disabled.md';
 import { html as groupHtml } from './docs/group.md';
 import NavTitle from '@site/components/NavTitle';
 export default function CheckboxPage() {
-  const checkboxGroup: CheckboxType[] = [
+  const checkboxGroup: CheckboxGroupOption[] = [
     {
       value: 'apple',
-      children: (
+      label: (
         <div>
           <p>apple</p>
           <p>🍎</p>
@@ -21,7 +21,7 @@ export default function CheckboxPage() {
     },
     {
       value: 'banana',
-      children: (
+      label: (
         <div>
           <p>banana</p>
           <p>🍌</p>
@@ -30,7 +30,7 @@ export default function CheckboxPage() {
     },
     {
       value: 'orange',
-      children: (
+      label: (
         <div>
           <p>orange</p>
           <p>🍊</p>

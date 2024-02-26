@@ -1,5 +1,5 @@
 ```typescript
-import Button, { ButtonGroup } from 'your path';
+import Button, { ButtonGroup } from 'your path/Button';
 
 export default function Demo() {
   return (

@@ -1,5 +1,5 @@
 ```ts
-import InputNumber from 'your path';
+import InputNumber from 'your path/InputNumber';
 
 export default function Demo() {
   return (

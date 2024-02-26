@@ -1,5 +1,5 @@
 ```typescript
-import Switch from 'your path';
+import Switch from 'your path/Switch';
 
 export default function Demo() {
   return (

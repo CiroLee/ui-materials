@@ -1,7 +1,7 @@
 ```ts
 import { useState } from 'react'
-import Input from 'your path';
-import Checkbox from 'your path';
+import Input from 'your path/Input';
+import Checkbox from 'your path/Checkbox';
 
 export default function Demo() {
   const [disabled, setDisabled] = useState(true);

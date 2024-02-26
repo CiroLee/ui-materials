@@ -1,8 +1,8 @@
 ```typescript
 import { useState } from 'react';
-import Switch from 'your path';
-import Popup from 'your path';
-import Button from 'your path';
+import Switch from 'your path/Switch';
+import Popup from 'your path/Popup';
+import Button from 'your path/Button';
 
 export default function Demo() {
   const [showCenter, setShowCenter] = useState(false);

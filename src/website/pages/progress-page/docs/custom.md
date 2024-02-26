@@ -1,5 +1,5 @@
 ```ts
-import Progress from 'your path'
+import Progress from 'your path/Progress';
 
 export default function Demo() {
   return (

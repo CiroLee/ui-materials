@@ -1,5 +1,5 @@
 ```typescript
-import Button from 'your path';
+import Checkbox from 'your path/Button';
 import { User, Upload, Loader } from 'lucide-react';
 export default function Demo() {
   return (

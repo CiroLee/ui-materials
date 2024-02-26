@@ -269,8 +269,8 @@ export default function ModalPage() {
             setClosable(list as string[]);
           }}
           options={[
-            { value: 'escape', children: 'escape to close' },
-            { value: 'maskable', children: 'click mask to close' },
+            { value: 'escape', label: 'escape to close' },
+            { value: 'maskable', label: 'click mask to close' },
           ]}></CheckboxGroup>
         <Button className="mt-4" onClick={() => setModal8(true)}>
           open modal

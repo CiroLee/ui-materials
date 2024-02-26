@@ -1,5 +1,5 @@
 ```ts
-import Textarea from 'your path';
+import Textarea from 'your path/Textarea';
 
 export default function Demo() {
   return (

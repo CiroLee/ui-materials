@@ -1,7 +1,7 @@
 ```typescript
-import Tag from 'your path';
+import Tag from 'your path/Tag';
 import { Smile } from 'lucide-react';
-import Avatar from '@ui/Avatar';
+import Avatar from 'your path/Avatar';
 
 export default function Demo() {
   return (

@@ -1,7 +1,7 @@
 ```ts
-import { useState } from 'react'
-import Progress from 'your path'
-import Button, { ButtonGroup } from 'your path'
+import { useState } from 'react';
+import Progress from 'your path/Progress';
+import Button, { ButtonGroup } from 'your path/Button';
 
 export default function Demo() {
   const [percent, setPercent] = useState(10);

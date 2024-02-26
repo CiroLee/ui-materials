@@ -1,8 +1,8 @@
 ```ts
 import { useState } from 'react';
-import Modal from 'your path';
-import Button from 'your path';
-import RadioGroup from 'your path';
+import Modal from 'your path/Modal';
+import Button from 'your path/Button';
+import RadioGroup from 'your path/RadioGroup';
 
 type FooterALign = 'start' | 'center' | 'end';
 

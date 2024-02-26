@@ -1,6 +1,6 @@
 ```typescript
 import { Image } from 'lucide-react';
-import Skeleton from 'your path';
+import Skeleton from 'your path/Skeleton';
 
 export default function Demo() {
   return (

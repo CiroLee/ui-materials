@@ -1,5 +1,5 @@
 ```ts
-import InputNumber from 'your path';
+import InputNumber from 'your path/InputNumber';
 import { PiggyBank, BarChart3 } from 'lucide-react';
 
 export default function Demo() {
