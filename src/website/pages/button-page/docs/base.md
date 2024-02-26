@@ -6,6 +6,7 @@ export default function Demo() {
     <div className="[&_button:not(:first-child)]:ml-2">
       <Button>primary</Button>
       <Button type="success">success</Button>
+      <Button type="info">infomation</Button>
       <Button type="warn">warn</Button>
       <Button type="danger">danger</Button>
       <Button type="text">text</Button>

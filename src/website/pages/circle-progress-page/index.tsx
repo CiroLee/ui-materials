@@ -49,13 +49,14 @@ export default function CircleProgressPage() {
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
-          colors
+          color
         </Heading>
-        <div className="flex items-center [&_div]:mr-3">
-          <CircleProgress percent={20} colors="primary" />
-          <CircleProgress percent={20} colors="success" />
-          <CircleProgress percent={20} colors="warn" />
-          <CircleProgress percent={20} colors="danger" />
+        <div className="flex items-center gap-x-3">
+          <CircleProgress percent={20} color="primary" />
+          <CircleProgress percent={20} color="success" />
+          <CircleProgress percent={20} color="info" />
+          <CircleProgress percent={20} color="warn" />
+          <CircleProgress percent={20} color="danger" />
         </div>
         <CodeView content={colorsHtml} />
       </ShowBox>

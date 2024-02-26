@@ -3,7 +3,7 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'type',
     desc: 'button type',
-    type: 'tag: primary | success | warn | danger',
+    type: 'tag: primary | success | info | warn | danger',
     required: false,
     default: 'primary',
   },

@@ -48,13 +48,14 @@ export default function ProgressPage() {
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h2" className="mb-2">
-          colors
+          color
         </Heading>
         <div className="space-y-3">
-          <Progress percent={65} colors="primary" className="w-3/4" />
-          <Progress percent={65} colors="success" className="w-3/4" />
-          <Progress percent={65} colors="warn" className="w-3/4" />
-          <Progress percent={65} colors="danger" className="w-3/4" />
+          <Progress percent={65} color="primary" className="w-3/4" />
+          <Progress percent={65} color="success" className="w-3/4" />
+          <Progress percent={65} color="info" className="w-3/4" />
+          <Progress percent={65} color="warn" className="w-3/4" />
+          <Progress percent={65} color="danger" className="w-3/4" />
         </div>
         <CodeView content={colorsHtml} />
       </ShowBox>
@@ -63,10 +64,11 @@ export default function ProgressPage() {
           striped
         </Heading>
         <div className="space-y-3">
-          <Progress percent={65} striped colors="primary" className="w-3/4" />
-          <Progress percent={65} striped colors="success" className="w-3/4" />
-          <Progress percent={65} striped colors="warn" className="w-3/4" />
-          <Progress percent={65} striped colors="danger" className="w-3/4" />
+          <Progress percent={65} striped color="primary" className="w-3/4" />
+          <Progress percent={65} striped color="success" className="w-3/4" />
+          <Progress percent={65} striped color="info" className="w-3/4" />
+          <Progress percent={65} striped color="warn" className="w-3/4" />
+          <Progress percent={65} striped color="danger" className="w-3/4" />
         </div>
         <CodeView content={stripedHtml} />
       </ShowBox>
@@ -76,7 +78,7 @@ export default function ProgressPage() {
         </Heading>
         <div className="space-y-3">
           <div className="flex items-center">
-            <Progress percent={percent} striped colors="primary" className="w-3/4 mr-2" />
+            <Progress percent={percent} striped color="primary" className="w-3/4 mr-2" />
             <span>{percent}%</span>
           </div>
           <ButtonGroup>

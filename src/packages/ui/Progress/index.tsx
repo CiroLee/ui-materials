@@ -7,8 +7,9 @@ const indicator = tv(
   {
     base: 'size-full transition-transform duration-300 ease rounded-[inherit]',
     variants: {
-      colors: {
+      color: {
         primary: 'bg-brand-500',
+        info: 'bg-info-500',
         success: 'bg-success-500',
         warn: 'bg-warn-500',
         danger: 'bg-danger-500',
@@ -19,7 +20,7 @@ const indicator = tv(
     },
     defaultVariants: {
       size: 'medium',
-      colors: 'primary',
+      color: 'primary',
     },
   },
   { twMerge: false },
@@ -42,14 +43,14 @@ const progress = tv({
 type ProgressVariants = VariantProps<typeof progress>;
 interface ProgressProps extends ProgressVariants {
   percent?: number;
-  colors?: Colors;
+  color?: Colors;
   striped?: boolean;
   className?: string;
   style?: React.CSSProperties;
 }
 
 const Progress = forwardRef<React.ElementRef<typeof RadixProgress.Root>, ProgressProps>((props, ref) => {
-  const { percent = 0, size, colors, striped, className, style } = props;
+  const { percent = 0, size, color, striped, className, style } = props;
   return (
     <RadixProgress.Root
       ref={ref}
@@ -57,7 +58,7 @@ const Progress = forwardRef<React.ElementRef<typeof RadixProgress.Root>, Progres
       className={progress({ size, class: className })}
       style={{ transform: 'translateZ(0)', ...style }}>
       <RadixProgress.Indicator
-        className={indicator({ colors, striped })}
+        className={indicator({ color, striped })}
         style={{ transform: `translateX(-${100 - percent}%)` }}
       />
     </RadixProgress.Root>

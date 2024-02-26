@@ -15,6 +15,13 @@ const compoundVariants = tv({
       class: `border-success-500 text-success-500 hover:bg-success-500/5 hover:border-success-500/80 
         active:text-success-600 active:border-success-600 active:bg-success-500/10`,
     },
+
+    {
+      outline: true,
+      type: 'info',
+      class: `border-info-500 text-info-500 hover:bg-info-500/5 hover:border-info-500/80 
+        active:text-info-600 active:border-info-600 active:bg-info-500/10`,
+    },
     {
       outline: true,
       type: 'danger',
@@ -42,6 +49,7 @@ const button = tv({
     type: {
       primary: 'bg-brand-500 text-white hover:bg-brand-500/90 active:bg-brand-600',
       success: 'bg-success-500 text-white hover:bg-success-500/90 active:bg-success-600',
+      info: 'bg-info-500 text-white hover:bg-info-500/90 active:bg-info-600',
       warn: 'bg-warn-500 text-white hover:bg-warn-500/90 active:bg-warn-600',
       danger: 'bg-danger-500 text-white hover:bg-danger-500/90 active:bg-danger-600',
       text: 'bg-transparent text-black hover:bg-black/[0.03] active:bg-black/5',
