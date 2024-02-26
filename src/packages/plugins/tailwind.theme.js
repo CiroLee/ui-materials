@@ -60,10 +60,14 @@ const themeExtends = {
       'linear-gradient(45deg,rgba(0,0,0,.1) 25%,transparent 0,transparent 50%,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 75%,transparent 0,transparent)',
   },
   boxShadow: {
-    around: ['4px 14px 20px -6px rgba(0, 0, 0, 0.1)', '-4px -4px 16px -4px rgba(0,0,0,0.1)'],
+    around: [
+      '0px 6px 16px 0px rgba(0, 0, 0, 0.08)',
+      '0px 3px 6px -4px rgba(0, 0, 0, 0.12)',
+      '0 -3px 6px rgba(0,0,0,0.04)',
+    ],
   },
   dropShadow: {
-    around: ['6px 14px 8px rgba(0, 0, 0, 0.07)', '-10px -14px 8px rgba(0,0,0,0.07)'],
+    around: ['6px 14px 8px rgba(0, 0, 0, 0.07)', '0px 9px 28px 8px rgba(0, 0, 0, 0.05)'],
   },
 };
 

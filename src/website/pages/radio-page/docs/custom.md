@@ -1,5 +1,5 @@
 ```typescript
-import RadioGroup, { type RadioOption } from 'your path';
+import RadioGroup, { type RadioOption } from 'your path/RadioGroup';
 
 export default function Demo() {
 const options: RadioOption[] = [

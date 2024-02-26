@@ -1,7 +1,7 @@
 ```ts
 import { useState } from 'react'
-import Popover from 'your path';
-import Button from 'your path';
+import Popover from 'your path/Popover';
+import Button from 'your path/Button';
 import type { Side, Align } from 'your path';
 const placements: { side: Side; align: Align }[] = [
   {

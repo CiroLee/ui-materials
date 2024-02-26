@@ -1,7 +1,7 @@
 ```typescript
-import Dropdown, { type MenuItem } from 'your path';
+import Dropdown, { type MenuItem } from 'your path/Dropdown';
 import { Layers, Droplet, Globe, Pipette } from 'lucide-react';
-import Button from 'your path';
+import Button from 'your path/Button';
 const menuWidthPreAndSuffix: MenuItem[] = [
   {
     id: 'layer',

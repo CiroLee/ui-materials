@@ -1,5 +1,5 @@
 ```ts
-import CircleProgress from 'your path';
+import CircleProgress from 'your path/CircleProgress';
 import { AlertTriangle } from 'lucide-react';
 
 export default function Demo() {

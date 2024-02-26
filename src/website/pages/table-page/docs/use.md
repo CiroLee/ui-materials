@@ -1,6 +1,6 @@
 ```typescript
 import { useState } from 'react';
-import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from 'your path';
+import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from 'your path/Table';
 
 export default function Demo() {
   const [checked, setChecked] = useState(false);

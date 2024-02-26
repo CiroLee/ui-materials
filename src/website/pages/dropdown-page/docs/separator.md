@@ -1,6 +1,6 @@
 ```typescript
-import Dropdown, { type MenuItem } from 'your path';
-import Button from 'your path';
+import Dropdown, { type MenuItem } from 'your path/Dropdown';
+import Button from 'your path/Button';
 const menuWidthSeparator: MenuItem[] = [
   {
     id: 'About',

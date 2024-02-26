@@ -1,6 +1,6 @@
 ```ts
-import { useToast } from 'your path';
-import Button from 'your path';
+import { useToast } from 'your path/Toast';
+import Button from 'your path/Button';
 import { Check, Send } from 'lucide-react';
 const text = 'this is a toast message';
 

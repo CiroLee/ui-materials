@@ -1,8 +1,8 @@
 ```typescript
 import { useState } from 'react';
-import Switch from 'your path';
-import Popover from 'your path';
-import Button from 'your path';
+import Switch from 'your path/Switch';
+import Popover from 'your path/Popover';
+import Button from 'your path/Button';
 
 
 export default function Demo() {

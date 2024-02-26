@@ -1,7 +1,7 @@
 ```ts
-import Tooltip from 'your path';
-import Button from 'your path';
-import type { Side, Align } from 'your path'
+import Tooltip from 'your path/Tooltip';
+import Button from 'your path/Button';
+import type { Side, Align } from 'your path/types/common'
 
 const placements: { side: Side; align: Align }[] = [
   {

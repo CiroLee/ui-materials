@@ -1,10 +1,13 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import Checkbox, { type CheckboxProps } from './Checkbox';
+export interface CheckboxGroupOption extends Omit<CheckboxProps, 'onCheckedChange' | 'children'> {
+  label?: React.ReactNode;
+}
 export interface CheckboxGroupProps {
   value?: string | number;
   className?: string;
   style?: React.CSSProperties;
-  options: Omit<CheckboxProps, 'onCheckedChange'>[];
+  options: CheckboxGroupOption[];
   onCheckedChange?: (list: (string | number | undefined)[]) => void;
 }
 
@@ -26,8 +29,9 @@ const CheckboxGroup = forwardRef<HTMLDivElement, CheckboxGroupProps>((props, ref
           checked={props.value === option.value}
           key={option.value}
           {...option}
-          onCheckedChange={onCheckedChangeHandler}
-        />
+          onCheckedChange={onCheckedChangeHandler}>
+          {option.label}
+        </Checkbox>
       ))}
     </div>
   );

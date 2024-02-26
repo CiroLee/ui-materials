@@ -1,5 +1,5 @@
 ```typescript
-import Heading from 'your path';
+import Heading from 'your path/Heading';
 
 export default function Demo() {
   return (

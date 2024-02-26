@@ -1,6 +1,6 @@
 ```ts
 import { useState } from 'react';
-import InputNumber from 'your path';
+import InputNumber from 'your path/InputNumber';
 export default function Demo() {
   const [val, setVal] = useState<number | null>(null);
   return (

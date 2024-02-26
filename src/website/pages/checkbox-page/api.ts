@@ -60,7 +60,7 @@ export const checkboxGroupRows: ApiTableRow[] = [
   {
     prop: 'options',
     desc: 'checkbox config options',
-    type: `Omit<CheckboxProps, 'onCheckedChange'>[]`,
+    type: `CheckboxGroupOption[]`,
     required: true,
     default: '-',
   },

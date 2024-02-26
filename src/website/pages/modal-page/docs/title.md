@@ -1,8 +1,8 @@
 ```ts
 import { useState } from 'react';
-import Modal from 'your path';
-import Heading from 'your path';
-import Button, { ButtonGroup } from 'your path';
+import Modal from 'your path/Modal';
+import Heading from 'your path/Heading';
+import Button, { ButtonGroup } from 'your path/Button';
 
 export default function Demo() {
   const [show, setShow] = useState(false)

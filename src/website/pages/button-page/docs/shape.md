@@ -1,5 +1,5 @@
 ```typescript
-import Button from 'your path';
+import Checkbox from 'your path/Button';
 
 export default function Demo() {
   return (

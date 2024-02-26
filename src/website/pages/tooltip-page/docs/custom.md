@@ -1,6 +1,6 @@
 ```ts
-import Tooltip from 'your path';
-import Button from 'your path';
+import Tooltip from 'your path/Tooltip';
+import Button from 'your path/Button';
 
 export default function Demo() {
     return (

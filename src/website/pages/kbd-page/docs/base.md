@@ -1,5 +1,5 @@
 ```typescript
-import Kbd from 'your path';
+import Kbd from 'your path/Kbd';
 export default function Demo() {
   return (
       <div className="mb-4 [&>div]:mr-2">

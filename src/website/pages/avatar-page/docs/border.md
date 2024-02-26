@@ -1,5 +1,5 @@
 ```typescript
-import Avatar from 'your path';
+import Checkbox from 'your path/Avatar';
 
 export default function Demo() {
   return (

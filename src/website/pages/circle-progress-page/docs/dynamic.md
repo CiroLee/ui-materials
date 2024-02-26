@@ -1,6 +1,6 @@
 ```ts
 import { useState } from 'react';
-import CircleProgress from 'your path';
+import CircleProgress from 'your path/CircleProgress';
 
 export default function Demo() {
   const [percent, setPercent] = useState(20);

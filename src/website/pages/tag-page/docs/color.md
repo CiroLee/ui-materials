@@ -1,5 +1,5 @@
 ```typescript
-import Tag from 'your path';
+import Tag from 'your path/Tag';
 
 export default function Demo() {
   return (

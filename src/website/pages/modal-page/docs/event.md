@@ -1,8 +1,8 @@
 ```ts
 import { useState } from 'react';
-import Modal from 'your path';
-import Button from 'your path';
-import { CheckboxGroup } from 'your path';
+import Modal from 'your path/Modal';
+import Checkbox from 'your path/Button';
+import { CheckboxGroup } from 'your path/Checkbox';
 
 export default function Demo() {
   const [show, setShow] = useState(false)
@@ -15,8 +15,8 @@ export default function Demo() {
           setClosable(list as string[]);
         }}
         options={[
-          { value: 'escape', children: 'escape to close' },
-          { value: 'maskable', children: 'click mask to close' },
+          { value: 'escape', label: 'escape to close' },
+          { value: 'maskable', label: 'click mask to close' },
         ]} />
         <Button className="mt-4" onClick={() => setShow(true)}>
           open modal
