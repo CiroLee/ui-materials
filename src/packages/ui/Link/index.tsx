@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 const linkStyle = tv({
-  base: 'cursor-pointer inline-flex transition-colors',
+  base: 'cursor-pointer inline-flex items-center transition-colors',
   variants: {
     color: {
       default: 'text-info-500 hover:text-info-500/80',
@@ -83,6 +83,7 @@ type LinkVariants = VariantProps<typeof linkStyle>;
 export interface LinkProps extends LinkVariants {
   href: string;
   isBlank?: boolean;
+  anchorIcon?: React.ReactNode;
   children?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
@@ -90,7 +91,7 @@ export interface LinkProps extends LinkVariants {
 }
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
-  const { href, color, size, disabled, isBlock, isBlank, children, onClick, className, style } = props;
+  const { href, color, size, disabled, isBlock, isBlank, anchorIcon, children, onClick, className, style } = props;
   const isOutSite = useMemo(() => {
     if (href.startsWith('/')) {
       return false;
@@ -113,18 +114,24 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
       className={linkStyle({ color, size, disabled, isBlock, class: className })}
       style={style}
       target={isBlank ? '_blank' : '_self'}
-      rel="noopener noreferrer"
+      rel={isBlank ? 'noopener noreferrer' : ''}
+      title={href}
       onClick={onClickHandler}>
       {children}
+      {anchorIcon ? anchorIcon : null}
     </a>
   ) : (
     <RouterLink
       ref={ref}
+      title={href}
       className={linkStyle({ color, size, disabled, isBlock, class: className })}
       style={style}
       to={href}
+      target={isBlank ? '_blank' : '_self'}
+      rel={isBlank ? 'noopener noreferrer' : ''}
       onClick={onClickHandler}>
       {children}
+      {anchorIcon ? anchorIcon : null}
     </RouterLink>
   );
 });

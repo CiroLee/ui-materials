@@ -2,6 +2,17 @@ import ShowBox from '@site/components/ShowBox';
 import NavTitle from '@site/components/NavTitle';
 import Heading from '@ui/Heading';
 import Link from '@ui/Link';
+import { RiShareBoxLine } from '@remixicon/react';
+import CodeView from '@site/components/CodeView';
+import { html as baseHtml } from './docs/base.md';
+import { html as sizeHtml } from './docs/size.md';
+import { html as disabledHtml } from './docs/disabled.md';
+import { html as colorHtml } from './docs/color.md';
+import { html as blockHtml } from './docs/block.md';
+import { html as blankHtml } from './docs/blank.md';
+import { html as anchorIconHtml } from './docs/icon.md';
+import ApiTable from '@site/components/ApiTable';
+import { rows } from './api';
 
 export default function LinkPage() {
   return (
@@ -12,6 +23,7 @@ export default function LinkPage() {
           basic
         </Heading>
         <Link href="https://github.com">Link</Link>
+        <CodeView content={baseHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -31,14 +43,16 @@ export default function LinkPage() {
             large
           </Link>
         </div>
+        <CodeView content={sizeHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           disabled
         </Heading>
         <Link href="https://github.com" disabled>
-          disabld Link
+          disabled Link
         </Link>
+        <CodeView content={disabledHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -61,6 +75,7 @@ export default function LinkPage() {
             danger
           </Link>
         </div>
+        <CodeView content={colorHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -83,7 +98,30 @@ export default function LinkPage() {
             danger
           </Link>
         </div>
+        <CodeView content={blockHtml} />
       </ShowBox>
+      <ShowBox className="mb-4">
+        <Heading as="h4" className="mb-2">
+          isBlank
+        </Heading>
+        <Link href="/Link" isBlank>
+          external link
+        </Link>
+        <CodeView content={blankHtml} />
+      </ShowBox>
+      <ShowBox className="mb-4">
+        <Heading as="h4" className="mb-2">
+          anchorIcon
+        </Heading>
+        <Link href="#" isBlock anchorIcon={<RiShareBoxLine className="ml-1" size={16} />}>
+          show anchorIcon
+        </Link>
+        <CodeView content={anchorIconHtml} />
+      </ShowBox>
+      <Heading as="h2" className="mb-2">
+        API
+      </Heading>
+      <ApiTable rows={rows} />
     </>
   );
 }
