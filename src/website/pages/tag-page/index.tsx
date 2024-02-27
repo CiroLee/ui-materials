@@ -37,6 +37,7 @@ export default function TagPage() {
           <Tag color="default">default</Tag>
           <Tag color="primary">primary</Tag>
           <Tag color="success">success</Tag>
+          <Tag color="info">infomation</Tag>
           <Tag color="warn">warn</Tag>
           <Tag color="danger">danger</Tag>
           <Tag className="text-white bg-[#e64980]">#e64980</Tag>

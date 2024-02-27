@@ -20,9 +20,12 @@ const circleProgressStyle = tv({
         base: 'w-[80px] h-[80px]',
       },
     },
-    colors: {
+    color: {
       primary: {
         indicator: 'stroke-brand-500',
+      },
+      info: {
+        indicator: 'stroke-info-500',
       },
       success: {
         indicator: 'stroke-success-500',
@@ -37,7 +40,7 @@ const circleProgressStyle = tv({
   },
   defaultVariants: {
     size: 'medium',
-    colors: 'primary',
+    color: 'primary',
   },
 });
 
@@ -55,7 +58,7 @@ const CircleProgress = forwardRef<HTMLDivElement, CircleProgress>((props, ref) =
   const {
     percent = 0,
     size,
-    colors,
+    color,
     svgClassName,
     indicatorClassName,
     trackerClassName,
@@ -99,7 +102,7 @@ const CircleProgress = forwardRef<HTMLDivElement, CircleProgress>((props, ref) =
           r="10"
           transform="rotate(-90 12 12)"
           strokeLinecap="round"
-          className={indicator({ colors, class: indicatorClassName })}
+          className={indicator({ color, class: indicatorClassName })}
           strokeDashoffset={updateOffset()}
           strokeDasharray={`${strokeDashLength} ${strokeDashLength}`}
         />

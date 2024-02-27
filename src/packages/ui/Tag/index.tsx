@@ -8,6 +8,7 @@ const tag = tv({
       default: 'bg-[#ededed] text-black/80',
       primary: 'bg-brand-500/10 text-brand-500',
       success: 'bg-success-500/10 text-success-500',
+      info: 'bg-info-500/10 text-info-500',
       warn: 'bg-warn-500/10 text-warn-500',
       danger: 'bg-danger-500/10 text-danger-500',
     },
