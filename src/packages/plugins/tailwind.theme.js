@@ -71,7 +71,7 @@ const themeExtends = {
     ],
   },
   dropShadow: {
-    around: ['6px 14px 8px rgba(0, 0, 0, 0.07)', '0px 9px 28px 8px rgba(0, 0, 0, 0.05)'],
+    around: ['0 14px 8px rgb(0 0 0 / 0.08)', '0 -14px 8px rgb(0 0 0 / 0.06)'],
   },
 };
 
