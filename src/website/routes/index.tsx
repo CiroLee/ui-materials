@@ -32,6 +32,7 @@ import ToastPage from '@site/pages/toast-page';
 import CalendarPage from '@site/pages/calendar-page';
 import LinkPage from '@site/pages/link-page';
 import AlertPage from '@site/pages/alert-page';
+import PinInputPage from '@site/pages/pin-input-page';
 
 export const router = createHashRouter([
   {
@@ -273,6 +274,15 @@ export const router = createHashRouter([
         element: <AlertPage />,
         meta: {
           title: 'Alert',
+          role: 'component',
+        },
+      },
+      {
+        path: 'PinInput',
+        id: 'PinInput',
+        element: <PinInputPage />,
+        meta: {
+          title: 'PinInput',
           role: 'component',
         },
       },
