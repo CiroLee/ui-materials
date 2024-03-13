@@ -72,9 +72,11 @@ const inputStyle = tv({
 
 type InputVariants = VariantProps<typeof inputStyle>;
 export interface InputProps extends InputVariants {
+  inputRef?: React.Ref<HTMLInputElement>;
   type?: 'text' | 'password';
   placeholder?: string;
   showCount?: boolean;
+  pwdIconVisible?: boolean;
   maxLength?: number;
   prefix?: React.ReactNode;
   suffix?: React.ReactNode;
@@ -85,14 +87,17 @@ export interface InputProps extends InputVariants {
   onInput?: React.FormEventHandler<HTMLInputElement>;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  onKeyDown?: React.KeyboardEventHandler<HTMLInputElement>;
 }
 
 const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
   const {
+    inputRef,
     type = 'text',
     value = '',
     allowClear,
     showCount,
+    pwdIconVisible = true,
     maxLength,
     status,
     disabled,
@@ -104,6 +109,7 @@ const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
     onInput,
     onBlur,
     onFocus,
+    onKeyDown,
     className,
     style,
   } = props;
@@ -145,6 +151,7 @@ const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
     <label className={base({ size, disabled, status, class: className })} ref={ref} style={style}>
       {prefix ? <div className={prefixStyle({ status })}>{prefix}</div> : null}
       <input
+        ref={inputRef}
         className={input({ disabled, size })}
         type={type === 'password' ? (showPassword ? 'text' : 'password') : type}
         placeholder={placeholder}
@@ -156,6 +163,7 @@ const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
         onChange={onChange}
         onBlur={onBlur}
         onFocus={onFocus}
+        onKeyDown={onKeyDown}
       />
       {allowClear && !disabled ? (
         <div className={rightBlock()}>
@@ -163,7 +171,7 @@ const Input = forwardRef<HTMLLabelElement, InputProps>((props, ref) => {
         </div>
       ) : null}
       {showCount ? <div className={count({ class: rightBlock() })}>{counts}</div> : null}
-      {type === 'password' ? (
+      {type === 'password' && pwdIconVisible ? (
         <div className={rightBlock()} onClick={() => setShowPassword(!showPassword)}>
           {showPassword ? <RiEyeLine className={eyeIcon()} /> : <RiEyeOffLine className={eyeIcon()} />}
         </div>

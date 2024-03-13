@@ -1,4 +1,4 @@
-import { forwardRef, useState, useRef, useEffect, useMemo } from 'react';
+import { forwardRef, useState, useRef, useMemo } from 'react';
 import { RiArrowUpSLine } from '@remixicon/react';
 import { tv, type VariantProps } from 'tailwind-variants';
 import { globalInputStyle as gInput } from '@/packages/plugins/input.style';
@@ -171,13 +171,6 @@ const InputNumber = forwardRef<HTMLLabelElement, InputNumberProps>((props, ref) 
     [e.key === 'ArrowDown', keyboard].every(Boolean) && handleStepChange(step, 'decrease');
   };
 
-  useEffect(() => {
-    inputRef.current?.addEventListener('keydown', inputKeyDownHandler as unknown as EventListener);
-    return () => {
-      inputRef.current?.removeEventListener('keydown', inputKeyDownHandler as unknown as EventListener);
-    };
-  }, [step, val, keyboard]);
-
   return (
     <label ref={ref} className={base({ size, status, disabled, class: className })} style={style}>
       {prefix ? <div className={prefixStyle({ status })}>{prefix}</div> : null}
@@ -193,6 +186,7 @@ const InputNumber = forwardRef<HTMLLabelElement, InputNumberProps>((props, ref) 
         onChange={onChangeHandler}
         onBlur={onBlurHandler}
         onFocus={onFocus}
+        onKeyDown={inputKeyDownHandler}
       />
       <div className={rightBlock({ size, disabled })}>
         <div
