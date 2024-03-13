@@ -33,6 +33,7 @@ import CalendarPage from '@site/pages/calendar-page';
 import LinkPage from '@site/pages/link-page';
 import AlertPage from '@site/pages/alert-page';
 import PinInputPage from '@site/pages/pin-input-page';
+import RadioButtonGroupPage from '@site/pages/radio-button-page';
 
 export const router = createHashRouter([
   {
@@ -116,11 +117,11 @@ export const router = createHashRouter([
         },
       },
       {
-        path: 'radio group',
-        id: 'radio group',
+        path: 'radio-group',
+        id: 'radio-group',
         element: <RadioPage />,
         meta: {
-          title: 'Radio Group',
+          title: 'RadioGroup',
           role: 'component',
         },
       },
@@ -251,7 +252,7 @@ export const router = createHashRouter([
         },
       },
       {
-        path: 'Calendar',
+        path: 'calendar',
         id: 'Calendar',
         element: <CalendarPage />,
         meta: {
@@ -260,7 +261,7 @@ export const router = createHashRouter([
         },
       },
       {
-        path: 'Link',
+        path: 'link',
         id: 'Link',
         element: <LinkPage />,
         meta: {
@@ -269,7 +270,7 @@ export const router = createHashRouter([
         },
       },
       {
-        path: 'Alert',
+        path: 'alert',
         id: 'Alert',
         element: <AlertPage />,
         meta: {
@@ -278,11 +279,20 @@ export const router = createHashRouter([
         },
       },
       {
-        path: 'PinInput',
+        path: 'pin-input',
         id: 'PinInput',
         element: <PinInputPage />,
         meta: {
           title: 'PinInput',
+          role: 'component',
+        },
+      },
+      {
+        path: 'radio-button-group',
+        id: 'RadioButtonGroup',
+        element: <RadioButtonGroupPage />,
+        meta: {
+          title: 'RadioButtonGroup',
           role: 'component',
         },
       },
