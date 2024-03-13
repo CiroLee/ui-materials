@@ -73,7 +73,7 @@ const button = tv({
       true: 'border bg-transparent',
     },
     disabled: {
-      true: 'disabled:cursor-not-allowed disabled:!text-black/30 disabled:border-0 disabled:bg-black/10',
+      true: 'disabled:cursor-not-allowed disabled:!text-black/20 disabled:border-0 disabled:bg-black/5',
     },
     loading: {
       true: 'opacity-70 cursor-default active:scale-100',

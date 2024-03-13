@@ -2,11 +2,8 @@ import { forwardRef, useState } from 'react';
 import * as RadixRadioGroup from '@radix-ui/react-radio-group';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
-export interface RadioOption {
-  value: string;
-  label: React.ReactNode;
-  disabled?: boolean;
-}
+import { RadioOption } from '@/packages/types/components';
+
 interface RadioGroupProps {
   direction?: 'vertical' | 'horizontal';
   value?: string;
