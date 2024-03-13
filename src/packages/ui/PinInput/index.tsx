@@ -16,10 +16,10 @@ interface PinInputProps {
   size?: Size;
   style?: React.CSSProperties;
   onValueChange?: (value: string) => void;
-  onCompleteChange?: (value: string) => void;
+  onComplete?: (value: string[]) => void;
 }
 const PinInput = forwardRef<HTMLDivElement, PinInputProps>((props, ref) => {
-  const { quantity, type, size, disabled, onValueChange, onCompleteChange, className, style } = props;
+  const { quantity, type, size, disabled, onValueChange, onComplete, className, style } = props;
   const { base, input } = pinInput();
 
   const [inputRefs, setInputRefs] = useState<React.RefObject<HTMLInputElement>[]>([]);
@@ -47,10 +47,6 @@ const PinInput = forwardRef<HTMLDivElement, PinInputProps>((props, ref) => {
 
   const handleOnKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
     if (e.key !== 'Backspace') return;
-    setPinValue((pre) => {
-      pre[index] = '';
-      return [...pre];
-    });
     if (pinValue[index] === '') {
       const preInput = inputRefs[index - 1];
       if (preInput?.current) {
@@ -62,7 +58,7 @@ const PinInput = forwardRef<HTMLDivElement, PinInputProps>((props, ref) => {
   // invoke onCompleteChange
   useEffect(() => {
     if (pinValue.length === quantity && pinValue.every(Boolean)) {
-      onCompleteChange?.(pinValue.join(''));
+      onComplete?.(pinValue);
     }
   }, [pinValue]);
 
