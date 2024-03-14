@@ -1,4 +1,5 @@
 import ShowBox from '@site/components/ShowBox';
+import { RiBankCardLine, RiAlipayLine, RiWechatPayLine } from '@remixicon/react';
 import NavTitle from '@site/components/NavTitle';
 import Heading from '@ui/Heading';
 import RadioButtonGroup from '@ui/RadioButtonGroup';
@@ -7,6 +8,7 @@ import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as sizeHtml } from './docs/size.md';
 import { html as typeHtml } from './docs/type.md';
+import { html as customHtml } from './docs/custom.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 const options: RadioOption[] = [
@@ -26,6 +28,35 @@ const options: RadioOption[] = [
     label: 'XL',
     value: 'xl',
     disabled: true,
+  },
+];
+const customOptions: RadioOption[] = [
+  {
+    label: (
+      <div className="flex flex-col items-center">
+        <RiBankCardLine size={28} />
+        <p>card</p>
+      </div>
+    ),
+    value: 'bank',
+  },
+  {
+    label: (
+      <div className="flex flex-col items-center">
+        <RiAlipayLine size={28} />
+        <p>alipay</p>
+      </div>
+    ),
+    value: 'alipay',
+  },
+  {
+    label: (
+      <div className="flex flex-col items-center">
+        <RiWechatPayLine size={28} />
+        <p>wechat-pay</p>
+      </div>
+    ),
+    value: 'wechat-pay',
   },
 ];
 export default function RadioButtonGroupPage() {
@@ -69,6 +100,17 @@ export default function RadioButtonGroupPage() {
           <RadioButtonGroup size="large" options={options} onValueChange={handleOnValueChange} />
         </div>
         <CodeView content={sizeHtml} />
+      </ShowBox>
+      <ShowBox className="mb-4">
+        <Heading as="h4" className="mb-2">
+          custom content
+        </Heading>
+        <RadioButtonGroup
+          className="[&_button]:w-[100px] [&_button]:h-[80px]"
+          options={customOptions}
+          onValueChange={handleOnValueChange}
+        />
+        <CodeView content={customHtml} />
       </ShowBox>
       <Heading as="h2" className="mb-4">
         API
