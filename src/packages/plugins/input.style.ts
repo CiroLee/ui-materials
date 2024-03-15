@@ -1,6 +1,6 @@
 export const globalInputStyle = {
   base: 'flex relative rounded-medium border border-black/10 has-[:focus]:border-brand-500 has-[:focus]:shadow-[0_0_0_2px_#e7dafd] hover:border-brand-500/60 transition-all ease-linear',
-  input: 'full outline-0 placeholder:text-black/30 bg-transparent',
+  input: 'full outline-none placeholder:text-black/30 bg-transparent',
   tinyBase: 'h-global-ty text-[14px]',
   smallBase: 'h-global-sm text-[14px]',
   smallInput: 'placeholder:text-[14px] text-[14px]',
