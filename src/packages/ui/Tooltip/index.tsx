@@ -5,7 +5,7 @@ import { AnimatePresence, Variants, motion } from 'framer-motion';
 import type { Align, Side } from '@/packages/types/common';
 
 const tooltip = tv({
-  base: 'px-2 py-1 rounded-large bg-white shadow-[0_20px_50px_-10px,0_0_32px_-5px] shadow-black/20',
+  base: 'px-2 py-1 rounded-large bg-white shadow-around',
   variants: {
     placement: {
       'top-start': 'origin-bottom-left',
