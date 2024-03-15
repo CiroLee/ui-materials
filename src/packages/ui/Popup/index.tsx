@@ -187,7 +187,7 @@ const Popup = forwardRef<HTMLDivElement, PopupProps>((props, ref) => {
                 : maskVariants
             }
             exit="hidden"
-            className={clsx('popup-mask w-full h-full bg-black/[0.45]', { 'backdrop-blur-sm': props.isBlur })}
+            className={clsx('popup-mask w-full h-full bg-black-mask', { 'backdrop-blur-sm': props.isBlur })}
             onClick={maskOnCLickHandler}>
             <>{placementContainer(props.placement, props.children)}</>
           </motion.div>

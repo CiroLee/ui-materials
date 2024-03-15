@@ -40,6 +40,8 @@ const themeExtends = {
       500: '#FF4C3F',
       600: '#eb3e31',
     },
+    'black-mask': 'rgb(0 0 0 / 45%)',
+    'white-mask': 'rgb(240 240 240 / 80%)',
   },
   padding: {
     'button-ty': '10px',
@@ -63,7 +65,8 @@ const themeExtends = {
   }),
   zIndex: {
     popup: 100,
-    toast: 101,
+    loading: 101,
+    toast: 102,
   },
   animation: {
     flicker: 'flicker 2s infinite ease',

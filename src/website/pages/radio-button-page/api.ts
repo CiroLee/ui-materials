@@ -10,7 +10,7 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'options',
     desc: 'radio button config options(see RadioGroup)',
-    type: 'link: RadioOption(https://cirolee.github.io/ui-materials/#/radio-group)',
+    type: 'link: RadioOption(https://github.com/CiroLee/ui-materials/blob/main/src/packages/types/components.ts)',
     required: true,
     default: '-',
   },

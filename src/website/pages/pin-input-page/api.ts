@@ -43,7 +43,7 @@ export const rows: ApiTableRow[] = [
   },
   {
     prop: 'onValueChange',
-    desc: 'callabck on input change',
+    desc: 'callback on input change',
     type: '(value: string) => void',
     required: false,
     default: '-',
