@@ -1,0 +1,1 @@
+import{j as e}from"./index-D-JE1pYc.js";import{H as t}from"./index-Xl6EncUu.js";const r=()=>e.jsx("div",{className:"flex items-center justify-center h-full",children:e.jsx(t,{as:"h2",className:"text-3xl font-bold",children:"modern ui materials about react aiming to use easily"})});export{r as default};
