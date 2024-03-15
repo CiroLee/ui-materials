@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@ui/Table';
 import Tag from '@ui/Tag';
 import Link from '@ui/Link';
+import { RiShareBoxLine } from '@remixicon/react';
 
 export interface ApiTableRow {
   prop: string;
@@ -34,7 +35,12 @@ function renderType(type: string) {
     const match = type.match(pattern);
     if (match) {
       return (
-        <Link color="primary" className="text-[14px]" isBlank href={match[2]}>
+        <Link
+          color="primary"
+          className="text-[14px]"
+          isBlank
+          href={match[2]}
+          anchorIcon={<RiShareBoxLine className="ml-1" size={16} />}>
           {match[1]}
         </Link>
       );

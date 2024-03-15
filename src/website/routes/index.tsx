@@ -1,5 +1,5 @@
 import { RouteObject, createHashRouter } from 'react-router-dom';
-import Home from '@site/pages/home';
+import { lazy } from 'react';
 import Layout from '@site/layout';
 export type MyRouteObject = RouteObject & {
   meta: {
@@ -7,33 +7,6 @@ export type MyRouteObject = RouteObject & {
     role?: string;
   };
 };
-import DropdownMenuPage from '@site/pages/dropdown-page';
-import PopupPage from '@site/pages/popup-page';
-import SwitchPage from '@site/pages/switch-page';
-import ButtonPage from '@site/pages/button-page';
-import CheckboxPage from '@site/pages/checkbox-page';
-import AvatarPage from '@site/pages/avatar-page';
-import TablePage from '@site/pages/table-page';
-import RadioPage from '@site/pages/radio-page';
-import BadgePage from '@site/pages/badge-page';
-import TagPage from '@site/pages/tag-page';
-import KbdPage from '@site/pages/kbd-page';
-import HeadingPage from '@site/pages/heading-page';
-import SkeletonPage from '@site/pages/skeleton-page';
-import PopoverPage from '@site/pages/popover-page';
-import TooltipPage from '@site/pages/tooltip-page';
-import CircleProgressPage from '@site/pages/circle-progress-page';
-import ProgressPage from '@site/pages/progress-page';
-import ModalPage from '@site/pages/modal-page';
-import InputPage from '@site/pages/input-page';
-import InputNumberPage from '@site/pages/input-number-page';
-import TextareaPage from '@site/pages/textarea-page';
-import ToastPage from '@site/pages/toast-page';
-import CalendarPage from '@site/pages/calendar-page';
-import LinkPage from '@site/pages/link-page';
-import AlertPage from '@site/pages/alert-page';
-import PinInputPage from '@site/pages/pin-input-page';
-import RadioButtonGroupPage from '@site/pages/radio-button-page';
 
 export const router = createHashRouter([
   {
@@ -48,7 +21,7 @@ export const router = createHashRouter([
       {
         path: '/',
         id: 'home',
-        element: <Home />,
+        Component: lazy(() => import('@site/pages/home')),
         meta: {
           role: 'title',
         },
@@ -56,7 +29,7 @@ export const router = createHashRouter([
       {
         path: '/button',
         id: 'button',
-        element: <ButtonPage />,
+        Component: lazy(() => import('@site/pages/button-page')),
         meta: {
           title: 'Button',
           role: 'component',
@@ -65,7 +38,7 @@ export const router = createHashRouter([
       {
         path: '/dropdown',
         id: 'dropdown',
-        element: <DropdownMenuPage />,
+        Component: lazy(() => import('@site/pages/dropdown-page')),
         meta: {
           title: 'Dropdown',
           role: 'component',
@@ -74,7 +47,7 @@ export const router = createHashRouter([
       {
         path: '/popup',
         id: 'popup',
-        element: <PopupPage />,
+        Component: lazy(() => import('@site/pages/popup-page')),
         meta: {
           title: 'Popup',
           role: 'component',
@@ -83,7 +56,7 @@ export const router = createHashRouter([
       {
         path: '/switch',
         id: 'switch',
-        element: <SwitchPage />,
+        Component: lazy(() => import('@site/pages/switch-page')),
         meta: {
           title: 'Switch',
           role: 'component',
@@ -92,7 +65,7 @@ export const router = createHashRouter([
       {
         path: 'checkbox',
         id: 'checkbox',
-        element: <CheckboxPage />,
+        Component: lazy(() => import('@site/pages/checkbox-page')),
         meta: {
           title: 'Checkbox',
           role: 'component',
@@ -101,7 +74,7 @@ export const router = createHashRouter([
       {
         path: 'avatar',
         id: 'avatar',
-        element: <AvatarPage />,
+        Component: lazy(() => import('@site/pages/avatar-page')),
         meta: {
           title: 'Avatar',
           role: 'component',
@@ -110,7 +83,7 @@ export const router = createHashRouter([
       {
         path: 'table',
         id: 'table',
-        element: <TablePage />,
+        Component: lazy(() => import('@site/pages/table-page')),
         meta: {
           title: 'Table',
           role: 'component',
@@ -119,7 +92,7 @@ export const router = createHashRouter([
       {
         path: 'radio-group',
         id: 'radio-group',
-        element: <RadioPage />,
+        Component: lazy(() => import('@site/pages/radio-page')),
         meta: {
           title: 'RadioGroup',
           role: 'component',
@@ -128,7 +101,7 @@ export const router = createHashRouter([
       {
         path: 'badge',
         id: 'badge',
-        element: <BadgePage />,
+        Component: lazy(() => import('@site/pages/badge-page')),
         meta: {
           title: 'Badge',
           role: 'component',
@@ -137,7 +110,7 @@ export const router = createHashRouter([
       {
         path: 'tag',
         id: 'tag',
-        element: <TagPage />,
+        Component: lazy(() => import('@site/pages/tag-page')),
         meta: {
           title: 'Tag',
           role: 'component',
@@ -146,7 +119,7 @@ export const router = createHashRouter([
       {
         path: 'kbd',
         id: 'kbd',
-        element: <KbdPage />,
+        Component: lazy(() => import('@site/pages/kbd-page')),
         meta: {
           title: 'Kbd',
           role: 'component',
@@ -155,7 +128,7 @@ export const router = createHashRouter([
       {
         path: 'heading',
         id: 'heading',
-        element: <HeadingPage />,
+        Component: lazy(() => import('@site/pages/heading-page')),
         meta: {
           title: 'Heading',
           role: 'component',
@@ -164,7 +137,7 @@ export const router = createHashRouter([
       {
         path: 'skeleton',
         id: 'skeleton',
-        element: <SkeletonPage />,
+        Component: lazy(() => import('@site/pages/skeleton-page')),
         meta: {
           title: 'Skeleton',
           role: 'component',
@@ -173,7 +146,7 @@ export const router = createHashRouter([
       {
         path: 'popover',
         id: 'popover',
-        element: <PopoverPage />,
+        Component: lazy(() => import('@site/pages/popover-page')),
         meta: {
           title: 'Popover',
           role: 'component',
@@ -182,7 +155,7 @@ export const router = createHashRouter([
       {
         path: 'tooltip',
         id: 'tooltip',
-        element: <TooltipPage />,
+        Component: lazy(() => import('@site/pages/tooltip-page')),
         meta: {
           title: 'Tooltip',
           role: 'component',
@@ -191,7 +164,7 @@ export const router = createHashRouter([
       {
         path: 'circle-progress',
         id: 'circle-progress',
-        element: <CircleProgressPage />,
+        Component: lazy(() => import('@site/pages/circle-progress-page')),
         meta: {
           title: 'CircleProgress',
           role: 'component',
@@ -200,7 +173,7 @@ export const router = createHashRouter([
       {
         path: 'progress',
         id: 'progress',
-        element: <ProgressPage />,
+        Component: lazy(() => import('@site/pages/progress-page')),
         meta: {
           title: 'Progress',
           role: 'component',
@@ -209,7 +182,7 @@ export const router = createHashRouter([
       {
         path: 'modal',
         id: 'modal',
-        element: <ModalPage />,
+        Component: lazy(() => import('@site/pages/modal-page')),
         meta: {
           title: 'Modal',
           role: 'component',
@@ -218,7 +191,7 @@ export const router = createHashRouter([
       {
         path: 'input',
         id: 'input',
-        element: <InputPage />,
+        Component: lazy(() => import('@site/pages/input-page')),
         meta: {
           title: 'Input',
           role: 'component',
@@ -227,7 +200,7 @@ export const router = createHashRouter([
       {
         path: 'input-number',
         id: 'input-number',
-        element: <InputNumberPage />,
+        Component: lazy(() => import('@site/pages/input-number-page')),
         meta: {
           title: 'InputNumber',
           role: 'component',
@@ -236,7 +209,7 @@ export const router = createHashRouter([
       {
         path: 'textarea',
         id: 'textarea',
-        element: <TextareaPage />,
+        Component: lazy(() => import('@site/pages/textarea-page')),
         meta: {
           title: 'Textarea',
           role: 'component',
@@ -245,7 +218,7 @@ export const router = createHashRouter([
       {
         path: 'toast',
         id: 'toast',
-        element: <ToastPage />,
+        Component: lazy(() => import('@site/pages/toast-page')),
         meta: {
           title: 'Toast',
           role: 'component',
@@ -254,7 +227,7 @@ export const router = createHashRouter([
       {
         path: 'calendar',
         id: 'Calendar',
-        element: <CalendarPage />,
+        Component: lazy(() => import('@site/pages/calendar-page')),
         meta: {
           title: 'Calendar',
           role: 'component',
@@ -263,7 +236,7 @@ export const router = createHashRouter([
       {
         path: 'link',
         id: 'Link',
-        element: <LinkPage />,
+        Component: lazy(() => import('@site/pages/link-page')),
         meta: {
           title: 'Link',
           role: 'component',
@@ -272,7 +245,7 @@ export const router = createHashRouter([
       {
         path: 'alert',
         id: 'Alert',
-        element: <AlertPage />,
+        Component: lazy(() => import('@site/pages/alert-page')),
         meta: {
           title: 'Alert',
           role: 'component',
@@ -281,7 +254,7 @@ export const router = createHashRouter([
       {
         path: 'pin-input',
         id: 'PinInput',
-        element: <PinInputPage />,
+        Component: lazy(() => import('@site/pages/pin-input-page')),
         meta: {
           title: 'PinInput',
           role: 'component',
@@ -290,9 +263,18 @@ export const router = createHashRouter([
       {
         path: 'radio-button-group',
         id: 'RadioButtonGroup',
-        element: <RadioButtonGroupPage />,
+        Component: lazy(() => import('@site/pages/radio-button-page')),
         meta: {
           title: 'RadioButtonGroup',
+          role: 'component',
+        },
+      },
+      {
+        path: 'loading',
+        id: 'Loading',
+        Component: lazy(() => import('@site/pages/loading-page')),
+        meta: {
+          title: 'Loading',
           role: 'component',
         },
       },
