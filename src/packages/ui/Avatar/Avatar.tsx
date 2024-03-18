@@ -36,15 +36,16 @@ export interface AvatarProps extends AvatarVariants {
 }
 
 const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps>((props, ref) => {
-  const { shape, size, text, alt, bordered, color = '#eae8e8', className, style } = props;
+  const { src, shape, size, text, alt, bordered, color = '#eae8e8', className, style } = props;
   return (
     <RadixAvatar.Root
       className={avatar({ shape, size, bordered, class: className })}
       style={{ '--border-color': color, ...style } as React.CSSProperties}
       ref={ref}>
-      <RadixAvatar.Image className="w-full h-full object-cover" src={props.src} alt={alt} />
+      <RadixAvatar.Image className="w-full h-full object-cover" src={src} alt={alt} />
       {!text ? (
         <RadixAvatar.Fallback
+          delayMs={300}
           className={avatar({
             size,
             shape,
@@ -64,9 +65,7 @@ const Avatar = forwardRef<React.ElementRef<typeof RadixAvatar.Root>, AvatarProps
           </svg>
         </RadixAvatar.Fallback>
       ) : null}
-      {!props.src && props.text ? (
-        <div className="w-full h-full flex items-center justify-center">{props.text}</div>
-      ) : null}
+      {!src && text ? <div className="w-full h-full flex items-center justify-center">{text}</div> : null}
     </RadixAvatar.Root>
   );
 });
