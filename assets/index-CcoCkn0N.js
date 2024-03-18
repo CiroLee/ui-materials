@@ -1,1 +1,0 @@
-import{r,H as e}from"./index-C05EYDUz.js";import{a as f}from"./index-C4LmOpUy.js";const n=e.useId||(()=>{});let s=0;function c(a){const[t,o]=r.useState(n());return f(()=>{a||o($=>$??String(s++))},[a]),a||(t?`radix-${t}`:"")}export{c as $};
