@@ -3,14 +3,14 @@ import { Link as RouterLink } from 'react-router-dom';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 const linkStyle = tv({
-  base: 'cursor-pointer inline-flex items-center transition-colors',
+  base: 'relative cursor-pointer inline-flex items-center transition-colors after:w-full after:h-[1px] after:absolute after:left-0 after:bottom-0 after:opacity-0 after:transition-opacity',
   variants: {
     color: {
-      default: 'text-info-500 hover:text-info-500/80',
-      primary: 'text-brand-500 hover:text-brand-500/80',
-      success: 'text-success-500 hover:text-success-500/80',
-      warn: 'text-warn-500 hover:text-warn-500/80',
-      danger: 'text-danger-500 hover:text-danger-500/80',
+      default: 'text-info-500 hover:text-info-500/80 after:bg-info-500/80',
+      primary: 'text-brand-500 hover:text-brand-500/80 after:bg-brand-500/80',
+      success: 'text-success-500 hover:text-success-500/80 after:bg-success-500/80',
+      warn: 'text-warn-500 hover:text-warn-500/80 after:bg-warn-500/80',
+      danger: 'text-danger-500 hover:text-danger-500/80 after:bg-danger-500/80',
     },
     size: {
       tiny: 'text-[12px]',
@@ -20,6 +20,9 @@ const linkStyle = tv({
     },
     disabled: {
       true: 'text-neutral-400 hover:bg-transparent hover:text-neutral cursor-not-allowed',
+    },
+    underline: {
+      true: 'hover:after:opacity-100',
     },
     isBlock: {
       true: '',
@@ -91,7 +94,8 @@ export interface LinkProps extends LinkVariants {
 }
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
-  const { href, color, size, disabled, isBlock, isBlank, anchorIcon, children, onClick, className, style } = props;
+  const { href, color, size, disabled, isBlock, isBlank, underline, anchorIcon, children, onClick, className, style } =
+    props;
   const isOutSite = useMemo(() => {
     if (href.startsWith('/')) {
       return false;
@@ -111,7 +115,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
     <a
       href={href}
       ref={ref}
-      className={linkStyle({ color, size, disabled, isBlock, class: className })}
+      className={linkStyle({ color, size, disabled, isBlock, underline, class: className })}
       style={style}
       target={isBlank ? '_blank' : '_self'}
       rel={isBlank ? 'noopener noreferrer' : ''}

@@ -22,6 +22,13 @@ export const rows: ApiTableRow[] = [
     default: 'false',
   },
   {
+    prop: 'underline',
+    desc: 'whether set link underline when hover',
+    type: 'boolean',
+    required: false,
+    default: false,
+  },
+  {
     prop: 'isBlock',
     desc: 'whether set link as block width hover effect',
     type: 'boolean',

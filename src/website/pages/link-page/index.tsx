@@ -11,6 +11,7 @@ import { html as colorHtml } from './docs/color.md';
 import { html as blockHtml } from './docs/block.md';
 import { html as blankHtml } from './docs/blank.md';
 import { html as anchorIconHtml } from './docs/icon.md';
+import { html as underlineHtml } from './docs/underline.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 
@@ -59,19 +60,19 @@ export default function LinkPage() {
           color
         </Heading>
         <div className="flex items-center gap-3">
-          <Link color="default" href="#">
+          <Link color="default" href="https://github.com">
             default
           </Link>
-          <Link color="primary" href="#">
+          <Link color="primary" href="https://github.com">
             primary
           </Link>
-          <Link color="success" href="#">
+          <Link color="success" href="https://github.com">
             success
           </Link>
-          <Link color="warn" href="#">
+          <Link color="warn" href="https://github.com">
             warn
           </Link>
-          <Link color="danger" href="#">
+          <Link color="danger" href="https://github.com">
             danger
           </Link>
         </div>
@@ -79,22 +80,45 @@ export default function LinkPage() {
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
+          underline
+        </Heading>
+        <div className="flex items-center gap-3">
+          <Link color="default" underline href="https://github.com">
+            default
+          </Link>
+          <Link color="primary" underline href="https://github.com">
+            primary
+          </Link>
+          <Link color="success" underline href="https://github.com">
+            success
+          </Link>
+          <Link color="warn" underline href="https://github.com">
+            warn
+          </Link>
+          <Link color="danger" underline href="https://github.com">
+            danger
+          </Link>
+        </div>
+        <CodeView content={underlineHtml} />
+      </ShowBox>
+      <ShowBox className="mb-4">
+        <Heading as="h4" className="mb-2">
           isBlock
         </Heading>
         <div className="flex items-center gay-3">
-          <Link href="#" isBlock>
+          <Link href="https://github.com" isBlock>
             default
           </Link>
-          <Link href="#" color="primary" isBlock>
+          <Link href="https://github.com" color="primary" isBlock>
             primary
           </Link>
-          <Link href="#" color="success" isBlock>
+          <Link href="https://github.com" color="success" isBlock>
             success
           </Link>
-          <Link href="#" color="warn" isBlock>
+          <Link href="https://github.com" color="warn" isBlock>
             warn
           </Link>
-          <Link href="#" color="danger" isBlock>
+          <Link href="https://github.com" color="danger" isBlock>
             danger
           </Link>
         </div>
@@ -113,7 +137,7 @@ export default function LinkPage() {
         <Heading as="h4" className="mb-2">
           anchorIcon
         </Heading>
-        <Link href="#" isBlock anchorIcon={<RiShareBoxLine className="ml-1" size={16} />}>
+        <Link href="https://github.com" isBlock anchorIcon={<RiShareBoxLine className="ml-1" size={16} />}>
           show anchorIcon
         </Link>
         <CodeView content={anchorIconHtml} />
