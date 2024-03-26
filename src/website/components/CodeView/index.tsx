@@ -5,6 +5,7 @@ import Button from '@ui/Button';
 
 interface CodeViewProps {
   content: string;
+  className?: string;
 }
 const MAX_HEIGHT = 400;
 
@@ -24,9 +25,13 @@ const CodeView: FC<CodeViewProps> = (props) => {
 
   return (
     <div
-      className={clsx('relative my-[12px] rounded-[6px] overflow-hidden', {
-        'max-h-[200px]': expanded && !expandedToggle,
-      })}>
+      className={clsx(
+        'relative my-[12px] rounded-[6px] overflow-hidden',
+        {
+          'max-h-[200px]': expanded && !expandedToggle,
+        },
+        props.className,
+      )}>
       <div
         ref={ref}
         className="text-[14px] [&_pre]:m-0 [&_pre]:p-3 [&_pre]:overflow-x-auto"
