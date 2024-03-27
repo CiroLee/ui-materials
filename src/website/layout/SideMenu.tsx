@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { RiArrowLeftSLine } from '@remixicon/react';
 import { motion, type Variants } from 'framer-motion';
@@ -25,12 +25,18 @@ export default function SideMenu() {
       },
     },
   };
+
+  useEffect(() => {
+    if (document.body.clientWidth < 768) {
+      setCollapsed(true);
+    }
+  }, []);
   return (
     <motion.aside
       initial="expanded"
       animate={collapsed ? 'collapsed' : 'expanded'}
       variants={variant}
-      className="relative flex flex-col shrink-0 w-[200px] h-[100vh] border-r">
+      className="flex flex-col shrink-0 w-[200px] h-[100vh] border-r bg-white z-10 fixed md:relative">
       <motion.div className="overflow-hidden whitespace-nowrap">
         <Link className="h-[36px] px-8px h-44px mb-2 flex items-center px-2 font-bold cursor-pointer" to={head.path!}>
           {head.meta.title}
@@ -50,7 +56,7 @@ export default function SideMenu() {
           <RiArrowLeftSLine size={20} className="text-[20px]" />
         </motion.div>
       </motion.div>
-      <div className="flex-1 overflow-y-auto pb-4 site-scrollbar">
+      <div className="flex-1 overflow-y-auto pb-4 md:site-scrollbar">
         {navRoutes.map((r) => (
           <motion.div key={r.id} className="overflow-hidden whitespace-nowrap">
             <NavLink

@@ -67,7 +67,7 @@ export default function LoadingPage() {
           size
         </Heading>
         <RadioGroup
-          className="mb-2"
+          className="mb-3 flex flex-wrap gap-3"
           options={sizeOptions}
           value={size}
           onValueChange={(value) => setSize(value as Size)}

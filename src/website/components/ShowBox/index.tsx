@@ -5,6 +5,9 @@ interface ShowBoxProps {
 }
 export default function ShowBox(props: ShowBoxProps) {
   return (
-    <div className={clsx('border border-dashed border-gray-300 rounded-sm p-4', props.className)}>{props.children}</div>
+    <div
+      className={clsx('border border-dashed border-gray-300 rounded-sm p-4 overflow-hidden relative', props.className)}>
+      {props.children}
+    </div>
   );
 }

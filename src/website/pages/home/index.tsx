@@ -7,7 +7,7 @@ import CodeView from '@site/components/CodeView';
 import Code from '@ui/Code';
 import { html as firstContent } from './docs/first.md';
 import { html as secondContent } from './docs/second.md';
-const style = 'size-8 border border-gray-300 rounded-full flex flex-center text-gray-700 mr-2';
+const style = 'size-8 border border-gray-300 rounded-full flex-shrink-0 flex flex-center text-gray-700 mr-2';
 const Home: FC = () => {
   return (
     <div className="">
@@ -28,16 +28,16 @@ const Home: FC = () => {
         </Heading>
         <span>install basic dependencies</span>
       </div>
-      <CodeView className="md:w-[75%] mb-8" content={firstContent} />
+      <CodeView className="md:w-[80%] mb-8" content={firstContent} />
       <div className="flex items-center">
         <Heading as="h5" className={style}>
           2
         </Heading>
         <span>
-          copy plugins to your project, and import them in your <Code>tailwind.plugin.js</Code>
+          copy plugins to your project, and import them in your <Code size="tiny">tailwind.plugin.js</Code>
         </span>
       </div>
-      <CodeView content={secondContent} className="md:w-[75%] mb-8" />
+      <CodeView content={secondContent} className="md:w-[80%] mb-8" />
       <div className="flex items-center">
         <Heading as="h5" className={style}>
           3
