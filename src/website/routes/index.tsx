@@ -296,6 +296,15 @@ export const router = createHashRouter([
           role: 'component',
         },
       },
+      {
+        path: 'segment',
+        id: 'segment',
+        Component: lazy(() => import('@site/pages/segment-page')),
+        meta: {
+          title: 'Segment',
+          role: 'component',
+        },
+      },
     ] as MyRouteObject[],
   } as MyRouteObject,
 ]);
