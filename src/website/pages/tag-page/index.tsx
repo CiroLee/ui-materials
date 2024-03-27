@@ -33,7 +33,7 @@ export default function TagPage() {
         <Heading as="h4" className="mb-4">
           color
         </Heading>
-        <div className="flex items-center [&>div]:mr-2">
+        <div className="flex flex-wrap gap-3">
           <Tag color="default">default</Tag>
           <Tag color="primary">primary</Tag>
           <Tag color="success">success</Tag>

@@ -26,7 +26,7 @@ export default function InputPage() {
           basic
         </Heading>
         <Input
-          className="w-[400px]"
+          className="max-max-w-[400px]"
           placeholder="input sth..."
           value="some texts"
           onInput={(e) => {
@@ -48,7 +48,7 @@ export default function InputPage() {
         <Heading as="h4" className="mb-2">
           size
         </Heading>
-        <div className="w-[400px] space-y-3">
+        <div className="max-w-[400px] space-y-3">
           <Input size="tiny" placeholder="tiny size" />
           <Input size="small" placeholder="small size" />
           <Input size="medium" placeholder="medium size" />
@@ -60,7 +60,7 @@ export default function InputPage() {
         <Heading as="h4" className="mb-2">
           prefix and suffix
         </Heading>
-        <div className="w-[400px] space-y-3">
+        <div className="max-w-[400px] space-y-3">
           <Input placeholder="icon prefix..." prefix={<RiUserLine size={18} />} />
           <Input placeholder="text prefix..." prefix={<span>+86</span>} />
           <Input placeholder="icon suffix..." suffix={<RiSearchLine size={18} />} />
@@ -71,7 +71,7 @@ export default function InputPage() {
         <Heading as="h4" className="mb-2">
           disabled
         </Heading>
-        <div className="space-y-2 w-[400px]">
+        <div className="space-y-2 max-w-[400px]">
           <Checkbox checked={disabled} onCheckedChange={setDisabled}>
             <span>disabled: {`${disabled}`}</span>
           </Checkbox>
@@ -83,7 +83,7 @@ export default function InputPage() {
         <Heading as="h4" className="mb-2">
           status
         </Heading>
-        <div className="w-[400px] space-y-3">
+        <div className="max-w-[400px] space-y-3">
           <Input status="error" placeholder="error" prefix={<RiUserLine size={18} />} />
           <Input status="warn" placeholder="warn" prefix={<RiUserLine size={18} />} />
           <Input status="readonly" placeholder="readonly" value="readonly..." />
@@ -94,14 +94,14 @@ export default function InputPage() {
         <Heading as="h4" className="mb-2">
           allow clear
         </Heading>
-        <Input className="w-[400px]" allowClear />
+        <Input className="max-w-[400px]" allowClear />
         <CodeView content={allowClearHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           showCount
         </Heading>
-        <div className="w-[400px] space-y-3">
+        <div className="max-w-[400px] space-y-3">
           <Input placeholder="without maxLength" showCount />
           <Input placeholder="with maxLength" showCount maxLength={10} />
         </div>
@@ -111,7 +111,7 @@ export default function InputPage() {
         <Heading as="h4" className="mb-2">
           password
         </Heading>
-        <Input type="password" className="w-[400px]" placeholder="password" />
+        <Input type="password" className="max-w-[400px]" placeholder="password" />
         <CodeView content={passwordHtml} />
       </ShowBox>
       <Heading as="h2" className="mb-4">

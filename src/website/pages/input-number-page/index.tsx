@@ -26,7 +26,7 @@ export default function InputNumberPage() {
         <Heading as="h4" className="mb-2">
           basic
         </Heading>
-        <InputNumber className="w-[400px]" value={val} onChange={setVal} />
+        <InputNumber className="max-w-[400px]" value={val} onChange={setVal} />
         <p className="mt-2">{val}</p>
         <CodeView content={baseHtml} />
       </ShowBox>
@@ -34,7 +34,7 @@ export default function InputNumberPage() {
         <Heading as="h4" className="mb-2">
           size
         </Heading>
-        <div className="w-[400px] flex flex-col space-y-3">
+        <div className="max-w-[400px] flex flex-col space-y-3">
           <InputNumber size="tiny" placeholder="tiny" />
           <InputNumber size="small" placeholder="small" />
           <InputNumber size="medium" placeholder="medium" />
@@ -46,7 +46,7 @@ export default function InputNumberPage() {
         <Heading as="h4" className="mb-2">
           prefix
         </Heading>
-        <div className="w-[400px] flex flex-col space-y-3">
+        <div className="max-w-[400px] flex flex-col space-y-3">
           <InputNumber prefix={<RiMoneyCnyBoxLine size={18} />} />
           <InputNumber prefix={<RiBarChartLine size={18} />} />
         </div>
@@ -56,7 +56,7 @@ export default function InputNumberPage() {
         <Heading as="h4" className="mb-2">
           min and max
         </Heading>
-        <InputNumber className="w-[400px]" min={2} max={20} />
+        <InputNumber className="max-w-[400px]" min={2} max={20} />
         <CodeView content={minMaxHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
@@ -64,7 +64,7 @@ export default function InputNumberPage() {
           step
         </Heading>
         <InputNumber
-          className="w-[400px]"
+          className="max-w-[400px]"
           step={2}
           onStep={(value, option) => {
             console.log('value:', value, 'option:', option);
@@ -76,14 +76,14 @@ export default function InputNumberPage() {
         <Heading as="h4" className="mb-2">
           disabled
         </Heading>
-        <InputNumber className="w-[400px]" disabled value={10} prefix={<RiMoneyCnyBoxLine size={18} />} />
+        <InputNumber className="max-w-[400px]" disabled value={10} prefix={<RiMoneyCnyBoxLine size={18} />} />
         <CodeView content={disabledHtml} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           status
         </Heading>
-        <div className="flex flex-col space-y-3 w-[400px]">
+        <div className="flex flex-col space-y-3 max-w-[400px]">
           <InputNumber status="error" prefix={<RiMoneyCnyBoxLine size={18} />} />
           <InputNumber status="warn" prefix={<RiMoneyCnyBoxLine size={18} />} />
           <InputNumber status="readonly" prefix={<RiMoneyCnyBoxLine size={18} />} value={666} />
@@ -97,7 +97,7 @@ export default function InputNumberPage() {
         <Checkbox checked={keyboard} onCheckedChange={setKeyboard}>
           <span>keyboard enabled:{String(keyboard)}</span>
         </Checkbox>
-        <InputNumber className="mt-2 w-[400px]" keyboard={keyboard} />
+        <InputNumber className="mt-2 max-w-[400px]" keyboard={keyboard} />
         <CodeView content={keyboardHtml} />
       </ShowBox>
       <Heading as="h2" className="mb-2">

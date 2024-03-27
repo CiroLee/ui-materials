@@ -15,13 +15,13 @@ const modal = tv({
   variants: {
     size: {
       small: {
-        base: 'w-[32vw]',
+        base: 'w-[60vw] md:w-[32vw]',
       },
       medium: {
-        base: 'w-[50vw]',
+        base: 'w-[70vw] md:w-[50vw]',
       },
       large: {
-        base: 'w-[80vw]',
+        base: 'w-[94vw] md:w-[80vw]',
       },
     },
     footerAlign: {

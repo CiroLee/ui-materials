@@ -21,7 +21,7 @@ export default function ButtonPage() {
         <Heading as="h4" className="mb-2">
           basic
         </Heading>
-        <div className="[&_button:not(:first-child)]:ml-2">
+        <div className="flex gap-2 flex-wrap">
           <Button>primary</Button>
           <Button type="success">success</Button>
           <Button type="info">information</Button>
@@ -38,7 +38,7 @@ export default function ButtonPage() {
         <Heading as="h4" className="mb-2">
           outline
         </Heading>
-        <div className="[&_button:not(:first-child)]:ml-2">
+        <div className="flex gap-2 flex-wrap">
           <Button outline>primary</Button>
           <Button outline type="success">
             success
@@ -107,7 +107,7 @@ export default function ButtonPage() {
         <Heading as="h4" className="mb-2">
           width icon
         </Heading>
-        <div className="flex items-center [&_button:not(:first-child)]:ml-2">
+        <div className="flex gap-2 flex-wrap">
           <Button type="primary">
             <RiUserLine size={16} className="mr-1" />
             <span>User</span>
@@ -130,7 +130,7 @@ export default function ButtonPage() {
         <Heading as="h4" className="mb-2">
           buttonGroup
         </Heading>
-        <div className="flex flex-wrap space-x-3">
+        <div className="flex gap-2 flex-wrap">
           <ButtonGroup className="mb-2">
             <Button>apple</Button>
             <Button>banana</Button>

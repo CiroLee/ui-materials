@@ -7,7 +7,7 @@ export default function Layout() {
     <ToastProvider>
       <div className="flex">
         <SideMenu />
-        <main className="flex-1 py-4 px-12 h-[100vh] overflow-auto">
+        <main className="flex-1 py-4 px-4 h-[100vh] overflow-auto md:px-12">
           <Suspense>
             <Outlet />
           </Suspense>

@@ -12,7 +12,6 @@ interface CounterProps {
   suffix?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  onUpDate?: (latest: number) => void;
   onComplete?: () => void;
 }
 
@@ -22,13 +21,12 @@ const Counter = forwardRef<HTMLDivElement, CounterProps>((props, ref) => {
     decimal = 0,
     to,
     isInView,
-    duration = 2,
+    duration = 2000,
     delay = 0,
     prefix,
     suffix,
     className,
     style,
-    onUpDate,
     onComplete,
   } = props;
   const initValue = useMotionValue(from);
@@ -38,11 +36,10 @@ const Counter = forwardRef<HTMLDivElement, CounterProps>((props, ref) => {
 
   useEffect(() => {
     const animation = animate(initValue, to, {
-      duration,
+      duration: duration / 1000,
       delay: delay / 1000,
       ease: 'circOut',
       onUpdate: (latest) => {
-        onUpDate?.(latest);
         if (latest === to) {
           onComplete?.();
         }
@@ -57,7 +54,7 @@ const Counter = forwardRef<HTMLDivElement, CounterProps>((props, ref) => {
   return (
     <div ref={counterRef} className={className} style={style}>
       {prefix}
-      <motion.div className="counter__value leading-[1]" ref={ref}>
+      <motion.div className="counter__value" ref={ref}>
         {count}
       </motion.div>
       {suffix}
