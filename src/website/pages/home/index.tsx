@@ -34,7 +34,7 @@ const Home: FC = () => {
           2
         </Heading>
         <span>
-          copy plugins to your project, and import them in your <Code size="tiny">tailwind.plugin.js</Code>
+          copy plugins to your project, and import them in your <Code size="tiny">tailwind.config.js</Code>
         </span>
       </div>
       <CodeView content={secondContent} className="md:w-[80%] mb-8" />
