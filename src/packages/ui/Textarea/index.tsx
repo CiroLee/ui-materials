@@ -4,7 +4,7 @@ import { globalInputStyle as gInput } from '@/packages/plugins/input.style';
 const textarea = tv({
   slots: {
     base: `${gInput.base} w-fit`,
-    input: 'outline-0 placeholder:text-black/30 bg-transparent p-[8px] leading-[1.3] min-h-[38px]',
+    input: 'outline-none placeholder:text-black/30 bg-transparent p-[8px] leading-[1.3] min-h-[38px]',
     clear: `${gInput.clear} size-[16px] absolute before:h-[8px] after:h-[8px] right-[8px] bottom-[8px] z-[2]`,
     count: 'text-[14px] text-black/50 absolute right-0 -bottom-[24px]',
   },

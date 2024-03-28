@@ -17,7 +17,7 @@ export const radioGroupRows: ApiTableRow[] = [
   {
     prop: 'options',
     desc: 'radio config options',
-    type: `RadioOption[]`,
+    type: `CommonOption[]`,
     required: true,
     default: '-',
   },

@@ -1,32 +1,33 @@
 import { type ApiTableRow } from '@site/components/ApiTable';
+
 export const rows: ApiTableRow[] = [
   {
-    prop: 'value',
-    desc: 'value of radio',
+    prop: 'defaultValue',
     type: 'string',
+    desc: 'default value of segment for initial',
     required: false,
     default: '-',
   },
   {
     prop: 'options',
-    desc: 'radio button config options(see RadioGroup)',
+    desc: 'options of segment',
     type: 'link: CommonOption(https://github.com/CiroLee/ui-materials/blob/main/src/packages/types/components.ts)',
     required: true,
     default: '-',
   },
   {
-    prop: 'type',
-    desc: 'appearance of radio button',
-    type: 'tag: outline | solid',
-    required: false,
-    default: 'outline',
-  },
-  {
     prop: 'size',
-    desc: 'size of radio button',
+    desc: 'size of segment',
     type: 'tag: tiny | small | medium | large',
     required: false,
     default: 'medium',
+  },
+  {
+    prop: 'colors',
+    desc: 'color theme of segment',
+    type: 'tag: default | primary | info | success | warn | danger',
+    required: false,
+    default: 'default',
   },
   {
     prop: 'className',
@@ -36,15 +37,15 @@ export const rows: ApiTableRow[] = [
   },
   {
     prop: 'style',
-    type: 'React.CSSProperties',
+    type: 'React.CssProperties',
     required: false,
     default: '-',
   },
   {
-    prop: 'onValueChange',
-    desc: 'radio change callback',
-    type: '(value: string) => void',
+    prop: 'onSegmentChange',
+    desc: 'callback when segment item changed',
     required: false,
+    type: '(value: string) => void',
     default: '-',
   },
 ];

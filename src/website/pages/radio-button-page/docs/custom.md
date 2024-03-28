@@ -1,8 +1,8 @@
 ```ts
 import RadioButtonGroup from 'your path/RadioButtonGroup';
-import  type { RadioOption } from 'your path/types/components';
+import  type { CommonOption } from 'your path/types/components';
 import { RiBankCardLine, RiAlipayLine, RiWechatPayLine } from '@remixicon/react';
-const options: RadioOption[] = [
+const options: CommonOption[] = [
   {
     label: (
       <div className="flex flex-col items-center">

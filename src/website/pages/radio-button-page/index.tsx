@@ -3,7 +3,7 @@ import { RiBankCardLine, RiAlipayLine, RiWechatPayLine } from '@remixicon/react'
 import NavTitle from '@site/components/NavTitle';
 import Heading from '@ui/Heading';
 import RadioButtonGroup from '@ui/RadioButtonGroup';
-import { RadioOption } from '@/packages/types/components';
+import { CommonOption } from '@/packages/types/components';
 import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as sizeHtml } from './docs/size.md';
@@ -11,7 +11,7 @@ import { html as typeHtml } from './docs/type.md';
 import { html as customHtml } from './docs/custom.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
-const options: RadioOption[] = [
+const options: CommonOption[] = [
   {
     label: 'S',
     value: 's',
@@ -30,7 +30,7 @@ const options: RadioOption[] = [
     disabled: true,
   },
 ];
-const customOptions: RadioOption[] = [
+const customOptions: CommonOption[] = [
   {
     label: (
       <div className="flex flex-col items-center">

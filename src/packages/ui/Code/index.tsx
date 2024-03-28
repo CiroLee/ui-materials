@@ -10,7 +10,7 @@ const codeStyle = tv({
       primary: 'bg-brand-100 border-brand-300 text-brand-600',
       success: 'bg-success-100 border-success-300 text-success-600',
       warn: 'bg-warn-100 border-warn-300 text-warn-600',
-      error: 'bg-danger-100 border-danger-300 text-danger-600',
+      danger: 'bg-danger-100 border-danger-300 text-danger-600',
     },
     size: {
       tiny: 'text-[0.7em] py-[1px] px-[2px] rounded-small',

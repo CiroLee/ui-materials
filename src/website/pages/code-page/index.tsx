@@ -24,11 +24,23 @@ export default function CodePage() {
         <Heading as="h4" className="mb-2">
           size
         </Heading>
-        <div className="inline-flex flex-col gap-y-3">
-          <Code size="tiny">npm install tailwindcss -D</Code>
-          <Code size="small">npm install tailwindcss -D</Code>
-          <Code size="medium">npm install tailwindcss -D</Code>
-          <Code size="large">npm install tailwindcss -D</Code>
+        <div className="inline-flex flex-col gap-2">
+          <div>
+            <p>tiny:</p>
+            <Code size="tiny">npm install tailwindcss -D</Code>
+          </div>
+          <div>
+            <p>small:</p>
+            <Code size="small">npm install tailwindcss -D</Code>
+          </div>
+          <div>
+            <p>medium:</p>
+            <Code size="medium">npm install tailwindcss -D</Code>
+          </div>
+          <div>
+            <p>large:</p>
+            <Code size="large">npm install tailwindcss -D</Code>
+          </div>
         </div>
         <CodeView content={sizeHtml} />
       </ShowBox>
@@ -42,7 +54,7 @@ export default function CodePage() {
           <Code color="success">npm install tailwindcss -D</Code>
           <Code color="info">npm install tailwindcss -D</Code>
           <Code color="warn">npm install tailwindcss -D</Code>
-          <Code color="error">npm install tailwindcss -D</Code>
+          <Code color="danger">npm install tailwindcss -D</Code>
         </div>
         <CodeView content={colorHtml} />
       </ShowBox>

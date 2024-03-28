@@ -3,14 +3,14 @@ import Heading from '@ui/Heading';
 import ApiTable from '@site/components/ApiTable';
 import { radioGroupRows, radioOptionRows } from './api';
 import RadioGroup from '@ui/RadioGroup';
-import type { RadioOption } from '@/packages/types/components';
+import type { CommonOption } from '@/packages/types/components';
 import CodeView from '@site/components/CodeView';
 import { html as baseHtml } from './docs/base.md';
 import { html as orientationHtml } from './docs/direction.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as customHtml } from './docs/custom.md';
 import NavTitle from '@site/components/NavTitle';
-const options1: RadioOption[] = [
+const options1: CommonOption[] = [
   {
     value: 'apple',
     label: 'apple',
@@ -20,7 +20,7 @@ const options1: RadioOption[] = [
     label: 'banana',
   },
 ];
-const disabledOptions: RadioOption[] = [
+const disabledOptions: CommonOption[] = [
   {
     value: 'apple',
     label: 'apple',
@@ -35,7 +35,7 @@ const disabledOptions: RadioOption[] = [
     disabled: true,
   },
 ];
-const customOptions: RadioOption[] = [
+const customOptions: CommonOption[] = [
   {
     value: 'apple',
     label: (
@@ -115,7 +115,7 @@ export default function RadioPage() {
       </Heading>
       <ApiTable rows={radioGroupRows} />
       <Heading as="h4" className="my-2">
-        RadioOption
+        CommonOption
       </Heading>
       <ApiTable rows={radioOptionRows} />
     </>

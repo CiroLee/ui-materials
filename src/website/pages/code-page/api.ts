@@ -17,7 +17,7 @@ export const rows: ApiTableRow[] = [
   {
     prop: 'color',
     desc: 'color of code',
-    type: 'tag: default | primary | success | info | warn | error',
+    type: 'tag: default | primary | success | info | warn | danger',
     required: false,
     default: 'default',
   },
