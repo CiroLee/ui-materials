@@ -106,7 +106,7 @@ export default function SegmentPage() {
         <Heading as="h4" className="mb-2">
           layout evenly
         </Heading>
-        <Segment options={options} className="[&_.segment-item]:w-[100px] mb-3" />
+        <Segment options={options} className="[&_.segment-item]:w-[100px] mb-3 mr-3" />
         <Segment options={options} className="w-[408px] [&_.segment-item]:flex-1" />
         <CodeView content={evenlyContent} />
       </ShowBox>
