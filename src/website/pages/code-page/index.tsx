@@ -8,11 +8,13 @@ import { html as sizeHtml } from './docs/size.md';
 import { html as colorHtml } from './docs/color.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 export default function CodePage() {
   return (
     <>
       <NavTitle title="Code" sourceName="Code" />
+      <Description>A component to emphasize short code style</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

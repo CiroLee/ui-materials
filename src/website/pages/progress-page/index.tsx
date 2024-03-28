@@ -13,6 +13,8 @@ import { html as dynamicHtml } from './docs/dynamic.md';
 import { html as customHtml } from './docs/custom.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
+
 export default function ProgressPage() {
   const [percent, setPercent] = useState(10);
   const handleChangePercent = (value: number) => {
@@ -28,6 +30,7 @@ export default function ProgressPage() {
   return (
     <>
       <NavTitle title="Progress" sourceName="Progress" />
+      <Description>Display a progress bar</Description>
       <ShowBox className="mb-4">
         <Heading as="h2" className="mb-2">
           basic

@@ -12,6 +12,7 @@ import { html as withIconContent } from './docs/with-icon.md';
 import { html as colorsContent } from './docs/colors.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 const options: CommonOption[] = [
   {
@@ -65,6 +66,7 @@ export default function SegmentPage() {
   return (
     <>
       <NavTitle title="Segment" sourceName="Segment" />
+      <Description>A component allows to navigte between sections in a view</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

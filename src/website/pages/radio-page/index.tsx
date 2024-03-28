@@ -10,6 +10,8 @@ import { html as orientationHtml } from './docs/direction.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as customHtml } from './docs/custom.md';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 const options1: CommonOption[] = [
   {
     value: 'apple',
@@ -69,6 +71,7 @@ export default function RadioPage() {
   return (
     <>
       <NavTitle title="RadioGroup" sourceName="RadioGroup" />
+      <Description>Radio selection only on can be selected</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

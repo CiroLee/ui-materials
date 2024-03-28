@@ -15,6 +15,7 @@ import { html as titleContentHtml } from './docs/title-content.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
 
 const placements: { side: Side; align: Align }[] = [
   {
@@ -72,6 +73,7 @@ export default function PopoverPage() {
   return (
     <>
       <NavTitle title="Popover" sourceName="Popover" />
+      <Description>A component to display information by floating style, offen trigger by a button</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

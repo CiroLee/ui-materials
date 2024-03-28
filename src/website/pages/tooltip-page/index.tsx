@@ -12,6 +12,7 @@ import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import type { Align, Side } from '@/packages/types/common';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
 
 const placements: { side: Side; align: Align }[] = [
   {
@@ -68,6 +69,7 @@ export default function TooltipPage() {
   return (
     <>
       <NavTitle title="Tooltip" sourceName="Tooltip" />
+      <Description>Display message when hover a element</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

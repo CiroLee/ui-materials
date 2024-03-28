@@ -14,6 +14,7 @@ import { html as cellHtml } from './docs/cell.md';
 import { html as weekHtml } from './docs/week.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 export default function CalendarPage() {
   const [startWeekOnSunday, setStartWeekOnSunday] = useState(true);
@@ -29,6 +30,7 @@ export default function CalendarPage() {
   return (
     <>
       <NavTitle title="Calendar" sourceName="Calendar" />
+      <Description>A component to display calendar information</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

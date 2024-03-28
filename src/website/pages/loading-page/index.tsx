@@ -14,6 +14,8 @@ import { html as textHtml } from './docs/text.md';
 import { html as fullscreenHtml } from './docs/fullscreen.md';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
+
 const sizeOptions = [
   { label: 'tiny', value: 'tiny' },
   { label: 'small', value: 'small' },
@@ -46,6 +48,7 @@ export default function LoadingPage() {
   return (
     <>
       <NavTitle title="Loading" sourceName="Loading" />
+      <Description>A component to show loading status</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

@@ -11,6 +11,7 @@ import { html as decimalContent } from './docs/decimal.md';
 import { html as isInViewContent } from './docs/isInView.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 const countStyle =
   'bg-white w-[140px] text-[42px] inline-flex rounded-3 justify-center items-end font-bold border p-6 [&_div]:leading-[1]';
@@ -18,6 +19,7 @@ export default function CounterPage() {
   return (
     <>
       <NavTitle title="Counter" sourceName="Counter" />
+      <Description>A component allows for animating number from one state to another</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

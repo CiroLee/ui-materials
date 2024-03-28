@@ -13,10 +13,13 @@ import { html as iconsHtml } from './docs/icons.md';
 import { html as buttonGroupHtml } from './docs/button-group.md';
 import { rows, buttonGroupRows } from './api';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 export default function ButtonPage() {
   return (
     <>
       <NavTitle title="Button" sourceName="Button" />
+      <Description>A commom form component used to trigger actions</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

@@ -12,11 +12,13 @@ import { html as withoutIconHtml } from './docs/without-icon.md';
 import { html as customIconHtml } from './docs/custom-icon.md';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 export default function AlertPage() {
   return (
     <>
       <NavTitle title="Alert" sourceName="Alert" />
+      <Description>A component display a brief and important information</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

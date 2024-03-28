@@ -7,10 +7,13 @@ import { html as keyHtml } from './docs/keys.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 export default function KbdPage() {
   return (
     <>
       <NavTitle title="Kbd" sourceName="Kbd" />
+      <Description>A component to display keyboard input or hotkeys</Description>
       <ShowBox className="mb-4 [&>div]:mr-2">
         <Kbd keys={['command']} />
         <Kbd keys={['command']}>K</Kbd>

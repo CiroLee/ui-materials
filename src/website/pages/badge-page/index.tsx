@@ -13,10 +13,13 @@ import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
 import NavTitle from '@site/components/NavTitle';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
+import Description from '@site/components/Description';
+
 export default function BadgePage() {
   return (
     <>
       <NavTitle title="Badge" sourceName="Badge" />
+      <Description>A component to display count and status</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
           size

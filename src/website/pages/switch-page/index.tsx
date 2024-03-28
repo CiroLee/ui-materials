@@ -11,11 +11,14 @@ import { html as sizeHtml } from './docs/size.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as customHtml } from './docs/custom.md';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 export default function SwitchPage() {
   const [checked, setChecked] = useState(false);
   return (
     <div>
       <NavTitle title="Switch" sourceName="Switch" />
+      <Description>A component allows to toggle status</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

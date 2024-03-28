@@ -10,11 +10,13 @@ import { html as disabledHtml } from './docs/disabled.md';
 import { html as sizeHtml } from './docs/size.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 export default function PinInputPage() {
   return (
     <>
       <NavTitle title="PinInput" sourceName="PinInput" />
+      <Description>A component allows verification codes with auto-focus transfer</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

@@ -15,6 +15,7 @@ import { html as iconsHtml } from './docs/icons.md';
 import { html as actionHtml } from './docs/action.md';
 import ApiTable from '@site/components/ApiTable';
 import { toastOptionsRows, hookRows } from './api';
+import Description from '@site/components/Description';
 
 const text = 'this is a toast message';
 
@@ -56,6 +57,7 @@ export default function ToastPage() {
   return (
     <>
       <NavTitle title="Toast" sourceName="Toast" />
+      <Description>A component to display message for feedback</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

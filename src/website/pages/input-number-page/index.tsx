@@ -16,12 +16,15 @@ import { html as statusHtml } from './docs/status.md';
 import { html as keyboardHtml } from './docs/keyboard.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
+
 export default function InputNumberPage() {
   const [val, setVal] = useState<number | null>(null);
   const [keyboard, setKeyboard] = useState<boolean>(true);
   return (
     <>
       <NavTitle title="InputNumber" sourceName="InputNumber" />
+      <Description>A component only allows to input number</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

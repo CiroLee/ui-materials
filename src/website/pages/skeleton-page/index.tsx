@@ -9,10 +9,13 @@ import { html as childrenHtml } from './docs/children.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 export default function SkeletonPage() {
   return (
     <>
       <NavTitle title="Skeleton" sourceName="Skeleton" />
+      <Description>Display a placeholder while content is loading</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           type: flicker

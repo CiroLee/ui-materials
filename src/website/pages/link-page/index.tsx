@@ -14,11 +14,13 @@ import { html as anchorIconHtml } from './docs/icon.md';
 import { html as underlineHtml } from './docs/underline.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 export default function LinkPage() {
   return (
     <>
       <NavTitle title="Link" sourceName="Link" />
+      <Description>A component used to navigate between pages</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

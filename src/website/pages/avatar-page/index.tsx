@@ -10,11 +10,14 @@ import { html as textHtml } from './docs/text.md';
 import { html as groupHtml } from './docs/group.md';
 import { html as borderedHtml } from './docs/border.md';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
+
 export default function AvatarPage() {
   return (
     <>
       <NavTitle title="Avatar" sourceName="Avatar" />
+      <Description>A component display user profile image</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           size

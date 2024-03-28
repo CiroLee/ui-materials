@@ -16,11 +16,14 @@ import { html as countHtml } from './docs/count.md';
 import { html as passwordHtml } from './docs/password.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
+
 export default function InputPage() {
   const [disabled, setDisabled] = useState(true);
   return (
     <>
       <NavTitle title="Input" sourceName="Input" />
+      <Description>Form input component offen used to input one line words</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

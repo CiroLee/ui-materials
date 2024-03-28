@@ -8,6 +8,8 @@ import { html as baseHtml } from './docs/base.md';
 import { html as disabledHtml } from './docs/disabled.md';
 import { html as groupHtml } from './docs/group.md';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 export default function CheckboxPage() {
   const checkboxGroup: CheckboxGroupOption[] = [
     {
@@ -42,6 +44,7 @@ export default function CheckboxPage() {
   return (
     <>
       <NavTitle title="Checkbox" sourceName="Checkbox" />
+      <Description>A component allows for multiple selections</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

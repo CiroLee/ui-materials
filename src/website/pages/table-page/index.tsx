@@ -7,6 +7,7 @@ import Switch from '@ui/Switch';
 import CodeView from '@site/components/CodeView';
 import { html as useHtml } from './docs/use.md';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
 
 const rows: ApiTableRow[] = [
   {
@@ -35,6 +36,7 @@ export default function TablePage() {
   return (
     <>
       <NavTitle title="Table" sourceName="Table" />
+      <Description>A table component used for presenting data</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

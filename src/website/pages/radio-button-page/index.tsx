@@ -11,6 +11,8 @@ import { html as typeHtml } from './docs/type.md';
 import { html as customHtml } from './docs/custom.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
+
 const options: CommonOption[] = [
   {
     label: 'S',
@@ -66,6 +68,7 @@ export default function RadioButtonGroupPage() {
   return (
     <>
       <NavTitle title="RadioButtonGroup" sourceName="RadioButtonGroup" />
+      <Description>Radio selection only one can be selected but with button style</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

@@ -5,10 +5,13 @@ import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import { html as HeadingHtml } from './docs/heading.md';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 export default function HeadingPage() {
   return (
     <>
       <NavTitle title="Heading" sourceName="Heading" />
+      <Description>A component with union head style</Description>
       <ShowBox className="mb-4 [&_*]:mb-2">
         <Heading as="h1">h1 Heading</Heading>
         <Heading as="h2">h2 Heading</Heading>

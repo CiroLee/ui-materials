@@ -13,6 +13,7 @@ import { html as customHtml } from './docs/custom.md';
 import NavTitle from '@/website/components/NavTitle';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 export default function CircleProgressPage() {
   const [percent, setPercent] = useState(20);
@@ -29,6 +30,7 @@ export default function CircleProgressPage() {
   return (
     <>
       <NavTitle title="CircleProgress" sourceName="CircleProgress" />
+      <Description>A component to display progress width circle shape</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

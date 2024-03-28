@@ -12,11 +12,13 @@ import { html as customHtml } from './docs/custom.md';
 import { rows } from './api';
 import NavTitle from '@site/components/NavTitle';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
+import Description from '@site/components/Description';
 
 export default function TagPage() {
   return (
     <>
       <NavTitle title="Tag" sourceName="Tag" />
+      <Description>Display short texts</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
           size

@@ -19,6 +19,7 @@ import { html as eventHtml } from './docs/event.md';
 import { html as scrollContentHtml } from './docs/scroll-content.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 type FooterALign = 'start' | 'center' | 'end';
 export default function ModalPage() {
@@ -42,6 +43,7 @@ export default function ModalPage() {
   return (
     <>
       <NavTitle title="Modal" sourceName="Modal" />
+      <Description>Modal dialog displayed above the page</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic

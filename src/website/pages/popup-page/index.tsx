@@ -9,6 +9,8 @@ import Switch from '@ui/Switch';
 import CodeView from '@site/components/CodeView';
 import { html as useHtml } from './docs/use.md';
 import NavTitle from '@site/components/NavTitle';
+import Description from '@site/components/Description';
+
 export default function PopupPage() {
   const [showCenter, setShowCenter] = useState(false);
   const [showLeft, setShowLeft] = useState(false);
@@ -20,6 +22,7 @@ export default function PopupPage() {
   return (
     <>
       <NavTitle title="Popup" sourceName="Popup" />
+      <Description>Base component to show content above page with mask</Description>
       <ShowBox className="my-4">
         <p className="mb-3 flex items-center">
           <span>blur mask:</span>

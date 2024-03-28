@@ -12,11 +12,13 @@ import { html as clearHtml } from './docs/clear.md';
 import { html as countHtml } from './docs/count.md';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
+import Description from '@site/components/Description';
 
 export default function TextareaPage() {
   return (
     <>
       <NavTitle title="Textarea" sourceName="Textarea" />
+      <Description>A form component used to input multi-line input</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic
