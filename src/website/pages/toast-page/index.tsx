@@ -5,7 +5,7 @@ import NavTitle from '@site/components/NavTitle';
 import Button from '@ui/Button';
 import Heading from '@ui/Heading';
 import RadioGroup from '@ui/RadioGroup';
-import type { RadioOption } from '@/packages/types/components';
+import type { CommonOption } from '@/packages/types/components';
 import { useToast, type ToastPlacement } from '@ui/Toast';
 import CodeView from '@site/components/CodeView';
 import { html as preHtml } from './docs/pre.md';
@@ -18,7 +18,7 @@ import { toastOptionsRows, hookRows } from './api';
 
 const text = 'this is a toast message';
 
-const placementOption: RadioOption[] = [
+const placementOption: CommonOption[] = [
   {
     label: 'topLeft',
     value: 'topLeft',

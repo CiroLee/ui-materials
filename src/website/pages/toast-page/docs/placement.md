@@ -1,10 +1,10 @@
 ```ts
 import { useToast, type ToastPlacement  } from 'your path/Toast';
 import Button from 'your path/Button';
-import RadioGroup, { type RadioOption } from 'your path/RadioGroup';
+import RadioGroup, { type CommonOption } from 'your path/RadioGroup';
 const text = 'this is a toast message';
 
-const placementOption: RadioOption[] = [
+const placementOption: CommonOption[] = [
   {
     label: 'topLeft',
     value: 'topLeft',

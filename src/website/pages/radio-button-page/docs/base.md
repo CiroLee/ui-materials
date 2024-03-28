@@ -1,7 +1,7 @@
 ```ts
 import RadioButtonGroup from 'your path/RadioButtonGroup';
-import  type { RadioOption } from 'your path/types/components';
-const options: RadioOption[] = [
+import  type { CommonOption } from 'your path/types/components';
+const options: CommonOption[] = [
   {
     label: 'S',
     value: 's',

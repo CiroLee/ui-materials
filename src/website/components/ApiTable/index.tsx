@@ -19,7 +19,7 @@ function renderType(type: string) {
   if (type.startsWith('tag')) {
     const tags = type.replace(/^tag:/, '').split('|');
     return (
-      <>
+      <div className="flex flex-wrap gap-y-2">
         {tags.map((item, index) => (
           <div className="inline-flex items-center relative" key={index}>
             <Tag color="primary">{item}</Tag>
@@ -28,7 +28,7 @@ function renderType(type: string) {
             )}
           </div>
         ))}
-      </>
+      </div>
     );
   } else if (type.startsWith('link')) {
     const pattern = /link: (\w+)\((https?:\/\/\S+)\)/;

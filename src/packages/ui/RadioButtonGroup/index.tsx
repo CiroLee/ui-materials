@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { tv, type VariantProps } from 'tailwind-variants';
 import * as RadixRadioGroup from '@radix-ui/react-radio-group';
 import Button from '../Button';
-import type { RadioOption } from '@/packages/types/components';
+import type { CommonOption } from '@/packages/types/components';
 import type { Size } from '@/packages/types/common';
 const radioBtnGroupStyle = tv({
   base: 'flex gap-x-2.5',
@@ -13,7 +13,7 @@ type RadioButtonGroupVariants = VariantProps<typeof radioBtnGroupStyle>;
 interface RadioButtonGroupProps extends RadioButtonGroupVariants {
   value?: string;
   type?: 'solid' | 'outline';
-  options: RadioOption[];
+  options: CommonOption[];
   size?: Size;
   className?: string;
   style?: React.CSSProperties;

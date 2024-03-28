@@ -1,8 +1,8 @@
 ```typescript
-import RadioGroup, { type RadioOption } from 'your path/RadioGroup';
+import RadioGroup, { type CommonOption } from 'your path/RadioGroup';
 
 export default function Demo() {
-const options: RadioOption[] = [
+const options: CommonOption[] = [
   {
     value: 'apple',
     label: 'apple',
