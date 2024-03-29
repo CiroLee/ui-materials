@@ -6,7 +6,7 @@ export const rows: ApiTableRow[] = [
     desc: 'type of skeleton',
     type: 'tag: flicker | shimmer',
     required: false,
-    default: 'small',
+    default: 'flicker',
   },
   {
     prop: 'className',
