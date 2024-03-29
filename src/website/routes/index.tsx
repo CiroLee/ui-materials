@@ -305,6 +305,15 @@ export const router = createHashRouter([
           role: 'component',
         },
       },
+      {
+        path: 'divider',
+        id: 'divider',
+        Component: lazy(() => import('@site/pages/divider-page')),
+        meta: {
+          title: 'Divider',
+          role: 'component',
+        },
+      },
     ] as MyRouteObject[],
   } as MyRouteObject,
 ]);

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Table, TableBody, TableDataCell, TableHeader, TableHeaderCell, TableRow } from '@ui/Table';
 import Tag from '@ui/Tag';
 import Link from '@ui/Link';
+import Divider from '@ui/Divider';
 import { RiShareBoxLine } from '@remixicon/react';
 
 export interface ApiTableRow {
@@ -23,7 +24,7 @@ function renderType(type: string) {
         {tags.map((item, index) => (
           <div className="inline-flex items-center relative" key={index}>
             <Tag color="primary">{item}</Tag>
-            {index !== tags.length - 1 && <span className="relative inline-block w-px h-[80%] mx-2 bg-black/10"></span>}
+            {index !== tags.length - 1 && <Divider direction="vertical" className="mx-3" />}
           </div>
         ))}
       </div>

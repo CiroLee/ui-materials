@@ -2,10 +2,11 @@ import { forwardRef, useState } from 'react';
 import * as RadixRadioGroup from '@radix-ui/react-radio-group';
 import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
-import { CommonOption } from '@/packages/types/components';
+import type { CommonOption } from '@/packages/types/components';
+import type { Direction } from '@/packages/types/common';
 
 interface RadioGroupProps {
-  direction?: 'vertical' | 'horizontal';
+  direction?: Direction;
   value?: string;
   options: CommonOption[];
   className?: string;
