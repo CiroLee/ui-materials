@@ -1,6 +1,5 @@
 ```typescript
 import Checkbox from 'your path/Avatar';
-const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
 
 export default function Demo() {
   return (
