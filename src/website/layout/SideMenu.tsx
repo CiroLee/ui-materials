@@ -9,7 +9,7 @@ export default function SideMenu() {
   const [collapsed, setCollapsed] = useState(false);
   const head = router.routes.find((r) => r.id === 'layout') as MyRouteObject;
   const children = router.routes.find((r) => r.id === 'layout')!.children as MyRouteObject[];
-  const navRoutes = sortArrayByField(children, 'id');
+  const navRoutes = sortArrayByField(children, 'id').filter((item) => item.meta.role !== 'title');
   const variant: Variants = {
     collapsed: {
       width: 0,
