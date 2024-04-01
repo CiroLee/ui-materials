@@ -49,7 +49,7 @@ const Counter = forwardRef<HTMLDivElement, CounterProps>((props, ref) => {
       animation.pause();
       inView && animation.play();
     }
-    return animation.stop;
+    return () => animation.stop();
   }, [from, to, duration, delay, initValue, isInView, inView]);
   return (
     <div ref={counterRef} className={className} style={style}>
