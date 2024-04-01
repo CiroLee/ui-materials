@@ -4,11 +4,12 @@ import { RiArrowLeftSLine } from '@remixicon/react';
 import { motion, type Variants } from 'framer-motion';
 import { router } from '../routes';
 import { type MyRouteObject } from '../routes';
+import { sortArrayByField } from 'utils-gear';
 export default function SideMenu() {
   const [collapsed, setCollapsed] = useState(false);
   const head = router.routes.find((r) => r.id === 'layout') as MyRouteObject;
   const children = router.routes.find((r) => r.id === 'layout')!.children as MyRouteObject[];
-  const navRoutes = children.filter((c) => c.meta.role !== 'title').sort((a, b) => a.id!.localeCompare(b.id!));
+  const navRoutes = sortArrayByField(children, 'id');
   const variant: Variants = {
     collapsed: {
       width: 0,
