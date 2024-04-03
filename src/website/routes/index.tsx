@@ -314,6 +314,15 @@ export const router = createHashRouter([
           role: 'component',
         },
       },
+      {
+        path: 'tree',
+        id: 'tree',
+        Component: lazy(() => import('@site/pages/tree-page')),
+        meta: {
+          title: 'Tree',
+          role: 'component',
+        },
+      },
     ] as MyRouteObject[],
   } as MyRouteObject,
 ]);
