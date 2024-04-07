@@ -323,6 +323,15 @@ export const router = createHashRouter([
           role: 'component',
         },
       },
+      {
+        path: 'slider',
+        id: 'slider',
+        Component: lazy(() => import('@site/pages/slider-page')),
+        meta: {
+          title: 'Slider',
+          role: 'component',
+        },
+      },
     ] as MyRouteObject[],
   } as MyRouteObject,
 ]);

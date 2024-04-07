@@ -82,7 +82,7 @@ export default function TreePage() {
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
-          isBranch
+          showBranchLine
         </Heading>
         <Tree className="max-w-[200px]" options={commonTreeOptions} showBranchLine />
         <CodeView content={branchContent} />
