@@ -1,1 +1,0 @@
-import{j as s}from"./index-COZO8Rzb.js";import{c as o}from"./index-CaQzaSfZ.js";function m({className:t,children:r}){return s.jsx("p",{className:o("mb-4 text-[20px] text-gray-500/50",t),children:r})}export{m as D};
