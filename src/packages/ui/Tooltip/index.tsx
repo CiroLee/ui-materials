@@ -77,7 +77,12 @@ const Tooltip = forwardRef<React.ElementRef<typeof RadixTooltip.Root>, ToolTipPr
         <AnimatePresence>
           {open ? (
             <RadixTooltip.Portal forceMount>
-              <RadixTooltip.Content ref={ref} className="outline-0" side={side} align={align} sideOffset={sideOffset}>
+              <RadixTooltip.Content
+                ref={ref}
+                className="outline-none"
+                side={side}
+                align={align}
+                sideOffset={sideOffset}>
                 <motion.div
                   initial="closed"
                   animate={open ? 'open' : 'closed'}
