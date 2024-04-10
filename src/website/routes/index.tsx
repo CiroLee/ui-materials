@@ -332,6 +332,15 @@ export const router = createHashRouter([
           role: 'component',
         },
       },
+      {
+        path: 'browserframe',
+        id: 'browserframe',
+        Component: lazy(() => import('@site/pages/browserframe-page')),
+        meta: {
+          title: 'BrowserFrame',
+          role: 'component',
+        },
+      },
     ] as MyRouteObject[],
   } as MyRouteObject,
 ]);
