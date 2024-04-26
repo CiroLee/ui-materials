@@ -1,1 +1,0 @@
-import{r,I as e}from"./index-PCb06teX.js";import{a as f}from"./index-CH7zi03T.js";const n=e.useId||(()=>{});let s=0;function c(a){const[t,o]=r.useState(n());return f(()=>{a||o($=>$??String(s++))},[a]),a||(t?`radix-${t}`:"")}export{c as $};
