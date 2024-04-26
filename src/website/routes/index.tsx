@@ -341,6 +341,15 @@ export const router = createHashRouter([
           role: 'component',
         },
       },
+      {
+        path: 'resizable',
+        id: 'resizable',
+        Component: lazy(() => import('@site/pages/resizable-page')),
+        meta: {
+          title: 'Resizable',
+          role: 'component',
+        },
+      },
     ] as MyRouteObject[],
   } as MyRouteObject,
 ]);

@@ -85,6 +85,13 @@ const themeExtends = {
     'skeleton-flicker': 'linear-gradient(90deg, rgb(0 0 0 / 5%) 20%, rgb(0 0 0 / 10%) 40%, rgb(0 0 0 / 5%) 60%)',
     'striped-gradient':
       'linear-gradient(45deg,rgba(0,0,0,.1) 25%,transparent 0,transparent 50%,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 75%,transparent 0,transparent)',
+    diagonal: `repeating-linear-gradient(
+        -45deg,
+        #dddddd,
+        #dddddd 1px,
+        #f6f6f6 1px,
+        #f6f6f6 14px
+      )`,
   },
   boxShadow: {
     around: [
