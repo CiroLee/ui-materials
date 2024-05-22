@@ -4,11 +4,11 @@ import Heading from '@ui//Heading';
 import Description from '@site/components/Description';
 import BrowserFrame from '@ui/BrowserFrame';
 import CodeView from '@site/components/CodeView';
-import { html as typeContent } from './docs/type.md';
-import { html as titleContent } from './docs/type.md';
-import { html as urlContent } from './docs/url.md';
-import { html as frameContent } from './docs/frame.md';
-import { html as customContent } from './docs/custom.md';
+import typeMd from './docs/type.md?raw';
+import titleMd from './docs/type.md?raw';
+import urlMd from './docs/url.md?raw';
+import frameMd from './docs/frame.md?raw';
+import customMd from './docs/custom.md?raw';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 export default function BrowserFramePage() {
@@ -22,28 +22,28 @@ export default function BrowserFramePage() {
         </Heading>
         <BrowserFrame className="mb-4" />
         <BrowserFrame frameType="windows" />
-        <CodeView content={typeContent} />
+        <CodeView content={typeMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           title
         </Heading>
         <BrowserFrame frameType="macos" title="macOS" />
-        <CodeView content={titleContent} />
+        <CodeView content={titleMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           show url
         </Heading>
         <BrowserFrame showUrl url="https://www.google.com" />
-        <CodeView content={urlContent} />
+        <CodeView content={urlMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           use as iframe
         </Heading>
         <BrowserFrame showUrl asIframe url="https://cirolee.github.io/ui-materials" />
-        <CodeView content={frameContent} />
+        <CodeView content={frameMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -52,7 +52,7 @@ export default function BrowserFramePage() {
         <BrowserFrame>
           <p className="p-4">custom content</p>
         </BrowserFrame>
-        <CodeView content={customContent} />
+        <CodeView content={customMd} />
       </ShowBox>
       <Heading as="h2" className="mb-4">
         API

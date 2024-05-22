@@ -4,7 +4,7 @@ import Divider from '@ui/Divider';
 import ShowBox from '@site/components/ShowBox';
 import Description from '@site/components/Description';
 import CodeView from '@site/components/CodeView';
-import { html as baseContent } from './docs/base.md';
+import baseContent from './docs/base.md?raw';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 

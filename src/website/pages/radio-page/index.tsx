@@ -5,10 +5,10 @@ import { radioGroupRows, radioOptionRows } from './api';
 import RadioGroup from '@ui/RadioGroup';
 import type { CommonOption } from '@/packages/types/components';
 import CodeView from '@site/components/CodeView';
-import { html as baseHtml } from './docs/base.md';
-import { html as orientationHtml } from './docs/direction.md';
-import { html as disabledHtml } from './docs/disabled.md';
-import { html as customHtml } from './docs/custom.md';
+import baseHtml from './docs/base.md?raw';
+import orientationHtml from './docs/direction.md?raw';
+import disabledHtml from './docs/disabled.md?raw';
+import customHtml from './docs/custom.md?raw';
 import NavTitle from '@site/components/NavTitle';
 import Description from '@site/components/Description';
 

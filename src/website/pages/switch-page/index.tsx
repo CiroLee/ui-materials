@@ -6,10 +6,10 @@ import ShowBox from '@site/components/ShowBox';
 import Switch from '@ui/Switch';
 import { RiCheckLine, RiCloseLine } from '@remixicon/react';
 import CodeView from '@site/components/CodeView';
-import { html as baseHtml } from './docs/base.md';
-import { html as sizeHtml } from './docs/size.md';
-import { html as disabledHtml } from './docs/disabled.md';
-import { html as customHtml } from './docs/custom.md';
+import baseHtml from './docs/base.md?raw';
+import sizeHtml from './docs/size.md?raw';
+import disabledHtml from './docs/disabled.md?raw';
+import customHtml from './docs/custom.md?raw';
 import NavTitle from '@site/components/NavTitle';
 import Description from '@site/components/Description';
 

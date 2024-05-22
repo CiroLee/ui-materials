@@ -21,11 +21,11 @@ const tabsStyle = tv({
     },
     colors: {
       info: {
-        labelItem: '[&:not(.active):not(.disabled)]:hover:text-info-500 [&.active]:text-info-500',
+        labelItem: '[&:not(.active):not(.disabled)]:hover:text-info-500 [&.active:not(.disabled)]:text-info-500',
         indicator: 'bg-info-500',
       },
       primary: {
-        labelItem: '[&:not(.active):not(.disabled)]:hover:text-brand-400 [&.active]:text-brand-500',
+        labelItem: '[&:not(.active):not(.disabled)]:hover:text-brand-400 [&.active:not(.disabled)]:text-brand-500',
         indicator: 'bg-brand-500',
       },
       success: {
@@ -62,9 +62,8 @@ const panelStyle = tv({
 
 type TabsVariants = VariantProps<typeof tabsStyle>;
 
-export interface TabsProps extends TabsVariants {
+export interface TabsProps extends Omit<TabsVariants, 'active'> {
   defaultKey?: string;
-  disabled?: boolean;
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
@@ -175,9 +174,10 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>((props, ref) => {
 Tabs.displayName = 'Tabs';
 
 export interface TabPanelProps extends CommonOption {
+  label: string;
   className?: string;
   style?: React.CSSProperties;
-  children?: string;
+  children?: React.ReactNode;
 }
 
 function TabPanel(props: TabPanelProps) {

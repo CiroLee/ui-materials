@@ -6,7 +6,7 @@ import Resizable from '@ui/Resizable';
 import { RiShareBoxLine } from '@remixicon/react';
 import Link from '@ui/Link';
 import CodeView from '@/website/components/CodeView';
-import { html as usageContent } from './docs/usage.md';
+import usageContent from './docs/usage.md?raw';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
 

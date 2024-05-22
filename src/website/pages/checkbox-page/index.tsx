@@ -4,9 +4,9 @@ import ShowBox from '@site/components/ShowBox';
 import ApiTable from '@site/components/ApiTable';
 import { checkboxRows, checkboxGroupRows } from './api';
 import CodeView from '@site/components/CodeView';
-import { html as baseHtml } from './docs/base.md';
-import { html as disabledHtml } from './docs/disabled.md';
-import { html as groupHtml } from './docs/group.md';
+import baseMd from './docs/base.md?raw';
+import disabledMd from './docs/disabled.md?raw';
+import groupMd from './docs/group.md?raw';
 import NavTitle from '@site/components/NavTitle';
 import Description from '@site/components/Description';
 
@@ -52,7 +52,7 @@ export default function CheckboxPage() {
         <Checkbox checked value="apple" onCheckedChange={(checked, value) => console.log(checked, value)}>
           apple
         </Checkbox>
-        <CodeView content={baseHtml} />
+        <CodeView content={baseMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -64,7 +64,7 @@ export default function CheckboxPage() {
             disabled
           </Checkbox>
         </div>
-        <CodeView content={disabledHtml} />
+        <CodeView content={disabledMd} />
       </ShowBox>
       <ShowBox>
         <Heading as="h4" className="mb-2">
@@ -76,7 +76,7 @@ export default function CheckboxPage() {
           options={checkboxGroup}
           onCheckedChange={(list) => console.log('what you choose:', list)}
         />
-        <CodeView content={groupHtml} />
+        <CodeView content={groupMd} />
       </ShowBox>
       <Heading as="h2" className="mb-2">
         API
