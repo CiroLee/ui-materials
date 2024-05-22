@@ -20,7 +20,7 @@ export default function TagPage() {
       <NavTitle title="Tag" sourceName="Tag" />
       <Description>Display short texts</Description>
       <ShowBox className="mb-4">
-        <Heading as="h4" className="mb-4">
+        <Heading as="h4" className="mb-2">
           size
         </Heading>
         <div className="flex items-center [&>div]:mr-2">

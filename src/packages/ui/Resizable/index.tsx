@@ -26,4 +26,6 @@ const Resizable = forwardRef<ImperativePanelGroupHandle, ResizeBoxProps>((props,
   );
 });
 
+Resizable.displayName = 'Resizable';
+
 export default Resizable;
