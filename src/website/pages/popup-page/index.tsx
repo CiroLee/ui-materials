@@ -7,7 +7,7 @@ import Popup from '@ui/Popup';
 import Button from '@ui/Button';
 import Switch from '@ui/Switch';
 import CodeView from '@site/components/CodeView';
-import { html as useHtml } from './docs/use.md';
+import useHtml from './docs/use.md?raw';
 import NavTitle from '@site/components/NavTitle';
 import Description from '@site/components/Description';
 

@@ -4,11 +4,11 @@ import Avatar from '@ui/Avatar';
 import ShowBox from '@/website/components/ShowBox';
 import CodeView from '@/website/components/CodeView';
 import { RiNotification2Line, RiCheckLine } from '@remixicon/react';
-import { html as sizeHtml } from './docs/size.md';
-import { html as colorHtml } from './docs/color.md';
-import { html as placementHtml } from './docs/placement.md';
-import { html as outlineHtml } from './docs/outline.md';
-import { html as contentHtml } from './docs/content.md';
+import sizeMd from './docs/size.md?raw';
+import colorMd from './docs/color.md?raw';
+import placementMd from './docs/placement.md?raw';
+import outlineMd from './docs/outline.md?raw';
+import contentMd from './docs/content.md?raw';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
 import NavTitle from '@site/components/NavTitle';
@@ -35,7 +35,7 @@ export default function BadgePage() {
             <Avatar src={IMG_URL} />
           </Badge>
         </div>
-        <CodeView content={sizeHtml} />
+        <CodeView content={sizeMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
@@ -52,7 +52,7 @@ export default function BadgePage() {
             <Avatar src={IMG_URL} />
           </Badge>
         </div>
-        <CodeView content={colorHtml} />
+        <CodeView content={colorMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
@@ -72,7 +72,7 @@ export default function BadgePage() {
             <Avatar src={IMG_URL} />
           </Badge>
         </div>
-        <CodeView content={placementHtml} />
+        <CodeView content={placementMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
@@ -86,7 +86,7 @@ export default function BadgePage() {
             <Avatar src={IMG_URL} />
           </Badge>
         </div>
-        <CodeView content={outlineHtml} />
+        <CodeView content={outlineMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
@@ -103,7 +103,7 @@ export default function BadgePage() {
             <Avatar bordered color="#5bce5b" src={IMG_URL} />
           </Badge>
         </div>
-        <CodeView content={contentHtml} />
+        <CodeView content={contentMd} />
       </ShowBox>
       <Heading as="h4" className="my-2">
         API

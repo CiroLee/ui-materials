@@ -4,13 +4,13 @@ import ShowBox from '@site/components/ShowBox';
 import Button, { ButtonGroup } from '@ui/Button';
 import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
-import { html as baseHtml } from './docs/base.md';
-import { html as outlineHtml } from './docs/outline.md';
-import { html as sizeHtml } from './docs/size.md';
-import { html as shapeHtml } from './docs/shape.md';
-import { html as blockHtml } from './docs/block.md';
-import { html as iconsHtml } from './docs/icons.md';
-import { html as buttonGroupHtml } from './docs/button-group.md';
+import baseMd from './docs/base.md?raw';
+import outlineMd from './docs/outline.md?raw';
+import sizeMd from './docs/size.md?raw';
+import shapeMd from './docs/shape.md?raw';
+import blockMd from './docs/block.md?raw';
+import iconsMd from './docs/icons.md?raw';
+import buttonGroupMd from './docs/button-group.md?raw';
 import { rows, buttonGroupRows } from './api';
 import NavTitle from '@site/components/NavTitle';
 import Description from '@site/components/Description';
@@ -19,7 +19,7 @@ export default function ButtonPage() {
   return (
     <>
       <NavTitle title="Button" sourceName="Button" />
-      <Description>A commom form component used to trigger actions</Description>
+      <Description>A common form component used to trigger actions</Description>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
           basic
@@ -35,7 +35,7 @@ export default function ButtonPage() {
             disabled
           </Button>
         </div>
-        <CodeView content={baseHtml} />
+        <CodeView content={baseMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -59,7 +59,7 @@ export default function ButtonPage() {
             text
           </Button>
         </div>
-        <CodeView content={outlineHtml} />
+        <CodeView content={outlineMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -71,7 +71,7 @@ export default function ButtonPage() {
           <Button size="medium">medium</Button>
           <Button size="large">large</Button>
         </div>
-        <CodeView content={sizeHtml} />
+        <CodeView content={sizeMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -89,7 +89,7 @@ export default function ButtonPage() {
             S
           </Button>
         </div>
-        <CodeView content={shapeHtml} />
+        <CodeView content={shapeMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -104,7 +104,7 @@ export default function ButtonPage() {
             button
           </Button>
         </div>
-        <CodeView content={blockHtml} />
+        <CodeView content={blockMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -127,7 +127,7 @@ export default function ButtonPage() {
             <span>Loading</span>
           </Button>
         </div>
-        <CodeView content={iconsHtml} />
+        <CodeView content={iconsMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -164,7 +164,7 @@ export default function ButtonPage() {
             </Button>
           </ButtonGroup>
         </div>
-        <CodeView content={buttonGroupHtml} />
+        <CodeView content={buttonGroupMd} />
       </ShowBox>
       <Heading as="h2" className="mb-2">
         API

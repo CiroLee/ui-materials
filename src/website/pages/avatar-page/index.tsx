@@ -4,11 +4,11 @@ import Avatar, { AvatarGroup } from '@ui/Avatar';
 import ApiTable from '@site/components/ApiTable';
 import { rows, avatarGroupRows } from './api';
 import CodeView from '@site/components/CodeView';
-import { html as baseHtml } from './docs/base.md';
-import { html as shapeHtml } from './docs/shape.md';
-import { html as textHtml } from './docs/text.md';
-import { html as groupHtml } from './docs/group.md';
-import { html as borderedHtml } from './docs/border.md';
+import baseMd from './docs/base.md?raw';
+import shapeMd from './docs/shape.md?raw';
+import textMd from './docs/text.md?raw';
+import groupMd from './docs/group.md?raw';
+import borderedMd from './docs/border.md?raw';
 import NavTitle from '@site/components/NavTitle';
 import Description from '@site/components/Description';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
@@ -44,7 +44,7 @@ export default function AvatarPage() {
             <p>fallback</p>
           </div>
         </div>
-        <CodeView content={baseHtml} />
+        <CodeView content={baseMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -54,7 +54,7 @@ export default function AvatarPage() {
           <Avatar size="large" src={IMG_URL} />
           <Avatar size="large" shape="round" src={IMG_URL} />
         </div>
-        <CodeView content={shapeHtml} />
+        <CodeView content={shapeMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-4">
@@ -65,7 +65,7 @@ export default function AvatarPage() {
           <Avatar bordered color="#8749F5" src={IMG_URL} />
           <Avatar bordered shape="round" color="#65ca16" src={IMG_URL} />
         </div>
-        <CodeView content={borderedHtml} />
+        <CodeView content={borderedMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -78,7 +78,7 @@ export default function AvatarPage() {
           <Avatar text="L" size="large" className="bg-red-500 text-white text-[22px]" />
           <Avatar text="A" shape="round" size="large" className="bg-green-500 text-white text-[22px]" />
         </div>
-        <CodeView content={textHtml} />
+        <CodeView content={textMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -96,7 +96,7 @@ export default function AvatarPage() {
           <Avatar src={IMG_URL} />
           <Avatar text="+2" size="medium" className="bg-gray-300 text-white" />
         </AvatarGroup>
-        <CodeView content={groupHtml} />
+        <CodeView content={groupMd} />
       </ShowBox>
       <Heading as="h2" className="mb-2">
         API

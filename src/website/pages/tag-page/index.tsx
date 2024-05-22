@@ -5,10 +5,10 @@ import { RiUserSmileLine } from '@remixicon/react';
 import Avatar from '@ui/Avatar';
 import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
-import { html as sizeHtml } from './docs/size.md';
-import { html as colorHtml } from './docs/color.md';
-import { html as shapeHtml } from './docs/shape.md';
-import { html as customHtml } from './docs/custom.md';
+import sizeHtml from './docs/size.md?raw';
+import colorHtml from './docs/color.md?raw';
+import shapeHtml from './docs/shape.md?raw';
+import customHtml from './docs/custom.md?raw';
 import { rows } from './api';
 import NavTitle from '@site/components/NavTitle';
 const IMG_URL = 'https://ciro.club/statics/images/avatar/1702883782_LN0q9gDWoK6DUlk-NYVlj.png';
@@ -20,7 +20,7 @@ export default function TagPage() {
       <NavTitle title="Tag" sourceName="Tag" />
       <Description>Display short texts</Description>
       <ShowBox className="mb-4">
-        <Heading as="h4" className="mb-4">
+        <Heading as="h4" className="mb-2">
           size
         </Heading>
         <div className="flex items-center [&>div]:mr-2">

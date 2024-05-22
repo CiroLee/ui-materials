@@ -5,8 +5,8 @@ import Link from '@ui/Link';
 import Button from '@ui/Button';
 import CodeView from '@site/components/CodeView';
 import Code from '@ui/Code';
-import { html as firstContent } from './docs/first.md';
-import { html as secondContent } from './docs/second.md';
+import firstContent from './docs/first.md?raw';
+import secondContent from './docs/second.md?raw';
 const style = 'size-8 border border-gray-300 rounded-full flex-shrink-0 flex flex-center text-gray-700 mr-2';
 const Home: FC = () => {
   return (

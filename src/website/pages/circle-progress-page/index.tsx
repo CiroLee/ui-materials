@@ -5,11 +5,11 @@ import CircleProgress from '@ui/CircleProgress';
 import Button, { ButtonGroup } from '@ui/Button';
 import { RiAlertLine } from '@remixicon/react';
 import CodeView from '@/website/components/CodeView';
-import { html as baseHtml } from './docs/base.md';
-import { html as sizeHtml } from './docs/size.md';
-import { html as colorsHtml } from './docs/colors.md';
-import { html as dynamicHtml } from './docs/dynamic.md';
-import { html as customHtml } from './docs/custom.md';
+import baseMd from './docs/base.md?raw';
+import sizeMd from './docs/size.md?raw';
+import colorsMd from './docs/colors.md?raw';
+import dynamicMd from './docs/dynamic.md?raw';
+import customMd from './docs/custom.md?raw';
 import NavTitle from '@/website/components/NavTitle';
 import ApiTable from '@/website/components/ApiTable';
 import { rows } from './api';
@@ -36,7 +36,7 @@ export default function CircleProgressPage() {
           basic
         </Heading>
         <CircleProgress percent={20} />
-        <CodeView content={baseHtml} />
+        <CodeView content={baseMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -47,7 +47,7 @@ export default function CircleProgressPage() {
           <CircleProgress percent={20} size="medium" />
           <CircleProgress percent={20} size="large" />
         </div>
-        <CodeView content={sizeHtml} />
+        <CodeView content={sizeMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -60,7 +60,7 @@ export default function CircleProgressPage() {
           <CircleProgress percent={20} color="warn" />
           <CircleProgress percent={20} color="danger" />
         </div>
-        <CodeView content={colorsHtml} />
+        <CodeView content={colorsMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -77,7 +77,7 @@ export default function CircleProgressPage() {
             +
           </Button>
         </ButtonGroup>
-        <CodeView content={dynamicHtml} />
+        <CodeView content={dynamicMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -91,7 +91,7 @@ export default function CircleProgressPage() {
           svgClassName="stroke-[3]">
           <RiAlertLine size={34} color="red" />
         </CircleProgress>
-        <CodeView content={customHtml} />
+        <CodeView content={customMd} />
       </ShowBox>
       <Heading as="h2" className="mb-4">
         API

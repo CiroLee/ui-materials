@@ -3,7 +3,7 @@ import Heading from '@ui/Heading';
 import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
-import { html as HeadingHtml } from './docs/heading.md';
+import HeadingHtml from './docs/heading.md?raw';
 import NavTitle from '@site/components/NavTitle';
 import Description from '@site/components/Description';
 

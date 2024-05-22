@@ -8,10 +8,10 @@ import Button from '@ui/Button';
 import Switch from '@ui/Switch';
 import Tooltip from '@ui/Tooltip';
 import CodeView from '@site/components/CodeView';
-import { html as baseHtml } from './docs/base.md';
-import { html as headerHtml } from './docs/header.md';
-import { html as cellHtml } from './docs/cell.md';
-import { html as weekHtml } from './docs/week.md';
+import baseMd from './docs/base.md?raw';
+import headerMd from './docs/header.md?raw';
+import cellMd from './docs/cell.md?raw';
+import weekMd from './docs/week.md?raw';
 import ApiTable from '@site/components/ApiTable';
 import { rows } from './api';
 import Description from '@site/components/Description';
@@ -40,7 +40,7 @@ export default function CalendarPage() {
             console.log('your have choose: ', date.toLocaleDateString());
           }}
         />
-        <CodeView content={baseHtml} />
+        <CodeView content={baseMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -84,7 +84,7 @@ export default function CalendarPage() {
             );
           }}
         />
-        <CodeView content={headerHtml} />
+        <CodeView content={headerMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -95,7 +95,7 @@ export default function CalendarPage() {
           <span className="ml-2">: {`${startWeekOnSunday}`}</span>
         </div>
         <Calendar startWeekOnSunday={startWeekOnSunday} />
-        <CodeView content={weekHtml} />
+        <CodeView content={weekMd} />
       </ShowBox>
       <ShowBox className="mb-4">
         <Heading as="h4" className="mb-2">
@@ -129,7 +129,7 @@ export default function CalendarPage() {
             }
           }}
         />
-        <CodeView content={cellHtml} />
+        <CodeView content={cellMd} />
       </ShowBox>
       <Heading as="h2" className="mb-4">
         API

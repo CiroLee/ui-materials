@@ -4,10 +4,10 @@ import Heading from '@ui//Heading';
 import Tree, { type TreeOption } from '@ui//Tree';
 import CodeView from '@site/components/CodeView';
 import Description from '@site/components/Description';
-import { html as baseContent } from './docs/base.md';
-import { html as branchContent } from './docs/branch.md';
-import { html as disabledContent } from './docs/disabled.md';
-import { html as defaultExpendedIdsContent } from './docs/default-expended-ids.md';
+import baseContent from './docs/base.md?raw';
+import branchContent from './docs/branch.md?raw';
+import disabledContent from './docs/disabled.md?raw';
+import defaultExpendedIdsContent from './docs/default-expended-ids.md?raw';
 import ApiTable from '@/website/components/ApiTable';
 import { rows, treeOptions } from './api';
 const commonTreeOptions: TreeOption[] = [

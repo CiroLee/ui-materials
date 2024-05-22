@@ -4,11 +4,11 @@ import ShowBox from '@site/components/ShowBox';
 import CodeView from '@site/components/CodeView';
 import ApiTable from '@site/components/ApiTable';
 import { dropDownRows, menuItemRows } from './api';
-import { html as baseHtml } from './docs/base.md';
-import { html as sideHtml } from './docs/side.md';
-import { html as separatorHtml } from './docs/separator.md';
-import { html as childrenMenuHtml } from './docs/children-menu.md';
-import { html as preAndSuffixHtml } from './docs/custom.md';
+import baseHtml from './docs/base.md?raw';
+import sideHtml from './docs/side.md?raw';
+import separatorHtml from './docs/separator.md?raw';
+import childrenMenuHtml from './docs/children-menu.md?raw';
+import preAndSuffixHtml from './docs/custom.md?raw';
 import { commonMenus, menuWidthSeparator, menuWithChildren, menuWidthPreAndSuffix } from './mock';
 import Button from '@ui/Button';
 import NavTitle from '@site/components/NavTitle';
@@ -21,7 +21,7 @@ export default function DropdownMenuPage() {
   return (
     <>
       <NavTitle title="Dropdown" sourceName="Dropdown" />
-      <Description>Menus collection, offen triggered by a button</Description>
+      <Description>Menus collection, often triggered by a button</Description>
       <ShowBox className="mt-4">
         <Heading as="h4" className="mb-2">
           basic

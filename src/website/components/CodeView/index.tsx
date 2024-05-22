@@ -1,7 +1,16 @@
 import { type FC, useState, useEffect, useRef } from 'react';
 import clsx from 'clsx';
-import 'highlight.js/styles/atom-one-dark.css';
+// import 'highlight.js/styles/atom-one-dark.css';
 import Button from '@ui/Button';
+
+import MarkdownIt from 'markdown-it';
+import Shiki from '@shikijs/markdown-it';
+const md = MarkdownIt();
+md.use(
+  await Shiki({
+    theme: 'one-dark-pro',
+  }),
+);
 
 interface CodeViewProps {
   content: string;
@@ -35,7 +44,7 @@ const CodeView: FC<CodeViewProps> = (props) => {
       <div
         ref={ref}
         className="text-[14px] [&_pre]:m-0 [&_pre]:p-3 [&_pre]:overflow-x-auto"
-        dangerouslySetInnerHTML={{ __html: props.content }}></div>
+        dangerouslySetInnerHTML={{ __html: md.render(props.content) }}></div>
       {expanded ? (
         <div className="absolute bottom-0 flex justify-center items-center w-full h-[60px] bg-gradient-to-b from-transparent to-gray-800">
           <Button size="small" onClick={() => setExpandToggle(!expandedToggle)}>
